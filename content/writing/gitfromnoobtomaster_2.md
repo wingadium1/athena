@@ -3,8 +3,6 @@ title:  "Git from noob to master (Chapter 2)"
 tags: [Git, type/write]
 ---
 
-Git from noob to master - Chapter 2
-====
 > * [Chapter 1](gitfromnoobtomaster.html)
 
 Trong một vài lần chém gió về Git, thấy mọi người có vẻ chưa chú ý nhiều đến Git và sử dụng nó một cách hiệu quả.
