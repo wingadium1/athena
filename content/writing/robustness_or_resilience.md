@@ -1,6 +1,6 @@
 ---
 title: "Robustness hay Resilience?"
-tags: [ continuous_delivery.md, developer, [[refs/DevOps|DevOps]], writing, robustness, resilience, type/write ]
+tags: [ continuous_delivery.md, developer, devops, writing, robustness, resilience, type/write ]
 ---
 
 Nếu phần mềm là một vật thể bạn mong muốn chúng như một chai thủy tinh rất cứng hay một sợi dây cao su có khả năng co
@@ -19,7 +19,7 @@ Delivery trong quy trình phát triển.
 Resilience, khả năng phục hồi, thì ngược lại MTTR sẽ được coi trọng hơn, một cách tiếp cận để hạn chế tác động của sự cố
 phần mềm và phần mềm có thể hoạt động trong các điều kiện khác nhau về phần cứng cũng như cơ sở hạ tầng.
 
-Một cách suy nghĩ đơn giản như này, với Robustness phần mềm khó có cơ hội apply Continuous Delivery, vì khi một phần mềm
+Một cách suy nghĩ đơn giản như này, với Robustness phần mềm khó có cơ hội apply [[refs/CD|Continuous Delivery]], vì khi một phần mềm
 đòi hỏi ít sự cố, tức là số người trong chuỗi ra quyết định sẽ dài hơn (quan liêu), các stage cuối cùng của CD Pipeline
 thường ít được sử dụng do cần thời gian dài để xử lý qua các stage trước đó.
 
@@ -64,8 +64,8 @@ sẽ làm lỡ các phiên bản update của library, phần cứng hay ngôn n
 yêu cầu thay đổi về công nghệ, phiên bản vì có quá nhiều việc phải xử lý trong một lần update phần mềm.
 
 Từ đó có thể thấy rằng, Robustness hoàn toàn không thể đáp ứng nhu cầu về mặt kinh doanh của phần mềm, vì sự hạn chế về
-sự ổn định và số lượng phiên bản, điều đó lý giải tại sao nhiêu dự án phần mềm không thể xử lý được vấn đề Continuous
-Delivery.
+sự ổn định và số lượng phiên bản, điều đó lý giải tại sao nhiêu dự án phần mềm không thể xử lý được vấn đề [[refs/CD|Continuous
+Delivery]].
 
 ## Khi sự cố là điều không thể tránh khỏi
 
@@ -102,25 +102,21 @@ Vậy khi có sự cố chúng ta mất những gì
 Hãy xem xét bài toán giả thuyết như này:
 > Chúng ta có một trang thương mại điện tử, vì một lý do nào đó, database của service Cart bị quá tải, mọi thứ vẫn hoạt
 > động, nhưng người dùng không thể đặt hàng. Đội dự án không phát hiện ra sự cố này cho đến ngày thứ 4, mất 2 ngày để
-> hot
-> fix, và mất 1 ngày tiếp theo để checkout. Mỗi ngày chúng ta mất 80 triệu doanh thu, vậy là tổng cộng chúng ta mầt 560
-> triệu , trong đó có 240 triệu chi phí cơ hội và 320 triệu chi ví chìm.
+> hot fix, và mất 1 ngày tiếp theo để checkout. Mỗi ngày chúng ta mất 80 triệu doanh thu, vậy là tổng cộng chúng ta mầt 560
+> triệu, trong đó có 240 triệu chi phí cơ hội và 320 triệu chi ví chìm.
 
 ![image](https://s3.ap-southeast-1.amazonaws.com/techover.storage/wp-content/uploads/2021/08/24171154/cost.png)
 
 Tại sao sự cố lại xảy ra trong khi tất cả mọi việc đã được tính toán trước? Con người, tất nhiên rồi. Có một lý thuyết
-có tên gọi là [Bad Apple - Quả táo hỏng](https://en.wikipedia.org/wiki/Bad_apples), trong trường hợp này có thể hiểu là,
-không phải tất cả các thành viên trong dự án đều hoàn hảo mọi lúc (về công việc của họ trong dự án), hệ thống tin cậy
-nhưng con người thì không, khi có sự cố xảy ra nó kết hợp với việc tất cả mọi thứ đều được xem như là đã tính toán
-trước (các ẩn số đã biết), dễ dàng trở thành một kiểu đổ lỗi cho các cá nhân có liên quan, từ đó giảm độ hợp tác và chia
-sẻ kiến thức chung trong dự án.
+có tên gọi là [Bad Apple - Quả táo hỏng](https://en.wikipedia.org/wiki/Bad_apples), trong trường hợp này có thể hiểu là, không phải tất cả các thành viên 
+trong dự án đều hoàn hảo mọi lúc (về công việc của họ trong dự án), hệ thống tin cậy nhưng con người thì không, khi có 
+sự cố xảy ra nó kết hợp với việc tất cả mọi thứ đều được xem như là đã tính toán trước (các ẩn số đã biết), dễ dàng trở 
+thành một kiểu đổ lỗi cho các cá nhân có liên quan, từ đó giảm độ hợp tác và chia sẻ kiến thức chung trong dự án.
 
-> Việc tách biệt các nhiệm vụ đóng vai trò như một rào cản đối với việc chia sẻ kiến ​​thức, phản hồi và cộng tác, đồng
+> Việc tách biệt các nhiệm vụ đóng vai trò như một rào cản đối với việc chia sẻ kiến thức, phản hồi và cộng tác, đồng
 > thời làm giảm nhận thức về tình huống vốn là yếu tố cần thiết để có phản ứng hiệu quả trong trường hợp xảy ra sự cố.
-> Hơn
-> nữa, thường trong develop team sẽ còn có các hoạt động review code, điều này cũng làm giảm hiệu suất cho việc xử
-> lý/phản
-> hồi về sự cố, và đổ lỗi cho hoạt động review.
+> Hơn nữa, thường trong develop team sẽ còn có các hoạt động review code, điều này cũng làm giảm hiệu suất cho việc xử
+> lý/phản hồi về sự cố, và đổ lỗi cho hoạt động review.
 
 Với đội dự án trong trường hợp thương mại điện tử ở trên, họ sẽ xử lý như nào, có lẽ để xây dựng một phần mềm theo hướng
 Robustness, họ đã mất cả tháng (Lead Time), để qua tất cả các practice. Thế nhưng họ đã mất 4 ngày doanh thu cho chi phí
@@ -129,12 +125,12 @@ hội, ở trường hợp này họ sẵn sàng hy sinh chính Robustness để
 Robustness bị giảm xuống còn giờ hoặc ngày. Vấn đề có thể thấy ngay, cùng một quy trình nhưng đã bị kéo từ hàng tuần
 xuống hàng ngày hoặc thậm chí vài giờ.
 
-Continuous Delivery có thể cải thiện độ ổn định của hệ thống và khối lượng release, nhưng để xử lý rất khó. Continuous
-Delivery cho hệ thống Robustness sẽ gặp vấn đề ngay lập tức khi dự án quá chú trọng vào khối lượng release (đơn giản là
-khối lượng lớn, nhưng thời gian release quá dài để thông qua các practice). Rõ ràng thời gian development (coding,
-design, architect, unit-test) khó có thể giảm vậy 3 practice rõ ràng là khả dĩ nhất để thay đổi và giản lược, nhưng
-End-to-end testing gần như đã ăn sâu vào tiềm thức và gần như mọi người đều công nhận nó. Và Continuous Delivery sẽ bị
-đổ lỗi vì làm thay đổi văn hóa của dự án ngay lập tức khi có lỗi đầu tiên ở môi trường production sau khi áp dụng, và dự
+[[refs/CD|Continuous Delivery]] có thể cải thiện độ ổn định của hệ thống và khối lượng release, nhưng để xử lý rất khó.
+[[refs/CD|Continuous Delivery]] cho hệ thống Robustness sẽ gặp vấn đề ngay lập tức khi dự án quá chú trọng vào khối lượng 
+release (đơn giản là khối lượng lớn, nhưng thời gian release quá dài để thông qua các practice). Rõ ràng thời gian development 
+(coding, design, architect, unit-test) khó có thể giảm, vì vậy 3 practice rõ ràng là khả dĩ nhất để thay đổi và giản lược, nhưng
+End-to-end testing gần như đã ăn sâu vào tiềm thức và gần như mọi người đều công nhận nó. Và [[refs/CD|Continuous Delivery]] 
+sẽ bị đổ lỗi vì làm thay đổi văn hóa của dự án ngay lập tức, khi có lỗi đầu tiên ở môi trường production sau khi áp dụng, và dự
 án sẽ quay trở lại với hiện trạng.
 
 ## Nếu hệ thống có khả năng phục hồi thì sao
@@ -173,7 +169,7 @@ thống Resilience sẽ tốt hơn: ví dụ nếu hệ thống phân tán và p
 phí mất đi rõ ràng giảm.
 
 Vậy thay vì quá chú trọng vào phần DEV, phần OPS trong dự án được đầu tư nguồn lực tốt hơn để giữ cho hệ thống ở trong
-điều kiện hoạt động an toàn và tin cậy. Tuy nhiên việc xây dựng hệ thống có khả năng chịu đựng tốt với các điều kiện,
+điều kiện hoạt động an toàn và tin cậy, tạo nên một cán cân cân bằng hơn trong [[refs/DevOps]]. Tuy nhiên việc xây dựng hệ thống có khả năng chịu đựng tốt với các điều kiện,
 thường dựa trên các practice sau đây:
 
 1. Đối với phần developer:
@@ -205,8 +201,7 @@ thường dựa trên các practice sau đây:
 4. Timeseries/Telemetry: Log, Monitor luôn là yêu cầu bắt buộc, kết hợp với alarm để mọi người có thể được thông báo khi
    có các sự cố hay lỗi runtime xảy ra. Cuối cùng là User Analytics (có thể lấy từ Firebase analytic, ...) dành cho việc
    theo dõi user experience.
-5. Con người: phần luôn là khó nhất và để nói về văn hóa trong dự án là chính, nhưng có nguyên
-   tắc ["You Built It, You Run It"](https://aws.amazon.com/blogs/enterprise-strategy/enterprise-[[refs/DevOps|DevOps]]-why-you-should-run-what-you-build/):
+5. Con người: phần luôn là khó nhất và để nói về văn hóa trong dự án là chính, nhưng có nguyên tắc ["You Built It, You Run It"](https://aws.amazon.com/blogs/enterprise-strategy/enterprise-devops-why-you-should-run-what-you-build/):
    thông tin trong dự án sẽ cần được transparency, mọi người cần làm mọi việc có thể làm (có thể không thuộc trách nhiệm
    của mình) để đảm bảo rằng mọi thứ ổn ngay từ đầu, việc minh bạch thông tin sẽ giúp tìm ra nguyên nhân của các vấn đề
    nhanh hơn nhiêu.
