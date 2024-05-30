@@ -1,6 +1,6 @@
 ---
 title:  "Note for AWS Lambda + API Gateway + Route53 + S3 + RDS project developement"
-tags: [AWS, Note, Iaas]
+tags: [AWS, Note, Iaas, type/blog]
 ---
 
 Note for AWS Lambda + API Gateway + Route53 + S3 + RDS project developement

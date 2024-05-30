@@ -1,6 +1,6 @@
 ---
 title: "Cost-effective, High Availability Cassandra with AWS EKS and EC2 Spot instance."
-tags: [ AWS, EC2, Spot Instance, HA, Cassandra, Iaas ]
+tags: [ AWS, EC2, Spot Instance, HA, Cassandra, Iaas, type/blog ]
 ---
 
 # Mở đầu

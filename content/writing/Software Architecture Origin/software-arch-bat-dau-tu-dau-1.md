@@ -1,6 +1,6 @@
 ---
 title:  "Software Architecture bắt đầu từ đâu? - 1"
-tags: [Software Architecture, developer]
+tags: [Software Architecture, developer, type/write]
 ---
 
 Motivation
@@ -54,6 +54,6 @@ Có rất nhiều bài viết nói về cái này, nhưng mình sẽ chỉ ra m�
   * Enterprise architecture, nó liên quan đến tất cả mọi thứ của một công ty, cá thể kinh doanh, từ chiến lược kinh doanh, mô hình vận hành, hoạt động kinh doanh và cả những thứ liên quan đến IT và Infrastructure nữa, nên nếu có bị giới hạn về mặt hiểu biết, mình có thể sẽ không đi sâu về cái này.
 * Soft skill cái này quan trọng này, có thể mọi người sẽ nghĩ đến những thứ khá cao siêu như Leadership hay Organization nhưng mình sẽ đi từ những thứ nhỏ nhỏ trước:
   * Ra quyết định - Decisions, tất nhiên là bạn cần quyết định nhiều thứ, đặc biệt là về kiến trúc hoặc đơn giản hơn là trong team sẽ làm việc với nhau như nào (communication decision)
-  * [[tags/continuous-delivery|Continuous Delivery]], nghe có vẻ là hard skill nhưng thực tế là soft skill. Về cơ bản phần mềm hay hệ thống sẽ vẫn là một thứ gì đấy trừu tượng (ở trên bản vẽ - mượn từ archiecture - kỹ sư trong ngành xây dựng), cho đến khi nó được deploy trên môi trường thực tế. Và khi phần mềm được deploy càng sớm và càng liên tục thì việc chứng mình architecture hợp lý càng nhanh và chính xác, mọi người cũng trưởng thành hơn về mặt thực hành.
+  * [[refs/continuous-delivery|Continuous Delivery]], nghe có vẻ là hard skill nhưng thực tế là soft skill. Về cơ bản phần mềm hay hệ thống sẽ vẫn là một thứ gì đấy trừu tượng (ở trên bản vẽ - mượn từ archiecture - kỹ sư trong ngành xây dựng), cho đến khi nó được deploy trên môi trường thực tế. Và khi phần mềm được deploy càng sớm và càng liên tục thì việc chứng mình architecture hợp lý càng nhanh và chính xác, mọi người cũng trưởng thành hơn về mặt thực hành.
 
 Bài tiếp theo mình sẽ viết tiếp về các skill nhé.

@@ -2,7 +2,7 @@
 title:  "How to use Git"
 date:   2022-05-12 12:00:00
 categories: new
-tags: [Git, F***, Coding, Writing]
+tags: [Git, F***, Coding, type/write]
 ---
 
 How to use Git

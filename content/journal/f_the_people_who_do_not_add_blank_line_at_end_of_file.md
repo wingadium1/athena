@@ -1,6 +1,6 @@
 ---
 title:  "F*** the people, who do not add Newline at End of File"
-tags: [Git, F***, Coding]
+tags: [Git, F***, Coding, type/blog]
 ---
 
 F*** the people, who do not add Newline at End of File

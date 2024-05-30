@@ -1,6 +1,6 @@
 ---
 title: "Container Runtime Monitoring với falco"
-tags: [ DevOps, k8s ]
+tags: [[[refs/DevOps|DevOps]], k8s, type/blog, type/write ]
 ---
 
 # Tại sao cần Monitor Container@runtime?
@@ -41,7 +41,7 @@ hoặc khởi động một quá trình, [container](container) sẽ thực hi�
 namespace đến kernel.
 Tất cả các sự kiện này đều liên quan đến bảo mật, và chúng nên được monitored@run-time.
 
-# Vậy [Falco](falco) Monitor Syscalls@Runtime như nào?
+# Vậy [Falco](falco.md) Monitor Syscalls@Runtime như nào?
 
 Kiểm tra các [system call](system_call) có thể được thực hiện qua mô-đun kernel, lắng nghe các sự kiện [system call](system_call).
 

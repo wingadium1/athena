@@ -1,6 +1,6 @@
 ---
 title:  "Bạn có phải là T-Shaped không?"
-tags: [Agile, Note, developer, I-shaped, T-shaped]
+tags: [Agile, Note, developer, I-shaped, T-shaped, type/blog]
 ---
 
 Hiện tại Agile và Scrum đang dần là method và framework chủ đạo trong các dự án phát triển phần mềm. Với Agile điều dự
@@ -18,7 +18,7 @@ sự phụ thuộc vào thành viên (một trong những vấn đề nhức nh�
 trong nhóm đều cần tham gia và hỗ trợ các task khác.
 
 Bản thân mình cũng là một dạng T-shaped, nếu trong một team làm một sản phảm full-stack, vừa có thể làm tester, đôi khi
-có thể làm BA, vừa có thể làm DEV hoặc quản trị dự án, nhưng phần lớn thời gian và kiến thức phát triển devops.
+có thể làm BA, vừa có thể làm DEV hoặc quản trị dự án, nhưng phần lớn thời gian và kiến thức phát triển [[refs/DevOps|DevOps]].
 
 ![image](https://s3.ap-southeast-1.amazonaws.com/techover.storage/wp-content/uploads/2021/09/07104124/2.png)
 
@@ -47,7 +47,7 @@ Vậy chuyển từ I-shaped sang T-shaped gần như là xu thế và nhu cầu
 
 Lợi ích là có:
 
-* **Team toàn diện hơn**: Các developer có chuyên môn và thường chia ra Front-end, Back-end, DevOps, hoặc thậm chí là
+* **Team toàn diện hơn**: Các developer có chuyên môn và thường chia ra Front-end, Back-end, [[refs/DevOps|DevOps]], hoặc thậm chí là
   stack công nghệ như MEAN. Nhưng T-shaped cũng cảm thấy thoải mái khi làm những công nghệ khác, ví dụ mình đã từng là
   người đầu tiên trong đơn vị làm về Xamarin, Golang, Cloud, ...
 * **Điều đó có nghĩa là bạn sẽ được giúp đỡ nhiều hơn và mọi nơi**: T-Shaped developer có thể tham gia và đóng góp cho

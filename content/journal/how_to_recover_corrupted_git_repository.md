@@ -3,7 +3,7 @@ layout: post
 title:  "How to recover corrupted GIT repository"
 date:   2018-01-15 12:00:00
 categories: new
-tags: [GIT]
+tags: [Git, type/blog]
 ---
 
 How to recover corrupted GIT repository

@@ -1,6 +1,6 @@
 ---
 title: "Software Architecture bắt đầu từ đâu? - 2: Decision"
-tags: [ Software Architecture, developer, tradeoff]
+tags: [ Software Architecture, developer, tradeoff, type/write]
 ---
 
 Như ở phần [[writing/Software-Architecture-Origin/software-arch-bat-dau-tu-dau-1|trước]] mình đã nói về các Soft Skills mà mình cho là yếu tố khác biệt giữa

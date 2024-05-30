@@ -1,6 +1,6 @@
 ---
 title: "Robustness hay Resilience?"
-tags: [ continuous-delivery, developer, devops, writing, robustness, resilience ]
+tags: [ continuous_delivery.md, developer, [[refs/DevOps|DevOps]], writing, robustness, resilience, type/write ]
 ---
 
 Nếu phần mềm là một vật thể bạn mong muốn chúng như một chai thủy tinh rất cứng hay một sợi dây cao su có khả năng co
@@ -206,7 +206,7 @@ thường dựa trên các practice sau đây:
    có các sự cố hay lỗi runtime xảy ra. Cuối cùng là User Analytics (có thể lấy từ Firebase analytic, ...) dành cho việc
    theo dõi user experience.
 5. Con người: phần luôn là khó nhất và để nói về văn hóa trong dự án là chính, nhưng có nguyên
-   tắc ["You Built It, You Run It"](https://aws.amazon.com/blogs/enterprise-strategy/enterprise-devops-why-you-should-run-what-you-build/):
+   tắc ["You Built It, You Run It"](https://aws.amazon.com/blogs/enterprise-strategy/enterprise-[[refs/DevOps|DevOps]]-why-you-should-run-what-you-build/):
    thông tin trong dự án sẽ cần được transparency, mọi người cần làm mọi việc có thể làm (có thể không thuộc trách nhiệm
    của mình) để đảm bảo rằng mọi thứ ổn ngay từ đầu, việc minh bạch thông tin sẽ giúp tìm ra nguyên nhân của các vấn đề
    nhanh hơn nhiêu.

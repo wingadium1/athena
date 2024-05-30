@@ -1,21 +1,21 @@
 ---
 title: "Software Architecture bắt đầu từ đâu? - 3: Continuous Delivery"
-tags: [ Software Architecture, developer, cicd, continuous-delivery]
+tags: [ Software Architecture, developer, cicd, continuous_delivery.md, type/write]
 ---
 
 Trong phần trước, mình đã nói về [[writing/Software-Architecture-Origin/software-arch-bat-dau-tu-dau-2|Soft Skill — Decision]], trong phần này sẽ đề cập
-tới một loại khác mà sẽ gây nhiều tranh cãi: [[tags/continuous-delivery|Continuous Delivery]].
+tới một loại khác mà sẽ gây nhiều tranh cãi: [[refs/continuous-delivery|Continuous Delivery]].
 
-[[tags/continuous-delivery|Continuous Delivery]], hãy nói về mặt khả năng, chính xác hơn là điểm khác biệt với Manual Delivery
+[[refs/continuous-delivery|Continuous Delivery]], hãy nói về mặt khả năng, chính xác hơn là điểm khác biệt với Manual Delivery
 ở 3 yếu tố: an toàn,
 nhanh chóng và bền vững (hoặc dùng từ Việt một chút là ổn định).
 
-> Trong bài viết này sẽ không đánh đồng [[tags/continuous-delivery|Continuous Delivery]] với các kỹ thuật automate, mà mọi
+> Trong bài viết này sẽ không đánh đồng [[refs/continuous-delivery|Continuous Delivery]] với các kỹ thuật automate, mà mọi
 > người hay khá nhầm lẫn với việc Automation Delivery (một trong những kỹ thuật của CD). Dù sao thì, mình chỉ muốn xem
 > xét
 > về mặt văn hóa trong dự án phần mềm.
 
-# Tại sao cần [[tags/continuous-delivery|Continuous Delivery]]?
+# Tại sao cần [[refs/continuous-delivery|Continuous Delivery]]?
 
 Thời gian — tất nhiên rồi, ai cũng muốn đưa những tính năng mới nhất cho người dùng một cách nhanh nhất, đưa hệ thống
 trở lại khi downtime nhanh nhất (Mean Time To Repair) đồng nghĩa với việc business được duy trì, tiền kiếm được không bị
@@ -27,7 +27,7 @@ Hãy xem xét 2 loại thời gian:
 * Cycle time: khoảng thời gian mà giữa 2 công việc liên tiếp được kết thúc, hay còn có thể hiểu là Deployment Frequency
   cho dễ hiểu
 
-[[tags/continuous-delivery|Continuous Delivery]] Pipeline sẽ được hình dung như này
+[[refs/continuous-delivery|Continuous Delivery]] Pipeline sẽ được hình dung như này
 
 ![image](https://www.gocd.org/assets/images/blog/cd-metrics/gocd-pipelines-6356c22e.png)
 
@@ -40,7 +40,7 @@ Vậy thời gian bao nhiêu là đủ?
 
 ![image](https://www.gocd.org/assets/images/blog/cd-metrics/continuous-delivery-benchmarking-329817c5.png)
 
-> Credit: Forsgren PhD, Nicole. Accelerate: The Science of Lean Software and DevOps: Building and Scaling High
+> Credit: Forsgren PhD, Nicole. Accelerate: The Science of Lean Software and [[refs/DevOps|DevOps]]: Building and Scaling High
 > Performing Technology Organizations (Kindle Location 564). IT Revolution Press. Kindle Edition.
 
 Nhìn chung thì khi chúng ta cố gắng tăng tần suất deploy chúng ta sẽ có thể giảm MTTR, có nghĩa chúng ta sẽ không tạo ra
@@ -63,7 +63,7 @@ Như vậy chúng ta sẽ có một mô hình:
   giỏi trong tay. Với các công cụ khác nhau như Sonarquebe hay chính Unit Test sẽ hỗ trợ developer tạo nên những sản
   phẩm tốt hơn.
 
-3. [[tags/continuous-delivery|Continuous Delivery]]:
+3. [[refs/continuous-delivery|Continuous Delivery]]:
 
 * Sau 2 vấn đề bên trên source code ổn định, deploy thường xuyên, bản vá được xử lý nhanh chóng ít ảnh hưởng, cuối chùng
   chúng ta có một phần mềm luôn ở trạng thái sẵn sàng.
@@ -97,18 +97,18 @@ hơn, ít tiềm ẩn lỗi hơn.
 Điều này khá giống trong lý thuyết phát triển phần mềm, chi phí sửa lỗi càng nhiều cho các lỗi ở giai đoạn muộn của dự
 án.
 
-# [[tags/continuous-delivery|Continuous Delivery]] bằng cách nào
+# [[refs/continuous-delivery|Continuous Delivery]] bằng cách nào
 
 ![image](https://ptgmedia.pearsoncmg.com/images/art_humble_continuousdelivery/elementLinks/humble_fig01.jpg)
 
-[[tags/continuous-delivery|Continuous Delivery]] cho chúng ta một cách tiếp cận khác về việc quản lý dự án, chúng ta có thể
+[[refs/continuous-delivery|Continuous Delivery]] cho chúng ta một cách tiếp cận khác về việc quản lý dự án, chúng ta có thể
 định nghĩa lại ***done***
 không phải là code xong mà là được delivery thành công.
 Toàn bộ quá trình nên sử dụng đối đa các nền tảng tự động như Unit-test, Automation Test, điều đó làm tăng tốc độ
 feedback trên các bản vá của source code cũng như infrastructure.
 Điều này càng quan trọng hơn khi chi phí End-to-end testing càng ngày càng lớn, chúng nên được thay thế bằng các danh
 mục testing như dưới đây ([multi-faceted testing portfolio](https://www.youtube.com/watch?v=afEzqDExCTE)), điều này càng
-quan trọng hơn trong thế giới hiện nay khi Devops là xu hướng, và các quyết định về release càng ngày càng gắn liên với
+quan trọng hơn trong thế giới hiện nay khi [[refs/DevOps|DevOps]] là xu hướng, và các quyết định về release càng ngày càng gắn liên với
 tình huống về mặt nghiệp vụ thay vì sự quyết định của một đội quản lý về vận hành.
 
 | Practice              | Quantity     | Frequency            | Duration    | Environment         |
@@ -122,5 +122,5 @@ tình huống về mặt nghiệp vụ thay vì sự quyết định của một
 | Anomaly detection     | 10 to 100+   | < 1m                 | < 10s       | All                 |
 | Adaptive architecture | N/A          | Always               | N/A         | All                 |
 
-Như vậy có thể thấy là việc xử lý [[tags/continuous-delivery|Continuous Delivery]] gần như không mang tính kỹ thuật mà mang
+Như vậy có thể thấy là việc xử lý [[refs/continuous-delivery|Continuous Delivery]] gần như không mang tính kỹ thuật mà mang
 tính định hướng về văn hóa làm việc cho dự án nhiều hơn, chính vì thế tại sao mình lại đặt nó là Soft Skill.

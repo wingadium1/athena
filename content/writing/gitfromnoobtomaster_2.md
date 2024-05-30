@@ -1,6 +1,6 @@
 ---
 title:  "Git from noob to master (Chapter 2)"
-tags: [Git]
+tags: [Git, type/write]
 ---
 
 Git from noob to master - Chapter 2
