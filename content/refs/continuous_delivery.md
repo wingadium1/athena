@@ -5,8 +5,6 @@ alias:
 tags: [ type/term ]
 ---
 
-# Continuous Delivery
-
 > [!info]
 > Phân phối liên tục (tiếng Anh: Continuous delivery - viết tắt: CD) là một cách tiếp cận của kỹ thuật phần mềm, trong
 > đó các đội sẽ sản xuất phần mềm trong chu kỳ ngắn, đảm bảo rằng các phần mềm có thể được phát hành một cách tin cậy

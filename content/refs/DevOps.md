@@ -3,8 +3,6 @@ title: "DevOps"
 tags: [ type/term ]
 ---
 
-# DevOps
-
 > [!info]
 > DevOps là một tập hợp các thực hành kết hợp giữa phát triển phần mềm (Dev) và vận hành công nghệ thông tin (Ops). Mục
 > tiêu của DevOps là rút ngắn chu kỳ phát triển phần mềm và cung cấp liên tục với chất lượng phần mềm cao. DevOps nhấn

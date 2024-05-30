@@ -1,10 +1,8 @@
 ---
-title:  "Note for AWS Lambda + API Gateway + Route53 + S3 + RDS project developement"
+title:  "Note for AWS Lambda + API Gateway + Route53 + S3 + RDS project development"
 tags: [AWS, Note, Iaas, type/blog]
 ---
 
-Note for AWS Lambda + API Gateway + Route53 + S3 + RDS project developement
-====
 
 AWS
 -----
@@ -19,7 +17,7 @@ Custom Authorizer API Gateway
 Config lambda function with environment tag
 * [AWS re:Invent Serverless Authentication and Authorization](https://gitlab.com/wingadium/ReadingDocument/blob/f21f586f2bae119d94c9c006c846783be31c9e26/Serverless%20Authentication%20AWS%20Re%20Invent%202016.pdf)
 
-### Lambda CI/CD
+### Lambda [[refs/cicd|CI-CD]]
 
 * [Continuous Deployment of AWS Lambda behind API Gateway](https://blog.jayway.com/2016/09/07/continuous-deployment-aws-lambda-behind-api-gateway/)
 * [Continuous Deployment on AWS Lambda](https://blog.jayway.com/2016/07/07/continuous-deployment-aws-lambda/)
