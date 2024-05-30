@@ -20,7 +20,7 @@ phối hợp với nhau để cải thiện quá trình triển khai và phát t
 tục, các nhóm có thể đảm bảo rằng các tính năng và bản sửa lỗi mới được kiểm tra và xác thực nhanh chóng, thúc đẩy chu
 kỳ phát triển nhanh hơn.
 
-Trong khi đó [[refs/CD|CD]] là hoạt động cốt lõi trong DevOps, nhằm mục đích phát hành phần mềm thường xuyên và đáng tin
+Trong khi đó [[refs/continuous_delivery|CD]] là hoạt động cốt lõi trong DevOps, nhằm mục đích phát hành phần mềm thường xuyên và đáng tin
 cậy. Tự động hóa các quy trình triển khai giúp giảm nguy cơ xảy ra lỗi do con người và nâng cao tốc độ cũng như độ tin
 cậy trong việc cung cấp các bản cập nhật cho người dùng.
 

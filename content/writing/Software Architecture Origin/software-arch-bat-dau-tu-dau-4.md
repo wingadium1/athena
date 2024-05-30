@@ -68,3 +68,9 @@ Có lẽ serires này sẽ dừng ở đây, mình sẽ cố gắng sắp xếp 
 viết khác.
 
 THE END.
+
+# Các bài viết cùng series
+* [[writing/Software-Architecture-Origin/software-arch-bat-dau-tu-dau-1|Software Architecture bắt đầu từ đâu? Phần 1]]
+* [[writing/Software-Architecture-Origin/software-arch-bat-dau-tu-dau-2|Software Architecture bắt đầu từ đâu? Phần 2]]
+* [[writing/Software-Architecture-Origin/software-arch-bat-dau-tu-dau-3|Software Architecture bắt đầu từ đâu? Phần 3]]
+* [[writing/Software-Architecture-Origin/software-arch-bat-dau-tu-dau-4|Software Architecture bắt đầu từ đâu? Phần 4]]

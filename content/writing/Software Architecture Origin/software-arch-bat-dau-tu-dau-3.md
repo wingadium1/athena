@@ -4,18 +4,18 @@ tags: [ Software Architecture, developer, cicd, continuous_delivery.md, type/wri
 ---
 
 Trong phần trước, mình đã nói về [[writing/Software-Architecture-Origin/software-arch-bat-dau-tu-dau-2|Soft Skill — Decision]], trong phần này sẽ đề cập
-tới một loại khác mà sẽ gây nhiều tranh cãi: [[refs/continuous-delivery|Continuous Delivery]].
+tới một loại khác mà sẽ gây nhiều tranh cãi: [[refs/continuous_delivery|Continuous Delivery]].
 
-[[refs/continuous-delivery|Continuous Delivery]], hãy nói về mặt khả năng, chính xác hơn là điểm khác biệt với Manual Delivery
+[[refs/continuous_delivery|Continuous Delivery]], hãy nói về mặt khả năng, chính xác hơn là điểm khác biệt với Manual Delivery
 ở 3 yếu tố: an toàn,
 nhanh chóng và bền vững (hoặc dùng từ Việt một chút là ổn định).
 
-> Trong bài viết này sẽ không đánh đồng [[refs/continuous-delivery|Continuous Delivery]] với các kỹ thuật automate, mà mọi
+> Trong bài viết này sẽ không đánh đồng [[refs/continuous_delivery|Continuous Delivery]] với các kỹ thuật automate, mà mọi
 > người hay khá nhầm lẫn với việc Automation Delivery (một trong những kỹ thuật của CD). Dù sao thì, mình chỉ muốn xem
 > xét
 > về mặt văn hóa trong dự án phần mềm.
 
-# Tại sao cần [[refs/continuous-delivery|Continuous Delivery]]?
+# Tại sao cần [[refs/continuous_delivery|Continuous Delivery]]?
 
 Thời gian — tất nhiên rồi, ai cũng muốn đưa những tính năng mới nhất cho người dùng một cách nhanh nhất, đưa hệ thống
 trở lại khi downtime nhanh nhất (Mean Time To Repair) đồng nghĩa với việc business được duy trì, tiền kiếm được không bị
@@ -27,7 +27,7 @@ Hãy xem xét 2 loại thời gian:
 * Cycle time: khoảng thời gian mà giữa 2 công việc liên tiếp được kết thúc, hay còn có thể hiểu là Deployment Frequency
   cho dễ hiểu
 
-[[refs/continuous-delivery|Continuous Delivery]] Pipeline sẽ được hình dung như này
+[[refs/continuous_delivery|Continuous Delivery]] Pipeline sẽ được hình dung như này
 
 ![image](https://www.gocd.org/assets/images/blog/cd-metrics/gocd-pipelines-6356c22e.png)
 
@@ -51,19 +51,19 @@ production (production ready).
 
 Như vậy chúng ta sẽ có một mô hình:
 
-1. Continuous Integration:
+1. [[refs/CI|Continuous Integration]]:
 
 * Integration sớm và thường xuyên
 * Mọi người cần đồng bộ trunk (ý nói đến phiên bản được deploy) hằng ngày
 
-2. Continuous Deployment:
+2. [[refs/continuous_deployment|Continuous Deployment]]:
 
 * Điều này có để dễ dàng đạt được, khi source code ở trunk khá ổn định và Deploy chỉ là stage cuối cùng của Continuous
   Integration, như vậy việc phát hiện các lỗi và fix chúng cũng nhanh hơn, kể cả khi bạn có những thành viên không quá
   giỏi trong tay. Với các công cụ khác nhau như Sonarquebe hay chính Unit Test sẽ hỗ trợ developer tạo nên những sản
   phẩm tốt hơn.
 
-3. [[refs/continuous-delivery|Continuous Delivery]]:
+3. [[refs/continuous_delivery|Continuous Delivery]]:
 
 * Sau 2 vấn đề bên trên source code ổn định, deploy thường xuyên, bản vá được xử lý nhanh chóng ít ảnh hưởng, cuối chùng
   chúng ta có một phần mềm luôn ở trạng thái sẵn sàng.
@@ -97,11 +97,11 @@ hơn, ít tiềm ẩn lỗi hơn.
 Điều này khá giống trong lý thuyết phát triển phần mềm, chi phí sửa lỗi càng nhiều cho các lỗi ở giai đoạn muộn của dự
 án.
 
-# [[refs/continuous-delivery|Continuous Delivery]] bằng cách nào
+# [[refs/continuous_delivery|Continuous Delivery]] bằng cách nào
 
 ![image](https://ptgmedia.pearsoncmg.com/images/art_humble_continuousdelivery/elementLinks/humble_fig01.jpg)
 
-[[refs/continuous-delivery|Continuous Delivery]] cho chúng ta một cách tiếp cận khác về việc quản lý dự án, chúng ta có thể
+[[refs/continuous_delivery|Continuous Delivery]] cho chúng ta một cách tiếp cận khác về việc quản lý dự án, chúng ta có thể
 định nghĩa lại ***done***
 không phải là code xong mà là được delivery thành công.
 Toàn bộ quá trình nên sử dụng đối đa các nền tảng tự động như Unit-test, Automation Test, điều đó làm tăng tốc độ
@@ -122,5 +122,11 @@ tình huống về mặt nghiệp vụ thay vì sự quyết định của một
 | Anomaly detection     | 10 to 100+   | < 1m                 | < 10s       | All                 |
 | Adaptive architecture | N/A          | Always               | N/A         | All                 |
 
-Như vậy có thể thấy là việc xử lý [[refs/continuous-delivery|Continuous Delivery]] gần như không mang tính kỹ thuật mà mang
+Như vậy có thể thấy là việc xử lý [[refs/continuous_delivery|Continuous Delivery]] gần như không mang tính kỹ thuật mà mang
 tính định hướng về văn hóa làm việc cho dự án nhiều hơn, chính vì thế tại sao mình lại đặt nó là Soft Skill.
+
+# Các bài viết cùng series
+* [[writing/Software-Architecture-Origin/software-arch-bat-dau-tu-dau-1|Software Architecture bắt đầu từ đâu? Phần 1]]
+* [[writing/Software-Architecture-Origin/software-arch-bat-dau-tu-dau-2|Software Architecture bắt đầu từ đâu? Phần 2]]
+* [[writing/Software-Architecture-Origin/software-arch-bat-dau-tu-dau-3|Software Architecture bắt đầu từ đâu? Phần 3]]
+* [[writing/Software-Architecture-Origin/software-arch-bat-dau-tu-dau-4|Software Architecture bắt đầu từ đâu? Phần 4]]

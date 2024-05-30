@@ -165,3 +165,9 @@ một lựa chọn tốt để trao đổi, nếu trong thời buổi WFH có th
 P/S: hãy ra quyết định một cách khôn ngoan nhé.
 
 Happy Coding.
+
+# Các bài viết cùng series
+* [[writing/Software-Architecture-Origin/software-arch-bat-dau-tu-dau-1|Software Architecture bắt đầu từ đâu? Phần 1]]
+* [[writing/Software-Architecture-Origin/software-arch-bat-dau-tu-dau-2|Software Architecture bắt đầu từ đâu? Phần 2]]
+* [[writing/Software-Architecture-Origin/software-arch-bat-dau-tu-dau-3|Software Architecture bắt đầu từ đâu? Phần 3]]
+* [[writing/Software-Architecture-Origin/software-arch-bat-dau-tu-dau-4|Software Architecture bắt đầu từ đâu? Phần 4]]
