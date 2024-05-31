@@ -28,7 +28,7 @@ Sau một hồi search thì phát hiện ra có nhiều thứ hỗ trợ mình t
 này: [peco](https://github.com/peco/peco), một tool filter được viết bằng Go Lang, chúng ta có thể truyền bất kì cái gì
 vào trong ```pipe``` của câu lệnh, từ ```history```, ```ls```, text file hoặc bất kì cái gì.
 
-![img.png](../assets/img/command_search_peco.png)
+![img.png](../assets/img/command_search_peco.webp)
 
 Giờ hãy kết hợp history search (```Ctrl + R```) và ```peco```.
 
@@ -65,5 +65,5 @@ $ source .zshrc (or .bash_rc)
 ```
 Thành quả nè
 
-![](../assets/img/command_search_peco2.png)
+![](../assets/img/command_search_peco2.webp)
 

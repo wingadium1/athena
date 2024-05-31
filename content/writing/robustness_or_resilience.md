@@ -235,7 +235,7 @@ nhanh hơn các đối thủ cạnh tranh.
 Mọi người sẽ có xu hướng tìm một cách để xử lý Continuous Delivery cho mọi dự án, tổ chức tuy nhiên việc đó quá phức
 tạp. Bản thân việc xây dựng theo hướng adaptive architect như đã nói ở trên cũng sinh ra các hoàn cảnh và ràng buộc.
 
-Tuy nhiên nếu một dự án đã tối ưu hóa Robustness và đang không có Continuous Delivery chúng ta có thể xử lý theo các
+Tuy nhiên nếu một dự án đã tối ưu hóa Robustness và đang không có [[refs/CD|Continuous Delivery]] chúng ta có thể xử lý theo các
 bước sau.
 
 1. Version hóa mọi thứ: Deployment sẽ ổn định hơn, không có phiên bản nào bất ngờ được deploy mà mọi người không biết.
@@ -262,7 +262,7 @@ cho chúng ta một loạt các thông số về độ ổn định, khối lư�
 MTTR và thời gian triển khai. Ngoài ra Chaos Engineering được xem xét cẩn thận sẽ cho chúng ta các practice giúp giảm
 MTTR xuống vài giờ thậm chí vài phút, bằng cách giả lập và chỉ ra các lỗi có thể xảy ra trong môi trường production.
 
-Các practice của robustness khi đó sẽ dần được thay thế bằng sự kết hợp giữa Continuous Delivery và các practice trong
+Các practice của robustness khi đó sẽ dần được thay thế bằng sự kết hợp giữa [[refs/CD|Continuous Delivery]] và các practice trong
 quá trình vận hành. End-to-end testing sẽ được thay thế dần
 bởi [Test Pyramid](https://martinfowler.com/bliki/TestPyramid.html), khối lượng test, tần suất test sẽ được phân phối
 một cách hợp lý để giảm thời gian test và chi phí. Trong đó số UnitTest sẽ được tiến hành thường xuyên và cho môi bản
@@ -280,7 +280,7 @@ muốn.
 ## Kết luận
 
 Tối ưu hóa cho Robustness có vẻ đã lỗi thời và không thể đáp ứng được nhu cầu công nghệ thông tin hiện nay, cùng với đó
-việc không áp dụng Continuous Delivery trong một thời gian dài rất dễ dẫn đến những sự cố lớn. Robustness rõ ràng vẫn có
+việc không áp dụng [[refs/CD|Continuous Delivery]] trong một thời gian dài rất dễ dẫn đến những sự cố lớn. Robustness rõ ràng vẫn có
 giá trị, điều đó là mong muốn tự nhiên của các lập trình viên và dự án, tuy vậy sự ưu tiên nên được thay đổi để hệ thống
 có khả năng thích ứng cao hơn cả về nghiệp vụ và các yêu cầu từ phía người dùng.
 
@@ -290,6 +290,6 @@ hơn. Việc này rõ ràng là một sự thay đổi về mô hình tổ chứ
 phần mềm rõ ràng luôn phức tạp và nhiều khi sự cố là không thể tránh khỏi, việc tối ưu khả năng phục hồi sẽ làm giảm chi
 phí hay tổn thất cho sự cố mà thôi.
 
-Ngoài ra việc tối ưu hóa cho Robustness sẽ làm giảm hiệu quả của Continuous Delivery, Continuous Delivery có thể cho ta
-thấy hiệu quả rõ ràng với các hệ thông phục hồi tốt, điều đó giúp chúng ta tăng độ tin cậy từ source code, deployment,
+Ngoài ra việc tối ưu hóa cho Robustness sẽ làm giảm hiệu quả của [[refs/CD|Continuous Delivery]], [[refs/CD|Continuous Delivery]] 
+có thể cho ta thấy hiệu quả rõ ràng với các hệ thông phục hồi tốt, điều đó giúp chúng ta tăng độ tin cậy từ source code, deployment,
 delivery và môi trường production ngay từ đầu.
