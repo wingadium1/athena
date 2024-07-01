@@ -1,6 +1,6 @@
 ---
 title: "Software Architecture: Bắt đầu từ đâu? - 4: Hard skills và tổng kết"
-tags: [ Software Architecture, developer, cicd, continuous_delivery.md, type/write]
+tags: [ Software Architecture, developer, cicd, continuous_delivery, type/write]
 ---
 
 Như mình đã nói ở phần đầu hard skill của developer và software architect khá rõ ràng về mặt tiếp cận, có nhiều nguồn

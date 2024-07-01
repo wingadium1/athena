@@ -1,6 +1,6 @@
 ---
 title: "Robustness hay Resilience?"
-tags: [ continuous_delivery.md, developer, devops, writing, robustness, resilience, type/write ]
+tags: [ continuous_delivery, developer, devops, writing, robustness, resilience, type/write ]
 ---
 
 Nếu phần mềm là một vật thể bạn mong muốn chúng như một chai thủy tinh rất cứng hay một sợi dây cao su có khả năng co
@@ -108,9 +108,9 @@ Hãy xem xét bài toán giả thuyết như này:
 ![image](https://s3.ap-southeast-1.amazonaws.com/techover.storage/wp-content/uploads/2021/08/24171154/cost.png)
 
 Tại sao sự cố lại xảy ra trong khi tất cả mọi việc đã được tính toán trước? Con người, tất nhiên rồi. Có một lý thuyết
-có tên gọi là [Bad Apple - Quả táo hỏng](https://en.wikipedia.org/wiki/Bad_apples), trong trường hợp này có thể hiểu là, không phải tất cả các thành viên 
-trong dự án đều hoàn hảo mọi lúc (về công việc của họ trong dự án), hệ thống tin cậy nhưng con người thì không, khi có 
-sự cố xảy ra nó kết hợp với việc tất cả mọi thứ đều được xem như là đã tính toán trước (các ẩn số đã biết), dễ dàng trở 
+có tên gọi là [Bad Apple - Quả táo hỏng](https://en.wikipedia.org/wiki/Bad_apples), trong trường hợp này có thể hiểu là, không phải tất cả các thành viên
+trong dự án đều hoàn hảo mọi lúc (về công việc của họ trong dự án), hệ thống tin cậy nhưng con người thì không, khi có
+sự cố xảy ra nó kết hợp với việc tất cả mọi thứ đều được xem như là đã tính toán trước (các ẩn số đã biết), dễ dàng trở
 thành một kiểu đổ lỗi cho các cá nhân có liên quan, từ đó giảm độ hợp tác và chia sẻ kiến thức chung trong dự án.
 
 > Việc tách biệt các nhiệm vụ đóng vai trò như một rào cản đối với việc chia sẻ kiến thức, phản hồi và cộng tác, đồng
@@ -126,10 +126,10 @@ Robustness bị giảm xuống còn giờ hoặc ngày. Vấn đề có thể th
 xuống hàng ngày hoặc thậm chí vài giờ.
 
 [[refs/CD|Continuous Delivery]] có thể cải thiện độ ổn định của hệ thống và khối lượng release, nhưng để xử lý rất khó.
-[[refs/CD|Continuous Delivery]] cho hệ thống Robustness sẽ gặp vấn đề ngay lập tức khi dự án quá chú trọng vào khối lượng 
-release (đơn giản là khối lượng lớn, nhưng thời gian release quá dài để thông qua các practice). Rõ ràng thời gian development 
+[[refs/CD|Continuous Delivery]] cho hệ thống Robustness sẽ gặp vấn đề ngay lập tức khi dự án quá chú trọng vào khối lượng
+release (đơn giản là khối lượng lớn, nhưng thời gian release quá dài để thông qua các practice). Rõ ràng thời gian development
 (coding, design, architect, unit-test) khó có thể giảm, vì vậy 3 practice rõ ràng là khả dĩ nhất để thay đổi và giản lược, nhưng
-End-to-end testing gần như đã ăn sâu vào tiềm thức và gần như mọi người đều công nhận nó. Và [[refs/CD|Continuous Delivery]] 
+End-to-end testing gần như đã ăn sâu vào tiềm thức và gần như mọi người đều công nhận nó. Và [[refs/CD|Continuous Delivery]]
 sẽ bị đổ lỗi vì làm thay đổi văn hóa của dự án ngay lập tức, khi có lỗi đầu tiên ở môi trường production sau khi áp dụng, và dự
 án sẽ quay trở lại với hiện trạng.
 
@@ -290,6 +290,6 @@ hơn. Việc này rõ ràng là một sự thay đổi về mô hình tổ chứ
 phần mềm rõ ràng luôn phức tạp và nhiều khi sự cố là không thể tránh khỏi, việc tối ưu khả năng phục hồi sẽ làm giảm chi
 phí hay tổn thất cho sự cố mà thôi.
 
-Ngoài ra việc tối ưu hóa cho Robustness sẽ làm giảm hiệu quả của [[refs/CD|Continuous Delivery]], [[refs/CD|Continuous Delivery]] 
+Ngoài ra việc tối ưu hóa cho Robustness sẽ làm giảm hiệu quả của [[refs/CD|Continuous Delivery]], [[refs/CD|Continuous Delivery]]
 có thể cho ta thấy hiệu quả rõ ràng với các hệ thông phục hồi tốt, điều đó giúp chúng ta tăng độ tin cậy từ source code, deployment,
 delivery và môi trường production ngay từ đầu.

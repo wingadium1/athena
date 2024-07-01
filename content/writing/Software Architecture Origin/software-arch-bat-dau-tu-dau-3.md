@@ -1,6 +1,6 @@
 ---
 title: "Software Architecture bắt đầu từ đâu? - 3: Continuous Delivery"
-tags: [ Software Architecture, developer, cicd, continuous_delivery.md, type/write]
+tags: [ Software Architecture, developer, cicd, continuous_delivery, type/write]
 ---
 
 Trong phần trước, mình đã nói về [[writing/Software-Architecture-Origin/software-arch-bat-dau-tu-dau-2|Soft Skill — Decision]], trong phần này sẽ đề cập
