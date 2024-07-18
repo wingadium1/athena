@@ -1,6 +1,6 @@
 ---
 title: "Container Runtime Monitoring với falco"
-tags: [[[refs/DevOps|DevOps]], k8s, type/blog, type/write ]
+tags: [ DevOps, k8s, type/blog, type/write ]
 ---
 
 # Tại sao cần Monitor Container@runtime?

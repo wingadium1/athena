@@ -2,7 +2,7 @@
 title: "Continuous Integration"
 alias:
   - CI
-tags: [ type/term ]
+tags: [ type/term, DevOps ]
 ---
 
 # Continuous Integration
