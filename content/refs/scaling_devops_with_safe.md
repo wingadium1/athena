@@ -5,7 +5,7 @@ tags: [ type/term, DevOps, SAFe® ]
 ---
 
 > [!info]
-> SAFe® là một framework được áp dụng phổ biến để tích hợp Agile, trong đó được biết đến như là: một nền tảng kiến ​​thức về các nguyên tắc, thực tiễn và năng lực tích hợp đã được chứng minh nhằm đạt được sự linh hoạt trong kinh doanh bằng cách sử dụng Lean, Agile và [[refs/DevOps|DevOps]].”
+> [[refs/safe|SAFe®]] là một framework được áp dụng phổ biến để tích hợp Agile, trong đó được biết đến như là: một nền tảng kiến ​​thức về các nguyên tắc, thực tiễn và năng lực tích hợp đã được chứng minh nhằm đạt được sự linh hoạt trong kinh doanh bằng cách sử dụng Lean, Agile và [[refs/DevOps|DevOps]].”
 
 Các tổ chức có thể chọn vận hành theo 1 trong 4 cấu hình của SAFe® (Essential SAFe, Large Solution SAFe, Portfolio SAFe, Full SAFe), phần lớn thì mọi tổ chức sẽ bắt đầu với Essential SAFe (khối xây dựng cơ bản cho tất cả các cấu hình SAFe và là điểm khởi đầu đơn giản nhất để triển khai)
 

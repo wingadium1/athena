@@ -8,6 +8,7 @@ tags: [ type/term, DevOps, SAFe® ]
 ---
 
 > [!info]
+> là một khái niệm của [[refs/safe|SAFe®]]
 > là một khung thời gian cadence-based (refer to [[refs/agile_cadence|Cadence]]) trong đó ART mang lại giá trị liên tục cho khách hàng phù hợp với mục tiêu PI
 > ở SAFe® 5 khái niệm này gọi là Program Increment
 
