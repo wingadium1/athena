@@ -2,18 +2,18 @@
 title: "SAFe®"
 alias:
   - Scale Agile Framework
-tags: [ type/term, SAFe® ]
+tags: [  SAFe® ]
 ---
 
 > [!info]
 > SAFe là framework hàng đầu thế giới về Business Agility. SAFe tích hợp sức mạnh của [[refs/lean|Lean]], [[refs/agile|Agile]] và [[refs/DevOps|DevOps]] vào một hệ thống vận hành toàn diện giúp các doanh nghiệp phát triển mạnh mẽ trong thời đại kỹ thuật số bằng cách cung cấp các sản phẩm và dịch vụ sáng tạo nhanh hơn, có thể dự đoán được hơn và chất lượng cao hơn.
 
 ## Safe Core values
-Safe có 4 giá trị cốt lõi, đến từ những practioner với ART và Lean Agile.
-* Alignment: tất cả mọi người đều làm việc cùng nhau hướng đến mục tiêu (của một [[refs/ron_westrum_generative_culture|Generative Culture]]). Một ART có [[refs/ron_westrum_generative_culture|Generative Culture]]) sẽ có các team align với các team khác trong cùng 1 train.
+Safe có 4 giá trị cốt lõi, đến từ những practioner với [[refs/agile_art|ART]] và Lean Agile.
+* Alignment: tất cả mọi người đều làm việc cùng nhau hướng đến mục tiêu (của một [[refs/ron_westrum_generative_culture|Generative Culture]]). Một [[refs/agile_art|ART]] có [[refs/ron_westrum_generative_culture|Generative Culture]]) sẽ có các team align với các team khác trong cùng 1 train.
 * Transparency: một tổ chức [[refs/ron_westrum_generative_culture|Generative Culture]]) sẽ tự có sự minh bạch, điều này là một điểm quan trọng cho phép một tổ chức có thể align được và bồi dưỡng văn hoá sáng tạo.
-* Program Execution: [[refs/ron_westrum_generative_culture|Generative Culture]] tập trung vào mục tiêu, và toàn bộ ART hoạt động minh bạch và cùng nhau làm việc hướng đến mục tiêu
-* Built-in Quality: Defect và failure làm suy yếu khả năng của ART trong việc cung cấp giải pháp đáng tin cậy và duy trì tầm nhìn của ART. Cần có thái độ cảnh giác để duy trì chất lượng bằng cách phát hiện và loại bỏ các khiếm khuyết trong suốt quá trình phát triển để giữ cho ART đi đúng hướng.
+* Program Execution: [[refs/ron_westrum_generative_culture|Generative Culture]] tập trung vào mục tiêu, và toàn bộ [[refs/agile_art|ART]] hoạt động minh bạch và cùng nhau làm việc hướng đến mục tiêu
+* Built-in Quality: Defect và failure làm suy yếu khả năng của [[refs/agile_art|ART]] trong việc cung cấp giải pháp đáng tin cậy và duy trì tầm nhìn của [[refs/agile_art|ART]]. Cần có thái độ cảnh giác để duy trì chất lượng bằng cách phát hiện và loại bỏ các khiếm khuyết trong suốt quá trình phát triển để giữ cho [[refs/agile_art|ART]] đi đúng hướng.
 
 # Safe Principles:
 
@@ -32,10 +32,10 @@ Safe có 4 giá trị cốt lõi, đến từ những practioner với ART và L
   - Move from phase-gate milestone to the milestones based on feedback and learning  of each increment of value and of the integrated solution at that point in time.
 6. Visualizing and limiting WIP, reducing batch sizes, and managing  queue lengths
 7. Applying cadence – synchronizing with cross-domain planning
-  - Bắt đầu với alignment, và chúng ta cần đảm bảo rằng mỗi người trong ART đều có tầm nhìn chung. Để đạt được điều đó, team trong ART đều cần apply [[refs/agile_cadence|cadence]] và synchronizing, cả 2 đều cần thiết để đảm bảo sự cân bằng giữa sự không chắc chắn vốn có trong quá trình phát triển và kế hoạch hiện tại của ART, cho phép có những thay đổi cần thiết.
+  - Bắt đầu với alignment, và chúng ta cần đảm bảo rằng mỗi người trong [[refs/agile_art|ART]] đều có tầm nhìn chung. Để đạt được điều đó, team trong [[refs/agile_art|ART]] đều cần apply [[refs/agile_cadence|cadence]] và synchronizing, cả 2 đều cần thiết để đảm bảo sự cân bằng giữa sự không chắc chắn vốn có trong quá trình phát triển và kế hoạch hiện tại của [[refs/agile_art|ART]], cho phép có những thay đổi cần thiết.
     * Cadence: drumbeat of development.
     * Synchronizing: start/stop learning/development cycle at the sametime -> integrate entire system.
-    * cross-domain planning: beginning of every [[refs/safe_pi|PI]]: all teams member align the ART mission for PI -> giảm thiểu biến số -> giảm rework.
+    * cross-domain planning: beginning of every [[refs/safe_pi|PI]]: all teams member align the [[refs/agile_art|ART]] mission for PI -> giảm thiểu biến số -> giảm rework.
 8. Unlocking the intrinsic motivation of knowledge workers
   - After money,  what really motivated people were these things:
     * Autonomy: People want to have the freedom to explore the best solutions and self-direct the  work they want to do

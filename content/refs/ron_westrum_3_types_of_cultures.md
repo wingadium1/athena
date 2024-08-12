@@ -1,6 +1,6 @@
 ---
 title: "3 kiểu văn hoá tổ chức theo Ron Westrum"
-tags: [ type/term ]
+tags: [  ]
 ---
 
 Năm 1988, Ron Westrum đang nghiên cứu cách cải thiện an toàn trong các nhóm y tế khi ông nảy ra ý tưởng xem xét văn hóa của các nhóm đó. Ông đã xem xét cách các tổ chức này xử lý thông tin và đưa ra một loại hình bao gồm ba loại văn hóa. Các kiểu văn hóa được xác định như sau:

@@ -2,7 +2,7 @@
 title: "Feature Flag"
 alias:
   - Feature Switch
-tags: [ type/term ]
+tags: [  ]
 ---
 
 > [!info]

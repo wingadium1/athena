@@ -1,9 +1,9 @@
 ---
 title: "8 bước để thúc đẩy quá trình chuyển đổi văn hóa"
-tags: [ type/term ]
+tags: [  ]
 ---
 
-Theo John Kotter đề cầm trong Leading Change, ông đề xuất phương pháp tám bước để thúc đẩy quá trình chuyển đổi văn hóa.
+Theo John Kotter đề cập trong Leading Change, ông đề xuất phương pháp tám bước để thúc đẩy quá trình chuyển đổi văn hóa.
 
 * Tạo cảm giác cấp bách
 * Dẫn dắt một liên minh mạnh mẽ

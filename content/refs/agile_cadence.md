@@ -2,7 +2,7 @@
 title: "Agile Cadence"
 alias:
   - Cadence
-tags: [ type/term, Agile, SAFe® ]
+tags: [  Agile, SAFe® ]
 ---
 
 > [!info]

@@ -2,7 +2,7 @@
 title: "CALMR"
 alias:
   - Culture, Automation, Lean Flow, Measurement, and Recovery
-tags: [ type/term, DevOps ]
+tags: [  DevOps ]
 ---
 
 > [!info]

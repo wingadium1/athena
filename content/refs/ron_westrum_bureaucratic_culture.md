@@ -1,6 +1,6 @@
 ---
 title: "Bureaucratic Culture"
-tags: [ type/term ]
+tags: [  ]
 ---
 
 > [!info]

@@ -2,7 +2,7 @@
 title: "SAFe® Innovation và Planning Iteration"
 alias:
   - IP Iteration
-tags: [ type/term, DevOps, SAFe® ]
+tags: [  DevOps, SAFe® ]
 ---
 
 > [!info]

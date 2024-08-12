@@ -1,7 +1,7 @@
 ---
 title: "Scaling Devops với SAFe®"
 alias:
-tags: [ type/term, DevOps, SAFe® ]
+tags: [  DevOps, SAFe® ]
 ---
 
 > [!info]

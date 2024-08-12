@@ -3,7 +3,7 @@ title: "Agile Manifesto"
 alias:
   - Agile
   - Tuyên ngôn Agile
-tags: [ type/term, Agile ]
+tags: [  Agile ]
 ---
 
 > [!info]
@@ -24,10 +24,10 @@ Có 12 điều trong đó:
    * [[refs/safe|SAFe®]] note: nhìn chung là phải cân bằng giữa chấp nhận thay đổi đánh đổi với thời gian development có thể bị trễ, về cơ bản thì thay đổi ở phía phần mềm thì đơn giản hơn (có nhiều kỹ thuật để làm điều đó), còn nếu yêu cầu thay đổi cần phải xử lý cả phần cứng thì tốn kém và khó hơn.
 3. **Deliver thường xuyên**, từ vài tuần đến vài tháng, với sự ưu tiên cho giảm thời gian giữa các lần delivery.
 4. **Đội kinh doanh và developer phải làm việc cùng nhau** hàng ngày trong suốt dự án.
-   * [[refs/safe|SAFe®]] note: ngoài Product Owner(PO), [[refs/safe|SAFe®]] add thêm [[refs/safe_product_management|Product Management]] làm việc với PO của từng team để định ra solution cho [[refs/safe_art|ART]]. Business Owner là một nhân vật quan trọng trong [[refs/safe_art|ART]].
+   * [[refs/safe|SAFe®]] note: ngoài Product Owner(PO), [[refs/safe|SAFe®]] add thêm [[refs/safe_product_management|Product Management]] làm việc với PO của từng team để định ra solution cho [[refs/agile_art|ART]]. Business Owner là một nhân vật quan trọng trong [[refs/agile_art|ART]].
 5. **Xây dựng các dự án xung quanh những cá nhân có động lực**. Cung cấp cho họ môi trường và hỗ trợ họ cần, và tin tưởng họ sẽ hoàn thành công việc.
 6. **Phương pháp truyền đạt thông tin hiệu quả nhất** đến và trong nội bộ development team là cuộc **trò chuyện trực tiếp**.
-   * [[refs/safe|SAFe®]] note: rất nhiều hoạt động trong [[refs/safe_art|ART]] như [[refs/safe_pi|Planning Interval]], [[refs/safe_ip_iteration|Innovation và Planning Iteration]] được tổ chức dưới dạng các cuộc gặp trực tiếp, tuy nhiên với xu hướng team phân tán (sau đại dịch toàn cầu) thì các cuộc họp online trở nên phổ biến hơn.
+   * [[refs/safe|SAFe®]] note: rất nhiều hoạt động trong [[refs/agile_art|ART]] như [[refs/safe_pi|Planning Interval]], [[refs/safe_ip_iteration|Innovation và Planning Iteration]] được tổ chức dưới dạng các cuộc gặp trực tiếp, tuy nhiên với xu hướng team phân tán (sau đại dịch toàn cầu) thì các cuộc họp online trở nên phổ biến hơn.
 7. **Phần mềm hoạt động** là thước đo chính của *tiến độ*.
 8. **Các quy trình Agile thúc đẩy phát triển bền vững**. Các sponsors, development team và người dùng phải có khả năng duy trì **[[refs/agile_candence|nhịp độ]] không đổi** vô thời hạn.
 9.  **Liên tục chú ý** đến sự *hoàn thiện về kỹ thuật* và *sử dụng các thiết kế tốt*, điều đó *tăng cường sự linh hoạt.*

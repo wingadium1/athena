@@ -2,7 +2,7 @@
 title: "Continuous Delivery"
 alias:
   - CD
-tags: [ type/term, DevOps ]
+tags: [  DevOps ]
 ---
 
 > [!info]

@@ -1,6 +1,6 @@
 ---
 title: "Pathological Culture"
-tags: [ type/term ]
+tags: [  ]
 ---
 
 > [!info]

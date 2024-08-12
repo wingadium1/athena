@@ -1,6 +1,6 @@
 ---
 title: "Generative Culture"
-tags: [ type/term ]
+tags: [  ]
 ---
 
 > [!info]

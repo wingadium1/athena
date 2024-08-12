@@ -2,7 +2,7 @@
 title: "Continuous Deployment"
 alias:
   - CI
-tags: [ type/term, DevOps ]
+tags: [  DevOps ]
 ---
 
 # Continuous Deployment

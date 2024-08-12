@@ -1,6 +1,6 @@
 ---
 title: "DevOps"
-tags: [ type/term ]
+tags: [  DevOps ]
 ---
 
 > [!info]

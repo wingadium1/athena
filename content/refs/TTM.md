@@ -2,7 +2,7 @@
 title: "TTM"
 alias:
   - Time to market
-tags: [ type/term, SAFe® ]
+tags: [  SAFe® ]
 ---
 
 > [!info]
