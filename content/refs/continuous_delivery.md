@@ -26,9 +26,9 @@ lại với nhau để thực hiện chúng nhanh hơn và thường xuyên hơn
 của [[refs/continuous_delivery|CD]], và [[refs/continuous_delivery|CD]]
 đi trực tiếp vào [[refs/DevOps|DevOps]]
 
-## Tương quan với Continuous Deployment
+## Tương quan với [[refs/continuous_deployment|Continuous Deployment]]
 
-Continuous Delivery đôi khi bị nhầm lẫn với Continuous Deployment (Triển khai liên tục). Continuous Deployment có nghĩa là
+Continuous Delivery đôi khi bị nhầm lẫn với [[refs/continuous_deployment|Continuous Deployment]] (Triển khai liên tục). [[refs/continuous_deployment|Continuous Deployment]] có nghĩa là
 mọi thay đổi được triển khai tự động lên môi trường production. Phân phối liên tục có nghĩa là đội làm việc đảm bảo rằng
 mọi thay đổi **có thể** được triển khai lên môi trường production, nhưng cũng **có thể không** cần phải triển khai, thường do lý
-do về phục vụ kinh doanh, marketing. Để làm được Continuous Deployment người ta phải làm được cả Continuous Delivery.
+do về phục vụ kinh doanh, marketing. Để làm được [[refs/continuous_deployment|Continuous Deployment]] người ta phải làm được cả Continuous Delivery.
