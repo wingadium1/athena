@@ -1,7 +1,7 @@
 ---
 title:  "Adopt a zero trust network model using istio ambient mode"
 date:   2024-06-16 12:00:00
-tags: [Cloud, k8s, type/write]
+tags: [Cloud, k8s, type/write, calico, istio]
 ---
 
 ## Install Calico.
@@ -146,6 +146,23 @@ spec:
 Create sleep service as requester
 
 ```
+# Copyright Istio Authors
+#
+#   Licensed under the Apache License, Version 2.0 (the "License");
+#   you may not use this file except in compliance with the License.
+#   You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+#   Unless required by applicable law or agreed to in writing, software
+#   distributed under the License is distributed on an "AS IS" BASIS,
+#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#   See the License for the specific language governing permissions and
+#   limitations under the License.
+
+##################################################################################################
+# Sleep service
+##################################################################################################
 apiVersion: v1
 kind: ServiceAccount
 metadata:
@@ -195,11 +212,75 @@ spec:
             secretName: sleep-secret
             optional: true
 ---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: sleep-2
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sleep-2
+  labels:
+    app: sleep-2
+    service: sleep-2
+spec:
+  ports:
+    - port: 80
+      name: http
+  selector:
+    app: sleep-2
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sleep-2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sleep-2
+  template:
+    metadata:
+      labels:
+        app: sleep-2
+    spec:
+      terminationGracePeriodSeconds: 0
+      serviceAccountName: sleep-2
+      containers:
+        - name: sleep
+          image: curlimages/curl
+          command: ["/bin/sleep", "infinity"]
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+            - mountPath: /etc/sleep/tls
+              name: secret-volume
+      volumes:
+        - name: secret-volume
+          secret:
+            secretName: sleep-secret
+            optional: true
+---
 ```
 
 Apply **AuthorizationPolicy** for ALLOW and DENY traffic from `sleep`
 
 ```
+apiVersion: security.istio.io/v1
+kind: AuthorizationPolicy
+metadata:
+  name: allow-sleep-to-httpbin-2
+spec:
+  selector:
+    matchLabels:
+      app: httpbin-2
+  action: ALLOW
+  rules:
+    - from:
+        - source:
+            principals:
+              - cluster.local/ns/default/sa/sleep-2
+---
 apiVersion: security.istio.io/v1
 kind: AuthorizationPolicy
 metadata:
@@ -215,25 +296,17 @@ spec:
             principals:
               - cluster.local/ns/default/sa/sleep
 ---
-apiVersion: security.istio.io/v1
-kind: AuthorizationPolicy
-metadata:
-  name: allow-sleep-to-httpbin-2
-spec:
-  selector:
-    matchLabels:
-      app: httpbin-2
-  action: DENY
-  rules:
-    - from:
-        - source:
-            principals:
-              - cluster.local/ns/default/sa/sleep
 ```
 
 Output
 
-![alt text](../assets/img/istio_ambient_output.png)
+On `sleep`: allow connect to `httpbin`
+
+![alt text](../assets/img/istio_ambient_output-sleep.png)
+
+On `sleep-2`: allow connect to `httpbin-2`
+
+![alt text](../assets/img/istio_ambient_output-sleep-2.png)
 
 ## TODO
 [] implement Waypoint proxies to reach zero trust network
