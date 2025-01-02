@@ -18,6 +18,7 @@ const config: QuartzConfig = {
     baseUrl: "athena.wingadium.space",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
+    generateSocialImages: false,
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
