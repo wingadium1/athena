@@ -5,7 +5,7 @@ alias:
 tags: [  ]
 ---
 
-> ![info]
+> [!info]
 > Dave McClure shares his startup metrics for product marketers and product managers. Abbreviated to ‘AARRR’, the metrics are intended to capture each stage of the customer lifecycle. Each product will have unique metrics for each bucket that track up to the key performance indicators of the business.
 
 
