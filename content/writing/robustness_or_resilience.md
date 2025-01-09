@@ -9,14 +9,14 @@ giãn?
 Đầu tiên nói đề cập thế này có vẻ hơi khó hiểu, hãy quay trở lại với bài
 viết: [[writing/Software-Architecture-Origin/software-arch-bat-dau-tu-dau-3|Software Architecture: Bắt đầu từ đâu? – Part 3 Soft Skills – Continuous Delivery]].
 Chúng ta có một vài metric liên quan đến Continuous Delivery, hãy để ý đến 2 cái Mean Time Between Failures (MTBF) và
-Mean Time To Repair (MTTR).
+Mean Time To Repair ([[refs/mean_time_to_recovery|MTTR]]).
 
 Robustness, một quan niệm khá xưa trong thế giới phần mềm, người ta muốn quan tâm đến việc phần mềm ít xảy ra sự cố hơn
-là thời gian khắc phục nó (ngay cả ở môi trường thương mại - production), tức là MTBF dài hơn được coi trọng hơn MTTR
+là thời gian khắc phục nó (ngay cả ở môi trường thương mại - production), tức là MTBF dài hơn được coi trọng hơn [[refs/mean_time_to_recovery|MTTR]]
 ngắn. Cách tiếp cận này đôi khi được coi là truyền thống, và thường các phần mềm này sẽ không được apply Continuous
 Delivery trong quy trình phát triển.
 
-Resilience, khả năng phục hồi, thì ngược lại MTTR sẽ được coi trọng hơn, một cách tiếp cận để hạn chế tác động của sự cố
+Resilience, khả năng phục hồi, thì ngược lại [[refs/mean_time_to_recovery|MTTR]] sẽ được coi trọng hơn, một cách tiếp cận để hạn chế tác động của sự cố
 phần mềm và phần mềm có thể hoạt động trong các điều kiện khác nhau về phần cứng cũng như cơ sở hạ tầng.
 
 Một cách suy nghĩ đơn giản như này, với Robustness phần mềm khó có cơ hội apply [[refs/CD|Continuous Delivery]], vì khi một phần mềm
@@ -29,7 +29,7 @@ lỗi được xử lý liên tục), và dần chuyển sang CD.
 ## Robustness - Truyền thống
 
 Dễ thấy là trong 1 2 chục năm trước, phần mềm hoàn hảo luôn là xu thế, các tổ chức luôn muốn phần mềm có độ tin cậy cao,
-tức là MTBF/MTTR khá lớn.
+tức là MTBF/[[refs/mean_time_to_recovery|MTTR]] khá lớn.
 Các dự án phần mềm theo kiểu này luôn muốn duy trì một môi trường production không có sự cố, với một niềm tin rằng môi
 trường production luôn được xử lý theo các ẩn số đã biết, trong đó các quá trình tương tác với môi trường luôn đồng nhất
 và có thể dự đoán được. Sự cố trong các phần mềm này luôn được cho là do các thay đổi (source code, biến môi trường, các
@@ -135,7 +135,7 @@ sẽ bị đổ lỗi vì làm thay đổi văn hóa của dự án ngay lập t
 
 ## Nếu hệ thống có khả năng phục hồi thì sao
 
-Hoặc chí ít là phục hồi nhanh, nếu việc này được chú trọng (Resilience), tức là chúng ta muốn có MTTR thấp hơn là việc
+Hoặc chí ít là phục hồi nhanh, nếu việc này được chú trọng (Resilience), tức là chúng ta muốn có [[refs/mean_time_to_recovery|MTTR]] thấp hơn là việc
 MTBF cao, bằng cách tối ưu hệ thống để có thể hotfix trên production khi có sự cố. Nhìn chung lỗi có thể phân loại, một
 số sẽ không bao giờ xảy ra, một số lỗi gây ra sự cố nghiêm trọng hơn các lỗi khác và các lỗi về an toàn thì không được
 phép xuất hiện, nhưng rõ ràng chúng ta nên có thể nhanh chóng đưa hệ thống trở lại hơn là cố gắng ít sự cố hơn.
@@ -259,8 +259,8 @@ phí, thời gian và tỉ lệ lỗi giảm.
 
 Nhưng việc đầu tiên đó là thay đổi nhận thức về các vấn đề quản lý rủi ro và robustness. Các bước thay đổi bên trên sẽ
 cho chúng ta một loạt các thông số về độ ổn định, khối lượng delivery và minh họa chi phí có thể được cải tiến cũng như
-MTTR và thời gian triển khai. Ngoài ra Chaos Engineering được xem xét cẩn thận sẽ cho chúng ta các practice giúp giảm
-MTTR xuống vài giờ thậm chí vài phút, bằng cách giả lập và chỉ ra các lỗi có thể xảy ra trong môi trường production.
+[[refs/mean_time_to_recovery|MTTR]] và thời gian triển khai. Ngoài ra Chaos Engineering được xem xét cẩn thận sẽ cho chúng ta các practice giúp giảm
+[[refs/mean_time_to_recovery|MTTR]] xuống vài giờ thậm chí vài phút, bằng cách giả lập và chỉ ra các lỗi có thể xảy ra trong môi trường production.
 
 Các practice của robustness khi đó sẽ dần được thay thế bằng sự kết hợp giữa [[refs/CD|Continuous Delivery]] và các practice trong
 quá trình vận hành. End-to-end testing sẽ được thay thế dần

@@ -43,7 +43,7 @@ Vậy thời gian bao nhiêu là đủ?
 > Credit: Forsgren PhD, Nicole. Accelerate: The Science of Lean Software and [[refs/DevOps|DevOps]]: Building and Scaling High
 > Performing Technology Organizations (Kindle Location 564). IT Revolution Press. Kindle Edition.
 
-Nhìn chung thì khi chúng ta cố gắng tăng tần suất deploy chúng ta sẽ có thể giảm MTTR, có nghĩa chúng ta sẽ không tạo ra
+Nhìn chung thì khi chúng ta cố gắng tăng tần suất deploy chúng ta sẽ có thể giảm [[refs/mean_time_to_recovery|MTTR]], có nghĩa chúng ta sẽ không tạo ra
 một sản phẩm có tính bền vững cao (robustness — như cách tiếp cận truyền thống), khi đó khả năng tự phục hồi sau lỗi (
 resilience) của sản phẩm được tăng lên (một cách tự nhiên), cùng với đó là giảm khả năng xảy ra lỗi vì gần như khi tăng
 tần suất deploy đến hằng ngày hoặc nhiều lần một ngày sản phẩm sẽ gần như lúc nào cũng sẵn sàng để đưa lên môi trường
