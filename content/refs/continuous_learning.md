@@ -13,11 +13,11 @@ tags: [ Agile, SAFe® ]
 Đây là một trong bảy năng lực cốt lõi của Business Agility, mỗi năng lực được hỗ trợ bởi một đánh giá cụ thể cho phép công ty đo lường năng lực của mình.
 
 Có 5 điều kỉ luật hoặc nguyên tắc của một tổ chức học tập cần có:
-* [[refs/personal_mastery|Personal mastery]]
-* [[refs/mental_models|Mental models]]
-* [[refs/shared_vision|Shared vision]]
-* [[refs/team_learning|Team learning]]
-* [[refs/system_thinking|Systems thinking]]
+* [[refs/clc_personal_mastery|Personal mastery]]
+* [[refs/clc_mental_models|Mental models]]
+* [[refs/clc_shared_vision|Shared vision]]
+* [[refs/clc_team_learning|Team learning]]
+* [[refs/clc_system_thinking|Systems thinking]]
 
 Khi các tổ chức làm việc trên bốn nguyên tắc đầu tiên, nguyên tắc thứ năm, tư duy hệ thống xuất hiện để đưa tổ chức lên một tầm cao mới trong việc trở thành một tổ chức học tập.
 

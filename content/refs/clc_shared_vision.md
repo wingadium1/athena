@@ -12,7 +12,7 @@ Sứ mệnh chung này có thể được coi là tầm nhìn chung (Shared Visi
 ### Types of vision
 1. Beating the other competitors: tạm thời, 
 2. Negative vision (avoid as opposed to what it wants to be) không thể tồn tại lâu, làm chệch hướng của tổ chức và không thể đạt được những mục tiêu dài hạn
-3. Shared vision đến từ cá nhân, không nhất thiết đến từ [[refs/personal_mastery|Personal mastery]], không nhất thiết phải từ người lãnh đạo hoặc một quy trình xác định trước. Bất kì ai trong tổ chức có thể lan toả tầm nhìn của mình đến những người khác và sẽ có những phản ứng có thể có sau đây:
+3. Shared vision đến từ cá nhân, không nhất thiết đến từ [[refs/clc_personal_mastery|Personal mastery]], không nhất thiết phải từ người lãnh đạo hoặc một quy trình xác định trước. Bất kì ai trong tổ chức có thể lan toả tầm nhìn của mình đến những người khác và sẽ có những phản ứng có thể có sau đây:
 * Enrollment
 * Buy-in
 * Commitment

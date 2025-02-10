@@ -5,7 +5,7 @@ alias:
 tags: [  DevOps, SAFe® ]
 ---
 
-> [!info] là những giả định, niềm tin và khái quát ăn sâu vào tiềm thức, định hình cách cá nhân nhận thức thế giới và đưa ra quyết định. Chúng đóng vai trò quan trọng trong việc định hình cách các nhóm và cá nhân hiểu công việc của họ, hợp tác và thích ứng với những thay đổi. [[refs/clc_continuous_learning|Continuous Learning Culture]] trong [[refs/safe|SAFe®]] nhấn mạnh tầm quan trọng của việc phát triển các Mental Models này để tăng cường sự nhanh nhẹn và hiệu quả.
+> [!info] là những giả định, niềm tin và khái quát ăn sâu vào tiềm thức, định hình cách cá nhân nhận thức thế giới và đưa ra quyết định. Chúng đóng vai trò quan trọng trong việc định hình cách các nhóm và cá nhân hiểu công việc của họ, hợp tác và thích ứng với những thay đổi. [[refs/continuous_learning|Continuous Learning Culture]] trong [[refs/safe|SAFe®]] nhấn mạnh tầm quan trọng của việc phát triển các Mental Models này để tăng cường sự nhanh nhẹn và hiệu quả.
 
 Khi cá nhân xây dựng [[refs/clc_personal_mastery|Personal Mastery]] họ sẽ cần đối phó với creative tension và khác biệt với thực tại (từ nhận thức về cách thế giới vận hành).
 
