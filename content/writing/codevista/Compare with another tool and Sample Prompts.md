@@ -196,123 +196,138 @@ Integration Tests:
 This comprehensive guide shows how to leverage CodeVista's capabilities effectively while incorporating best practices from other AI coding assistants. The key is to be specific, provide context, and use the appropriate command for each task.
 
 # Sample Prompts
-Here are **200 sample prompts** for CodeVista, categorized into various use cases such as **code generation**, **refactoring**, **testing**, **debugging**, **performance optimization**, **security enhancement**, and more. These prompts are designed to help developers utilize CodeVista effectively.
+
+Here are more than **100 sample prompts** for CodeVista, categorized into various use cases based on the features and capabilities outlined in the uploaded document. These prompts are designed to help developers maximize their use of CodeVista.
 
 ---
 
-## **1. Code Generation Prompts**
-1. Generate a function to calculate the factorial of a number.
-2. Create a REST API endpoint for user registration.
-3. Write a function to sort an array using quicksort.
-4. Generate code for connecting to a PostgreSQL database.
-5. Write a function to validate email addresses.
-6. Create a React component for a login form.
-7. Generate a Python script to scrape data from a webpage.
-8. Write a function to find the longest palindrome in a string.
-9. Generate a class to handle file uploads in Node.js.
-10. Create a function to calculate the Fibonacci sequence.
+### **1. Code Explanation Prompts**
+1. Explain the purpose of @function:getUserData.
+2. What does this code do? @selected_code.
+3. Explain the logic of the @class:OrderProcessor class.
+4. Explain the difference between `let` and `var` in JavaScript.
+5. Explain why this SQL query is slow: @selected_code.
+6. Explain the algorithm used in @function:sortArray.
+7. What is the time complexity of this function? @selected_code.
+8. Explain the purpose of @current_file.
+9. Explain the usage of recursion in @function:calculateFactorial.
+10. What does this regular expression do? `/[a-z]{3,}/`.
 
 ---
 
-## **2. Code Refactoring Prompts**
-1. Refactor this code to use async/await instead of promises.
-2. Simplify the logic in the `calculateDiscount` function.
-3. Convert this JavaScript code to TypeScript.
-4. Refactor the `fetchData` function to improve readability.
-5. Split the `UserService` class into smaller, more focused classes.
-6. Replace nested if-else blocks with a switch statement.
-7. Refactor this code to follow the SOLID principles.
-8. Optimize this function to reduce its time complexity.
-9. Refactor this legacy code to use modern ES6+ syntax.
-10. Extract reusable components from this React code.
+### **2. Code Fixing Prompts**
+1. Fix this code: @selected_code.
+2. Fix the syntax error in @function:fetchData.
+3. Fix the performance bottleneck in @class:DataProcessor.
+4. Fix the null pointer exception in @selected_code.
+5. Fix this error: "TypeError: undefined is not a function" in @current_file.
+6. Fix the security vulnerability in @function:processPayment.
+7. Fix the memory leak in @function:handleLargeData.
+8. Fix the deprecated API usage in @selected_code.
+9. Fix the SQL injection vulnerability in @function:getUserInput.
+10. Fix the infinite loop in @selected_code.
 
 ---
 
-## **3. Testing Prompts**
-1. Generate unit tests for the `validateUser` function.
-2. Write integration tests for the `OrderService` class.
-3. Create test cases for edge scenarios in `calculateTotal`.
-4. Write a Jest test for a React component.
-5. Generate a test suite for the `PaymentProcessor` module.
-6. Create mocks for external API calls in the `fetchData` function.
-7. Write a Cypress test for the login page.
-8. Generate test cases to validate input sanitization.
-9. Write a test for the `processTransaction` function with invalid data.
-10. Create end-to-end tests for the checkout flow.
+### **3. Code Autocompletion Prompts**
+1. Autocomplete this function: @selected_code.
+2. Suggest a completion for @function:calculateTax.
+3. Complete this SQL query: `SELECT * FROM users WHERE`.
+4. Complete the React component for a login form.
+5. Complete the missing logic in @function:processOrder.
+6. Suggest autocompletion for this Python script: @current_file.
+7. Complete the function to fetch data from an API.
+8. Provide a completion for this HTML form: `<form>`.
+9. Autocomplete the CSS for a responsive grid layout.
+10. Suggest autocompletion for the @class:UserController class.
 
 ---
 
-## **4. Debugging Prompts**
-1. Debug this code and identify potential null pointer exceptions.
-2. Find and fix memory leaks in the `processData` function.
-3. Debug this SQL query to fix syntax errors.
-4. Identify the root cause of the infinite loop in this code.
-5. Debug the `fetchData` function to handle API timeout errors.
-6. Fix the "undefined is not a function" error in this JavaScript code.
-7. Analyze the stack trace and suggest a fix for the crash.
-8. Debug this Python script to fix the `KeyError`.
-9. Identify and fix off-by-one errors in the loop.
-10. Debug the race condition in this multithreaded code.
+### **4. Unit Testing Prompts**
+1. Generate unit tests for @function:validateUserInput.
+2. Write Jest tests for @class:OrderProcessor.
+3. Generate test cases for edge scenarios in @function:calculateDiscount.
+4. Write a unit test for this code: @selected_code.
+5. Create a test suite for @current_file.
+6. Generate test cases for input validation in @function:processData.
+7. Write a test for the @function:fetchUserData function with mock API calls.
+8. Generate unit tests for @class:PaymentService.
+9. Write test cases for this function: @selected_code.
+10. Generate test cases for invalid inputs in @function:calculateFactorial.
 
 ---
 
-## **5. Performance Optimization Prompts**
-1. Optimize the `calculateSum` function to handle large datasets.
-2. Suggest caching strategies for the `fetchData` function.
-3. Optimize this SQL query to reduce execution time.
-4. Improve the performance of this React component.
-5. Optimize this code to reduce memory usage.
-6. Suggest performance improvements for the `processOrders` function.
-7. Optimize the API response time for the `getUserData` endpoint.
-8. Reduce the time complexity of this algorithm.
-9. Suggest lazy loading for images in this web application.
-10. Optimize the database schema for faster queries.
+### **5. Refactoring Prompts**
+1. Refactor this code to use async/await: @selected_code.
+2. Refactor @function:processData to improve readability.
+3. Refactor @class:UserManager to follow the SOLID principles.
+4. Refactor this legacy code to use ES6+ syntax: @current_file.
+5. Refactor @function:fetchOrders to reduce time complexity.
+6. Refactor the nested if-else blocks in @selected_code.
+7. Refactor @function:calculateTotal to use a functional programming approach.
+8. Refactor this code to use dependency injection: @selected_code.
+9. Refactor @class:OrderService to split responsibilities into smaller classes.
+10. Refactor this code to improve maintainability: @current_file.
 
 ---
 
-## **6. Security Enhancement Prompts**
-1. Add input validation to the `processUserInput` function.
-2. Implement CSRF protection for this web application.
-3. Check for SQL injection vulnerabilities in this code.
-4. Add encryption for sensitive data in the `UserService` class.
-5. Suggest security improvements for the login endpoint.
-6. Implement rate limiting for the `getUserData` API.
-7. Add JWT token validation to this middleware.
-8. Check for XSS vulnerabilities in this HTML template.
-9. Suggest best practices for handling user passwords.
-10. Add logging for unauthorized access attempts.
+### **6. Performance Optimization Prompts**
+1. Optimize the performance of @function:fetchData.
+2. Suggest caching strategies for @function:getUserDetails.
+3. Optimize this SQL query: @selected_code.
+4. Improve the performance of @class:DataProcessor.
+5. Optimize the API response time of @function:getOrders.
+6. Reduce the time complexity of @function:sortArray.
+7. Optimize @function:processLargeDataset for memory usage.
+8. Suggest performance improvements for @class:OrderManager.
+9. Optimize the database schema in @current_file.
+10. Improve the load time of this web page: @selected_code.
 
 ---
 
-## **7. Documentation Prompts**
-1. Generate JSDoc comments for the `processOrder` function.
-2. Create API documentation for the `UserService` class.
-3. Write a README file for this project.
-4. Generate comments explaining the logic in the `calculateTax` function.
-5. Document the parameters and return values of this function.
-6. Write a migration guide for upgrading from v1 to v2.
-7. Create a UML diagram for the `OrderService` architecture.
-8. Document the dependencies and setup instructions for this project.
-9. Generate inline comments for this complex algorithm.
-10. Write a high-level overview of the system architecture.
+### **7. Security Enhancement Prompts**
+1. Add input validation to @function:processUserInput.
+2. Check for SQL injection vulnerabilities in @selected_code.
+3. Implement CSRF protection in @current_file.
+4. Add encryption for sensitive data in @class:UserService.
+5. Suggest security improvements for @function:loginUser.
+6. Check for XSS vulnerabilities in @function:renderHTML.
+7. Add JWT validation to @function:verifyToken.
+8. Enhance the security of @class:PaymentGateway.
+9. Add rate limiting to @function:handleRequests.
+10. Check for potential vulnerabilities in @current_file.
 
 ---
 
-## **8. Architecture Design Prompts**
+### **8. Documentation Prompts**
+1. Generate JSDoc comments for @function:processOrder.
+2. Add docstrings to all functions in @current_file.
+3. Create API documentation for @class:OrderService.
+4. Write a README file for this project.
+5. Generate comments explaining @function:calculateTax.
+6. Document the parameters and return values of @function:fetchUserData.
+7. Create a UML diagram for @class:UserManager.
+8. Write a high-level overview of the system architecture in @current_file.
+9. Generate inline comments for @selected_code.
+10. Document the dependencies and setup instructions for this project.
+
+---
+
+### **9. Architecture Design Prompts**
 1. Suggest a microservices architecture for this project.
 2. Design a database schema for an e-commerce platform.
-3. Create an event-driven architecture for the `OrderService`.
+3. Create an event-driven architecture for @class:OrderProcessor.
 4. Suggest design patterns for building a scalable API.
 5. Propose a CQRS pattern implementation for this system.
-6. Design a caching strategy for frequently accessed data.
-7. Create a high-level architecture diagram for this application.
+6. Design a caching strategy for @function:getFrequentlyAccessedData.
+7. Create a high-level architecture diagram for @current_file.
 8. Suggest improvements to the current monolithic architecture.
 9. Propose a message queue system for asynchronous processing.
 10. Design a multi-tenant database schema for this SaaS platform.
 
 ---
 
-## **9. Frontend Development Prompts**
+### **10. Frontend Development Prompts**
 1. Create a responsive navigation bar using Tailwind CSS.
 2. Generate a React component for a product card.
 3. Write a function to handle form validation in Vue.js.
@@ -326,7 +341,7 @@ Here are **200 sample prompts** for CodeVista, categorized into various use case
 
 ---
 
-## **10. Backend Development Prompts**
+### **11. Backend Development Prompts**
 1. Write an Express middleware to log API requests.
 2. Generate a Flask route to handle file uploads.
 3. Create a GraphQL resolver for fetching user data.
@@ -340,7 +355,7 @@ Here are **200 sample prompts** for CodeVista, categorized into various use case
 
 ---
 
-## **11. DevOps Prompts**
+### **12. DevOps Prompts**
 1. Write a Dockerfile for this Node.js application.
 2. Generate a Kubernetes deployment file for this service.
 3. Create a CI/CD pipeline using GitHub Actions.
@@ -354,21 +369,7 @@ Here are **200 sample prompts** for CodeVista, categorized into various use case
 
 ---
 
-## **12. Data Science Prompts**
-1. Write a Python function to clean a dataset.
-2. Generate a script to train a machine learning model using scikit-learn.
-3. Write a function to visualize data using Matplotlib.
-4. Generate a SQL query to analyze sales data.
-5. Write a function to preprocess text data for NLP tasks.
-6. Create a script to perform sentiment analysis using Hugging Face.
-7. Generate a function to calculate the correlation matrix of a dataset.
-8. Write a script to scrape and analyze stock market data.
-9. Create a function to cluster data using K-means.
-10. Generate a script to forecast time series data.
-
----
-
-## **13. Miscellaneous Prompts**
+### **13. Miscellaneous Prompts**
 1. Write a script to automate file renaming.
 2. Generate a function to calculate the Levenshtein distance between two strings.
 3. Create a chatbot using Python and Flask.
@@ -382,7 +383,26 @@ Here are **200 sample prompts** for CodeVista, categorized into various use case
 
 ---
 
-### **Additional Prompts (131-200)**
-- These additional prompts include variations of the above categories and specific use cases for different programming languages, frameworks, and tools.
+### **14. Advanced Prompts**
+1. Generate a function to perform sentiment analysis using Hugging Face.
+2. Write a script to scrape and analyze stock market data.
+3. Create a function to cluster data using K-means.
+4. Generate a script to forecast time series data.
+5. Write a Python function to clean a dataset.
+6. Generate a SQL query to analyze sales data.
+7. Write a function to preprocess text data for NLP tasks.
+8. Create a script to train a machine learning model using scikit-learn.
+9. Write a function to visualize data using Matplotlib.
+10. Generate a function to calculate the correlation matrix of a dataset.
 
-If you'd like more prompts in a specific category or tailored to your needs, let me know!
+---
+
+### **15. Additional Prompts**
+These include variations of the above prompts tailored for specific programming languages, frameworks, or tools. Examples:
+1. Refactor this Python script to improve readability.
+2. Generate a test case for this Java code: @selected_code.
+3. Write a function to implement OAuth2 authentication in @current_file.
+4. Create a CI/CD pipeline for deploying a React app.
+5. Suggest improvements to the GraphQL schema in @current_file.
+
+Let me know if you'd like more prompts in a specific category or tailored for a particular use case!
