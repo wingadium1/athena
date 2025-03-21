@@ -2,14 +2,12 @@ Trong các hệ thống phân tán, một trong những vấn đề khó khăn n
 
 Hình dung như này, ngay cả khi bạn có một hệ thống với response time trung bình của một service là chấp nhận được, có một tỷ lệ nhỏ các yêu cầu có thể mất thời gian dài hơn đáng kể, gây ra trải nghiệm người dùng kém. 
 ![[Screenshot 2025-03-21 at 21.59.40.png]]
-Ở hình minh hoạ này, khi theo dõi target response time avg trên load balancer, chúng ta có thể thấy chỉ số khá tốt, tuy nhiên khi xét phân vị p99 và Max, con số khác xa nhưng với p80 con số lại gần với average, tức là đâu đó có một phần nhỏ một vài % số request bị chậm hơn hẳn.
+Ở hình minh hoạ này, khi theo dõi target response time avg trên load balancer, chúng ta có thể thấy chỉ số khá tốt, tuy nhiên khi xét phân vị p99 và Max, con số khá lớn nhưng với p80 con số lại gần với average, tức là đâu đó có một phần nhỏ một vài % số request bị chậm hơn hẳn.
 
 Vấn đề này thường được gọi là vấn đề "**[tail latency](https://andrewpakhomov.com/posts/latency-tail-latency-and-response-time-in-distributed-systems/)**", và nó được minh hoạ như này
 ![[Pasted image 20250321214431.png]]
 
-Một người bạn cùng trường đại học đã [đề cập](https://quanghoang.substack.com/p/50-days-of-sd-hedged-request) rằng tail latency là một thứ đáng quan tâm ở các công ty lớn, và ngay cả ở một project không được optimize nhiều lắm trong quá trình làm việc của tôi thì con số những request chậm hơn hẳn cũng chỉ là 1-5%, vậy điều gì làm chúng ta phải lo lắng về việc nó chậm một số lượng request nhỏ đến thế.
-
-Dưới đây là đoạn viết lại với ví dụ về việc dựng một service feed dựa trên khoảng 10 service độc lập:
+Một người bạn cùng trường đại học đã [đề cập](https://quanghoang.substack.com/p/50-days-of-sd-hedged-request) rằng tail latency là một thứ đáng quan tâm ở các công ty lớn. Vậy điều gì làm chúng ta phải lo lắng về việc nó chậm một số lượng request nhỏ đến thế, ngay cả ở một project không được optimize nhiều lắm trong quá trình làm việc của tôi thì con số những request chậm hơn hẳn cũng chỉ là 1-5% nếu chúng ta không biết rằng nó đang chậm một số lượng request nhỏ đến thế. Thế nhưng nó có thể gây ra sự bất tiện cho những người dùng nếu họ gặp phải những request chậm hơn nhiều so với các request bình thường.
 
 ---
 
