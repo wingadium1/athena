@@ -16,18 +16,17 @@ Giả sử chúng ta cần xây dựng một service feed bằng cách gọi kho
 Do độ trễ cuối cùng của service feed phụ thuộc vào service trả về kết quả chậm nhất, xác suất để người dùng gặp phải độ trễ lớn hơn 1 giây được tính như sau:
 
 - Xác suất mỗi service phản hồi nhanh (≤ 1 giây):  
-$$
-P(\text{fast}) = 99\% = 0.99
-$$
+  $$
+  P(\text{fast}) = 99\% = 0.99
+  $$
 - Xác suất cả 10 service đều phản hồi nhanh (≤ 1 giây):  
   $$
 	P(\text{all fast}) = 0.99^{10} \approx 0.9044 = 90.44\%
-   $$
-
+  $$
 - Như vậy, xác suất có ít nhất một service phản hồi chậm hơn 1 giây là:  
-$$
-P(\text{at least 1 slow}) = 1 - P(\text{all fast}) = 1 - 0.9044 = 0.0956 = 9.56\%
-$$
+  $$
+  P(\text{at least 1 slow}) = 1 - P(\text{all fast}) = 1 - 0.9044 = 0.0956 = 9.56\%
+  $$
 Điều này cho thấy, dù mỗi service riêng lẻ chỉ có 1% khả năng bị chậm, nhưng khi kết hợp 10 service lại với nhau, xác suất người dùng gặp độ trễ lớn hơn 1 giây đã tăng lên khoảng 9.56%. Nói cách khác, một tỷ lệ nhỏ latency bất thường ở từng service riêng lẻ cũng có thể gây ảnh hưởng đáng kể đến trải nghiệm chung của người dùng. Ở ví dụ trên con số của chúng tôi cũng tầm tầm đó, vậy có cách nào giải quyết không?
 
 May thay khi tìm hiểu về gRPC, Google có đề cập đến một kỹ thuật gọi là [Request Hedging hay Hedged Request](https://grpc.io/docs/guides/request-hedging/) gì đó

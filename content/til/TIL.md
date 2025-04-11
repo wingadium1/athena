@@ -5,6 +5,12 @@ tags: [ TIL ]
 
 TIL
 ====
+## 2025-03-24
+
+律师
+Lǜshī
+
+The OP is asking how to type characters, using a pinyin IME, when those characters have a `ü` in their pinyin spelling. For example, how do you type `绿`=`lü`? This is different than asking how to actually type the letter `ü`. The answer is to type a `v`. To follow the example, change to the pinyin IME, type `lv` and select `绿`.
 
 2024-05-28
 ----
