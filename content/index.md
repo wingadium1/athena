@@ -1,6 +1,6 @@
 # Wiki Index
 
-_Last updated: 2026-04-08 (ingest: tetsu-kasuya-46-method)_
+_Last updated: 2026-04-08 (ingest: dang-phong-21-nam-vien-tro-my)_
 
 Catalog của toàn bộ Athena Wiki. AI agent cập nhật file này sau mỗi lần ingest.
 
@@ -8,11 +8,14 @@ Catalog của toàn bộ Athena Wiki. AI agent cập nhật file này sau mỗi 
 
 ## Permanent Notes
 
-| Note                                                               | Domain  | Summary                                                          |
-| ------------------------------------------------------------------ | ------- | ---------------------------------------------------------------- |
-| [[permanent/llm-wiki-pattern\|LLM Wiki Pattern]]                   | PKM/LLM | Pattern xây dựng knowledge base với LLM làm maintainer           |
-| [[permanent/rag-vs-compiled-knowledge\|RAG vs Compiled Knowledge]] | PKM/LLM | So sánh RAG (re-derive mỗi lần) vs compiled knowledge (tích lũy) |
-| [[permanent/zettelkasten\|Zettelkasten]]                           | PKM     | Phương pháp atomic notes + linking của Niklas Luhmann            |
+| Note                                                                                 | Domain            | Summary                                                                        |
+| ------------------------------------------------------------------------------------ | ----------------- | ------------------------------------------------------------------------------ |
+| [[permanent/llm-wiki-pattern\|LLM Wiki Pattern]]                                     | PKM/LLM           | Pattern xây dựng knowledge base với LLM làm maintainer                         |
+| [[permanent/rag-vs-compiled-knowledge\|RAG vs Compiled Knowledge]]                   | PKM/LLM           | So sánh RAG (re-derive mỗi lần) vs compiled knowledge (tích lũy)               |
+| [[permanent/zettelkasten\|Zettelkasten]]                                             | PKM               | Phương pháp atomic notes + linking của Niklas Luhmann                          |
+| [[permanent/cip-counterpart-fund-viet-nam\|CIP và Counterpart Fund]]                 | Lịch sử/Kinh tế   | Cơ chế ẩn lương QLVNCH trong viện trợ kinh tế Mỹ — 1955–1975                   |
+| [[permanent/map-vien-tro-vu-khi-qlvnch\|MAP và EDA — Định Giá Thấp Vũ Khí Viện Trợ]] | Lịch sử/Kinh tế   | Structural underreporting vũ khí viện trợ qua cơ chế EDA book value            |
+| [[permanent/lau-nam-goc-qua-giam-sat-quoc-hoi\|Lầu Năm Góc và Giám Sát Quốc Hội]]    | Lịch sử/Chính trị | Bức tranh tổng thể về khoảng trống oversight của Quốc Hội Mỹ trong Vietnam War |
 
 ---
 
@@ -22,6 +25,7 @@ Catalog của toàn bộ Athena Wiki. AI agent cập nhật file này sau mỗi 
 | --------------------------------------------------------------------- | ---------------------- | ---------- |
 | [[literature/karpathy-llm-wiki\|LLM Wiki — Karpathy]]                 | Andrej Karpathy (gist) | 2026-04-08 |
 | [[literature/tetsu-kasuya-46-method\|Phương pháp 4:6 — Tetsu Kasuya]] | Project Barista        | 2026-04-08 |
+| [[literature/dang-phong-21-nam-vien-tro-my\|21 Năm Viện Trợ Mỹ ở VN]] | Đặng Phong (sách)      | 2026-04-08 |
 
 ---
 

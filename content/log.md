@@ -4,6 +4,19 @@ Append-only record of operations. Format: `## [YYYY-MM-DD] operation | descripti
 
 ---
 
+## [2026-04-08] ingest | 21 Năm Viện Trợ Mỹ ở Việt Nam — Đặng Phong
+
+Key concepts added: cip-counterpart-fund-viet-nam, map-vien-tro-vu-khi-qlvnch, lau-nam-goc-qua-giam-sat-quoc-hoi
+Pages touched: 1 literature note (mới), 3 permanent notes (mới), index.md (cập nhật)
+
+Highlights:
+
+- CIP counterpart fund: cơ chế ẩn lương QLVNCH trong viện trợ kinh tế — ngoài tầm giám sát Quốc Hội Mỹ
+- MAP/EDA: structural underreporting vũ khí viện trợ qua depreciated book value vs replacement cost
+- Bức tranh tổng thể: supplemental appropriations + Gulf of Tonkin deception + Pentagon Papers
+
+---
+
 ## [2026-04-08] capture | Kinh nghiệm coldbrew tại nhà
 
 Ghi lại journey: Hario Filter-in Bottle (vỡ) → Soriso 600ml (vấn đề filter nhỏ) → workaround túi lọc trà + fine robusta 1:10.
