@@ -1,6 +1,6 @@
 # Wiki Index
 
-_Last updated: 2026-04-08 (ingest: dang-phong-21-nam-vien-tro-my)_
+_Last updated: 2026-04-09 (query: OpenStack Neutron external-to-tenant network connectivity)_
 
 Catalog của toàn bộ Athena Wiki. AI agent cập nhật file này sau mỗi lần ingest.
 
@@ -8,30 +8,36 @@ Catalog của toàn bộ Athena Wiki. AI agent cập nhật file này sau mỗi 
 
 ## Permanent Notes
 
-| Note                                                                                 | Domain            | Summary                                                                        |
-| ------------------------------------------------------------------------------------ | ----------------- | ------------------------------------------------------------------------------ |
-| [[permanent/llm-wiki-pattern\|LLM Wiki Pattern]]                                     | PKM/LLM           | Pattern xây dựng knowledge base với LLM làm maintainer                         |
-| [[permanent/rag-vs-compiled-knowledge\|RAG vs Compiled Knowledge]]                   | PKM/LLM           | So sánh RAG (re-derive mỗi lần) vs compiled knowledge (tích lũy)               |
-| [[permanent/zettelkasten\|Zettelkasten]]                                             | PKM               | Phương pháp atomic notes + linking của Niklas Luhmann                          |
-| [[permanent/cip-counterpart-fund-viet-nam\|CIP và Counterpart Fund]]                 | Lịch sử/Kinh tế   | Cơ chế ẩn lương QLVNCH trong viện trợ kinh tế Mỹ — 1955–1975                   |
-| [[permanent/map-vien-tro-vu-khi-qlvnch\|MAP và EDA — Định Giá Thấp Vũ Khí Viện Trợ]] | Lịch sử/Kinh tế   | Structural underreporting vũ khí viện trợ qua cơ chế EDA book value            |
-| [[permanent/lau-nam-goc-qua-giam-sat-quoc-hoi\|Lầu Năm Góc và Giám Sát Quốc Hội]]    | Lịch sử/Chính trị | Bức tranh tổng thể về khoảng trống oversight của Quốc Hội Mỹ trong Vietnam War |
+| Note                                                                                                       | Domain            | Summary                                                                        |
+| ---------------------------------------------------------------------------------------------------------- | ----------------- | ------------------------------------------------------------------------------ |
+| [[permanent/llm-wiki-pattern\|LLM Wiki Pattern]]                                                           | PKM/LLM           | Pattern xây dựng knowledge base với LLM làm maintainer                         |
+| [[permanent/rag-vs-compiled-knowledge\|RAG vs Compiled Knowledge]]                                         | PKM/LLM           | So sánh RAG (re-derive mỗi lần) vs compiled knowledge (tích lũy)               |
+| [[permanent/zettelkasten\|Zettelkasten]]                                                                   | PKM               | Phương pháp atomic notes + linking của Niklas Luhmann                          |
+| [[permanent/cip-counterpart-fund-viet-nam\|CIP và Counterpart Fund]]                                       | Lịch sử/Kinh tế   | Cơ chế ẩn lương QLVNCH trong viện trợ kinh tế Mỹ — 1955–1975                   |
+| [[permanent/map-vien-tro-vu-khi-qlvnch\|MAP và EDA — Định Giá Thấp Vũ Khí Viện Trợ]]                       | Lịch sử/Kinh tế   | Structural underreporting vũ khí viện trợ qua cơ chế EDA book value            |
+| [[permanent/lau-nam-goc-qua-giam-sat-quoc-hoi\|Lầu Năm Góc và Giám Sát Quốc Hội]]                          | Lịch sử/Chính trị | Bức tranh tổng thể về khoảng trống oversight của Quốc Hội Mỹ trong Vietnam War |
+| [[permanent/openstack-overlay-networks\|OpenStack Overlay Networks (VXLAN/GRE/GENEVE)]]                     | Infrastructure    | Overlay tunnels giải quyết VLAN limit; VNI allocation và OVS flow pipeline     |
+| [[permanent/openstack-external-network-mapping\|OpenStack External Network Mapping]]                        | Infrastructure    | Provider networks kết nối vào tenant overlays qua OVS bridge + router namespace |
+| [[permanent/openstack-dvr-architecture\|DVR — Distributed Virtual Router]]                                  | Infrastructure    | Phân tán L3 routing ra compute nodes; east-west + floating IP north-south      |
+| [[permanent/openstack-floating-ip-nat\|Floating IP NAT Mechanism]]                                          | Infrastructure    | DNAT/SNAT iptables rules; centralized vs. DVR models                           |
+| [[permanent/openstack-bgp-evpn-external\|BGP/EVPN External Connectivity in OpenStack]]                      | Infrastructure    | Dynamic routing at scale: neutron-dynamic-routing, BGPVPN, ovn-bgp-agent      |
 
 ---
 
 ## Literature Notes
 
-| Note                                                                  | Source                 | Date Read  |
-| --------------------------------------------------------------------- | ---------------------- | ---------- |
-| [[literature/karpathy-llm-wiki\|LLM Wiki — Karpathy]]                 | Andrej Karpathy (gist) | 2026-04-08 |
-| [[literature/tetsu-kasuya-46-method\|Phương pháp 4:6 — Tetsu Kasuya]] | Project Barista        | 2026-04-08 |
-| [[literature/dang-phong-21-nam-vien-tro-my\|21 Năm Viện Trợ Mỹ ở VN]] | Đặng Phong (sách)      | 2026-04-08 |
+| Note                                                                          | Source                    | Date Read  |
+| ----------------------------------------------------------------------------- | ------------------------- | ---------- |
+| [[literature/karpathy-llm-wiki\|LLM Wiki — Karpathy]]                         | Andrej Karpathy (gist)    | 2026-04-08 |
+| [[literature/tetsu-kasuya-46-method\|Phương pháp 4:6 — Tetsu Kasuya]]         | Project Barista           | 2026-04-08 |
+| [[literature/dang-phong-21-nam-vien-tro-my\|21 Năm Viện Trợ Mỹ ở VN]]         | Đặng Phong (sách)         | 2026-04-08 |
+| [[literature/openstack-neutron-external-connectivity\|OpenStack Neutron Docs]] | OpenStack official docs   | 2026-04-09 |
 
 ---
 
 ## Maps of Content
 
-_(Tạo khi một domain có 5+ permanent notes)_
+- [[maps/map-of-openstack-networking\|OpenStack Networking]] — Overlay, DVR, Floating IP, BGP/EVPN
 
 ---
 

@@ -52,3 +52,39 @@ Chuyển đổi từ manual wiki sang AI-maintained wiki theo pattern của Karp
 
 **Notes hiện có:** ~100 files trong legacy folders
 **Permanent notes:** 0 (chưa ingest source nào)
+
+---
+
+## [2026-04-09] ingest | OpenStack Neutron Overlay Networks — VXLAN/GRE/GENEVE research
+
+Key concepts added: vlan-4094-limit, vxlan-vni-scalability, openstack-neutron-overlay-protocols, openstack-ml2-overlay-config
+Pages touched: 1 literature note (mới), 4 permanent notes (mới), index.md (cập nhật)
+
+Highlights:
+
+- Vấn đề: 12-bit 802.1Q VID → 4094 VLAN limit, không đủ cho large-scale multi-tenant cloud
+- VXLAN (RFC 7348): 24-bit VNI → 16.7M segments. UDP:4789. Fixed 8-byte header = limitation cho metadata
+- GRE: point-to-point, không support OVN, poor ECMP. Đang fade out trong deployments mới
+- GENEVE (RFC 8926): 24-bit VNI + variable-length TLV options. Default tunnel type của OVN. Cho phép in-band metadata, service chaining, transport security
+- OVN + VXLAN caveat: OVN giảm identifier xuống 12-bit → chỉ còn 4096 networks (phủ nhận mục đích của VXLAN)
+- Production recommendation 2026: GENEVE + OVN cho deployments mới; VXLAN + OVS + L2 population cho legacy
+- Critical footgun: ml2_conf.ini max_header_size default=30, OVN cần >=38
+
+---
+
+## [2026-04-09] query | OpenStack Neutron external-to-tenant network connectivity (deep technical)
+
+**Context**: Multi-tenant OpenStack deployment needing to map external networks into tenant overlay networks beyond VLAN 4094 limit.
+
+Key concepts researched and filed:
+- `openstack-overlay-networks` — VXLAN/GRE/GENEVE protocols, VNI allocation, OVS flow pipeline
+- `openstack-external-network-mapping` — Provider network → router namespace → overlay bridge architecture
+- `openstack-dvr-architecture` — DVR design, modes (dvr/dvr_snat/legacy), FIP namespace, IP consumption
+- `openstack-floating-ip-nat` — iptables DNAT/SNAT in qrouter namespace, centralized vs. DVR path
+- `openstack-bgp-evpn-external` — neutron-dynamic-routing, networking-bgpvpn, ovn-bgp-agent + FRR/EVPN
+
+Pages touched: 5 permanent notes (mới), 1 literature note (mới), 1 MOC (mới), index.md (cập nhật)
+
+Sources: OpenStack official docs (Neutron 25.x/28.x), Eran Gampel DVR blog, Red Hat DVR guide, networking-bgpvpn docs, ovn-bgp-agent docs, Red Hat EVPN/OpenShift article
+
+Answer filed as permanent notes: YES (5 notes + MOC)
