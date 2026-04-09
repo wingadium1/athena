@@ -1,6 +1,7 @@
 ---
 title: "Floating IP NAT Mechanism in OpenStack Neutron"
-aliases: ["floating IP Neutron", "DNAT SNAT Neutron", "one-to-one NAT OpenStack", "qrouter iptables"]
+aliases:
+  ["floating IP Neutron", "DNAT SNAT Neutron", "one-to-one NAT OpenStack", "qrouter iptables"]
 tags: [infrastructure, openstack, networking, nat, floating-ip]
 created: 2026-04-09
 updated: 2026-04-09
@@ -28,11 +29,12 @@ In the **centralized (non-DVR)** model, inside `qrouter-<uuid>`:
 # DNAT rule: incoming traffic to floating IP → VM private IP
 -A neutron-l3-agent-PREROUTING -d 203.0.113.17 -j DNAT --to-destination 192.0.2.4
 
-# SNAT rule: outgoing traffic from VM private IP → floating IP  
+# SNAT rule: outgoing traffic from VM private IP → floating IP
 -A neutron-l3-agent-float-snat -s 192.0.2.4 -j SNAT --to-source 203.0.113.17
 ```
 
 For SNAT on fixed-IP instances (no floating IP):
+
 ```bash
 # SNAT to router's external IP (masquerade)
 -A neutron-l3-agent-snat -o qg-<uuid> -j SNAT --to-source 203.0.113.11
@@ -62,6 +64,7 @@ Internet → Physical NIC → br-provider → br-int → fip namespace (fg- port
 ```
 
 Egress (VM → Internet with floating IP, DVR):
+
 ```
 VM → br-int → qrouter namespace: SNAT (192.0.2.4 → 203.0.113.17)
   qrouter → fpr- veth → fip namespace
@@ -70,10 +73,10 @@ VM → br-int → qrouter namespace: SNAT (192.0.2.4 → 203.0.113.17)
 
 ## Floating IP vs SNAT: When to Use Which
 
-| Scenario | Mechanism | Who initiates |
-|----------|-----------|---------------|
-| VM needs outbound internet | SNAT (shared router IP) | VM only |
-| External service needs to reach VM directly | Floating IP (DNAT) | External host |
+| Scenario                                            | Mechanism                       | Who initiates    |
+| --------------------------------------------------- | ------------------------------- | ---------------- |
+| VM needs outbound internet                          | SNAT (shared router IP)         | VM only          |
+| External service needs to reach VM directly         | Floating IP (DNAT)              | External host    |
 | Services not yet in tenant subnet needing VM access | Floating IP on external network | External service |
 
 > [!important] Your Use Case
@@ -89,7 +92,7 @@ VM → br-int → qrouter namespace: SNAT (192.0.2.4 → 203.0.113.17)
 
 - [[permanent/openstack-dvr-architecture]] — DVR changes which namespace does the NAT
 - [[permanent/openstack-external-network-mapping]] — provider network where floating IPs live
-- [[permanent/openstack-overlay-networks]] — VXLAN carries the post-DNAT traffic to the VM
+- [[permanent/openstack-neutron-overlay-protocols]] — VXLAN carries the post-DNAT traffic to the VM
 
 ## Sources
 

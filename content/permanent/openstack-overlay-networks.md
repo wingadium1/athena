@@ -4,6 +4,7 @@ aliases: ["VXLAN tenant network", "overlay tunnel Neutron", "Neutron tunnel type
 tags: [infrastructure, openstack, networking, overlay]
 created: 2026-04-09
 updated: 2026-04-09
+archived: true
 ---
 
 ## The Problem: VLAN Exhaustion in Multi-Tenant Clouds

@@ -1,6 +1,7 @@
 ---
 title: "DVR: Distributed Virtual Router in OpenStack Neutron"
-aliases: ["DVR OpenStack", "distributed routing Neutron", "dvr_snat mode", "qrouter namespace compute"]
+aliases:
+  ["DVR OpenStack", "distributed routing Neutron", "dvr_snat mode", "qrouter namespace compute"]
 tags: [infrastructure, openstack, networking, dvr, l3]
 created: 2026-04-09
 updated: 2026-04-09
@@ -22,11 +23,11 @@ This created a single point of failure AND a bandwidth bottleneck: every packet 
 
 Three distinct agent modes:
 
-| Node | `agent_mode` | Role |
-|------|-------------|------|
-| Network node | `dvr_snat` | Handles centralized SNAT only |
-| Compute nodes | `dvr` | Handles east-west + floating IP north-south |
-| Legacy/Centralized | `legacy` | All routing centralized (non-DVR) |
+| Node               | `agent_mode` | Role                                        |
+| ------------------ | ------------ | ------------------------------------------- |
+| Network node       | `dvr_snat`   | Handles centralized SNAT only               |
+| Compute nodes      | `dvr`        | Handles east-west + floating IP north-south |
+| Legacy/Centralized | `legacy`     | All routing centralized (non-DVR)           |
 
 ```ini
 # network node l3_agent.ini
@@ -39,12 +40,14 @@ agent_mode = dvr
 ```
 
 Also requires in `neutron.conf`:
+
 ```ini
 [DEFAULT]
 router_distributed = True
 ```
 
 And in `openvswitch_agent.ini` (both network and compute nodes):
+
 ```ini
 [agent]
 enable_distributed_routing = True
@@ -70,6 +73,7 @@ Reason: SNAT requires maintaining a shared IP pool and connection tracking state
 ## Namespace Topology with DVR
 
 ### On each compute node (with a VM on distributed router):
+
 ```bash
 ip netns list
 # qrouter-78d2f628-137c-4f26-a257-25fc20f203c1   ← router replica
@@ -77,6 +81,7 @@ ip netns list
 ```
 
 ### On the network node:
+
 ```bash
 ip netns list
 # snat-78d2f628-137c-4f26-a257-25fc20f203c1      ← centralized SNAT only
@@ -86,11 +91,13 @@ ip netns list
 ## The FIP Namespace: DVR's Key Innovation
 
 The `fip-<uuid>` namespace (one per external network per compute node) contains:
+
 - A `fg-<uuid>` gateway port (with Proxy ARP) connected to the provider external network
 - A `rfp-<uuid>` ↔ `fpr-<uuid>` point-to-point veth pair connecting to the `qrouter` namespace at 169.254.x.x/31 link-local address
 - The DVR namespace consumes one IP from the external network per compute node
 
 Floating IP DNAT flow (ingress):
+
 ```
 External packet → br-provider → br-int → fip namespace (fg-) → rfp-rfp veth
   → qrouter namespace (DNAT: floating IP → VM private IP) → br-int → VM
@@ -101,6 +108,7 @@ This is why: **each compute node running DVR needs an additional external networ
 ## IP Address Consumption Warning
 
 DVR requires **one external IP per compute node per distributed router**. For a deployment with:
+
 - 10 compute nodes
 - 5 distributed routers with floating IPs
 
@@ -109,6 +117,7 @@ You need 50 external IPs reserved just for DVR gateway ports. Plan your external
 ## DVR + HA (VRRP for SNAT)
 
 DVR and HA can be combined (`--distributed --ha`) for high-availability SNAT:
+
 - Multiple `snat-<uuid>` namespaces on different network nodes
 - Keepalived VRRP provides failover of the SNAT service
 - Max 3 agents per router controlled by `max_l3_agents_per_router`
@@ -125,7 +134,7 @@ max_l3_agents_per_router = 3
 
 - [[permanent/openstack-external-network-mapping]] — how provider networks connect to the DVR
 - [[permanent/openstack-floating-ip-nat]] — the DNAT/SNAT mechanics inside DVR namespaces
-- [[permanent/openstack-overlay-networks]] — VXLAN/GRE tunnels that carry east-west traffic between DVR instances
+- [[permanent/openstack-neutron-overlay-protocols]] — VXLAN/GRE tunnels that carry east-west traffic between DVR instances
 
 ## Sources
 

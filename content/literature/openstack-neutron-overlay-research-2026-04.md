@@ -2,7 +2,7 @@
 title: "OpenStack Neutron Overlay Networks — Research Session"
 type: literature
 source: "https://docs.openstack.org/neutron/latest/admin/intro-overlay-protocols.html"
-author: "OpenStack Docs / RFC 7348 / RFC 8926"
+author: "Research session — OpenStack Foundation docs, RFC 7348 (VXLAN), RFC 8926 (GENEVE)"
 date-read: 2026-04-09
 tags: [networking, OpenStack, Neutron, VXLAN, GENEVE, GRE, overlay, multi-tenancy]
 ---

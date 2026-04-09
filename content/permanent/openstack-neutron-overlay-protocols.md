@@ -58,38 +58,40 @@ GENEVE Header (16 bytes base + variable options):
 ```
 
 Điều này có nghĩa là:
+
 - **In-band metadata**: Security policy tags, region IDs, telemetry data có thể được truyền cùng packet
 - **Service chaining**: NSH (Network Service Header) có thể được embed trong GENEVE options
 - **Transport security**: Có thể mang cryptographic material
 - **Extensibility**: Vendors có thể define custom TLV option classes qua IANA — không cần protocol version bump
 
-RFC 8926 mô tả: *"The data plane is generic and extensible enough to support current and future control planes."* — VXLAN bị locked vào một control plane model (multicast flood-and-learn), GENEVE thì không.
+RFC 8926 mô tả: _"The data plane is generic and extensible enough to support current and future control planes."_ — VXLAN bị locked vào một control plane model (multicast flood-and-learn), GENEVE thì không.
 
 ## So sánh tổng hợp
 
-| Feature | VLAN (802.1Q) | GRE | VXLAN | GENEVE |
-|---|---|---|---|---|
-| RFC | IEEE 802.1Q | 2784/2890 | 7348 | 8926 |
-| Identifier size | 12-bit | 32-bit key | **24-bit VNI** | **24-bit VNI** |
-| Max segments | 4,094 | ~4B | ~16.7M | ~16.7M |
-| Transport | L2 tag | IP (proto 47) | UDP:4789 | UDP:6081 |
-| ECMP friendly | N/A | Poor | **Yes** | **Yes** |
-| Header size | +4 bytes | +4 bytes | +50 bytes | +60+ bytes (variable) |
-| Extensible metadata | No | No | **No** (fixed) | **Yes** (TLV) |
-| OVN support | Yes | **No** | Partial* | **Yes (default)** |
-| Transport security | N/A | Weak | No | Yes (via TLV) |
-| Service chaining | No | No | No | Yes |
-| In-band telemetry | No | No | No | Yes |
-| Kernel requirement | N/A | Any | Any | ≥ 3.18 |
+| Feature             | VLAN (802.1Q) | GRE           | VXLAN          | GENEVE                |
+| ------------------- | ------------- | ------------- | -------------- | --------------------- |
+| RFC                 | IEEE 802.1Q   | 2784/2890     | 7348           | 8926                  |
+| Identifier size     | 12-bit        | 32-bit key    | **24-bit VNI** | **24-bit VNI**        |
+| Max segments        | 4,094         | ~4B           | ~16.7M         | ~16.7M                |
+| Transport           | L2 tag        | IP (proto 47) | UDP:4789       | UDP:6081              |
+| ECMP friendly       | N/A           | Poor          | **Yes**        | **Yes**               |
+| Header size         | +4 bytes      | +4 bytes      | +50 bytes      | +60+ bytes (variable) |
+| Extensible metadata | No            | No            | **No** (fixed) | **Yes** (TLV)         |
+| OVN support         | Yes           | **No**        | Partial\*      | **Yes (default)**     |
+| Transport security  | N/A           | Weak          | No             | Yes (via TLV)         |
+| Service chaining    | No            | No            | No             | Yes                   |
+| In-band telemetry   | No            | No            | No             | Yes                   |
+| Kernel requirement  | N/A           | Any           | Any            | ≥ 3.18                |
 
-_*OVN + VXLAN: identifier bits reduced to 12-bit internally, limiting to 4096 networks and 4096 ports/network_
+_\*OVN + VXLAN: identifier bits reduced to 12-bit internally, limiting to 4096 networks and 4096 ports/network_
 
 ## OVN default: GENEVE
 
 Kể từ khi OVN (Open Virtual Network) trở thành preferred backend cho Neutron, **GENEVE là default tunnel type** trong ML2/OVN deployments. OVN sử dụng GENEVE options để truyền metadata cần thiết cho internal forwarding logic. VXLAN không đủ header space cho điều này.
 
 Từ Neutron docs (OVN install manual):
-> *"Because of limited space in VXLAN VNI to pass over the needed information that requires OVN to identify a packet, the header size to contain the segmentation ID is reduced to 12 bits, that allows a maximum number of 4096 networks."*
+
+> _"Because of limited space in VXLAN VNI to pass over the needed information that requires OVN to identify a packet, the header size to contain the segmentation ID is reduced to 12 bits, that allows a maximum number of 4096 networks."_
 
 ## Trạng thái năm 2026
 
@@ -98,11 +100,26 @@ Từ Neutron docs (OVN install manual):
 - **GRE**: Không support OVN. Ít được dùng trong deployments mới. Chủ yếu còn trong legacy hoặc khi cần specific point-to-point tunneling.
 - **IETF NVO3 WG**: Đã chọn GENEVE làm "common encapsulation" cho network virtualization overlays.
 
+## Encapsulation Path trong OVS (ML2/OVS)
+
+```
+VM vNIC
+  → tap interface (qbr bridge / security group rules)
+  → br-int (internal VLAN tag assigned per network)
+  → br-tun (VLAN ↔ VXLAN VNI translation via OpenFlow rules)
+  → Physical NIC (VXLAN UDP packet sent over underlay IP)
+  → Remote compute node br-tun (unwrap, re-assign internal VLAN)
+  → Remote br-int → target VM
+```
+
+`l2population` mechanism driver pre-populates forwarding tables — eliminating multicast BUM flood — critical for VXLAN at scale.
+
 ## Connections
 
 - [[permanent/vlan-4094-limit]] — vấn đề mà các protocols này giải quyết
 - [[permanent/vxlan-vni-scalability]] — deep dive vào VXLAN VNI
 - [[permanent/openstack-ml2-overlay-config]] — cách configure trong ml2_conf.ini
+- [[permanent/openstack-external-network-mapping]] — cách provider network kết nối vào overlay qua router namespace
 
 ## Sources
 

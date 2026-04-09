@@ -72,11 +72,12 @@ Highlights:
 
 ---
 
-## [2026-04-09] query | OpenStack Neutron external-to-tenant network connectivity (deep technical)
+## [2026-04-09] ingest | OpenStack Neutron external-to-tenant network connectivity (deep technical)
 
 **Context**: Multi-tenant OpenStack deployment needing to map external networks into tenant overlay networks beyond VLAN 4094 limit.
 
 Key concepts researched and filed:
+
 - `openstack-overlay-networks` — VXLAN/GRE/GENEVE protocols, VNI allocation, OVS flow pipeline
 - `openstack-external-network-mapping` — Provider network → router namespace → overlay bridge architecture
 - `openstack-dvr-architecture` — DVR design, modes (dvr/dvr_snat/legacy), FIP namespace, IP consumption

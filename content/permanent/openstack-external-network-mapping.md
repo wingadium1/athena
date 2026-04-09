@@ -11,6 +11,7 @@ updated: 2026-04-09
 Neutron manages two fundamentally different network types:
 
 **Provider Networks** (admin-created): mapped directly to physical network infrastructure. They can be:
+
 - `flat` — untagged, one-to-one bridge mapping to a physical interface
 - `vlan` — 802.1q tagged, up to 4094 per physical network
 - `vxlan`/`gre`/`geneve` — overlay (rare for provider; usually used for self-service)
@@ -29,6 +30,7 @@ In ML2/OVS, Neutron uses two OVS bridges connected via patch ports:
 ```
 
 Configuration in `openvswitch_agent.ini`:
+
 ```
 [ovs]
 bridge_mappings = provider:br-provider
@@ -52,6 +54,7 @@ When a VM on VXLAN VNI 101 sends traffic toward the external network:
 8. Exits physical interface to external network
 
 **Key insight**: The L3 router namespace is the critical translation point. Each Neutron router has:
+
 - One or more `qr-<uuid>` interfaces (one per connected tenant subnet)
 - One `qg-<uuid>` interface (gateway, on the provider/external network)
 
@@ -75,6 +78,7 @@ The router also holds **iptables rules** for NAT (SNAT/DNAT) applied on the `qg-
 ## Multi-External-Network Support (Provider Network Model)
 
 In the modern provider network model (as opposed to the legacy `external_network_bridge`):
+
 - All `qg-` and `qr-` interfaces attach to `br-int` directly
 - Each external network maps to a different VLAN on `br-provider` (or a different `br-provider` bridge)
 - Enables multiple external networks per L3 agent (critical for multi-tenant with separate external pools)
@@ -88,7 +92,7 @@ Both routers coexist on the same `br-int`, isolated by internal VLAN tags.
 
 ## Connections
 
-- [[permanent/openstack-overlay-networks]] — VNI/GRE tunnel segment IDs
+- [[permanent/openstack-neutron-overlay-protocols]] — VNI/GRE tunnel segment IDs
 - [[permanent/openstack-dvr-architecture]] — how DVR distributes this router namespace to compute nodes
 - [[permanent/openstack-floating-ip-nat]] — NAT rules in the router namespace
 

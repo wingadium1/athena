@@ -42,7 +42,7 @@ OpenStack Neutron solves the VLAN-limit problem by using overlay protocols (VXLA
 
 ## Links
 
-- [[permanent/openstack-overlay-networks]]
+- [[permanent/openstack-neutron-overlay-protocols]]
 - [[permanent/openstack-external-network-mapping]]
 - [[permanent/openstack-dvr-architecture]]
 - [[permanent/openstack-floating-ip-nat]]
