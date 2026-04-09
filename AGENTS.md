@@ -12,6 +12,21 @@ This wiki is built on **Quartz** and published at `athena.wingadium.space`. All 
 
 ---
 
+## CRITICAL: Owner-Gated File Creation
+
+> **You MUST NOT create or modify any wiki notes without an explicit owner trigger.**
+
+This is the most important rule. The wiki follows the **Karpathy LLM Wiki pattern**: the human decides what enters the wiki; the AI executes. This means:
+
+- **No autonomous note creation** — even if you just researched something interesting, do NOT file it without the owner saying so
+- **No skipping the INGEST discussion step** — you MUST discuss key takeaways with the owner before writing any files (see INGEST below)
+- **Background/subagents are research tools only** — if you fire background agents to research a topic, their output is for your context only. They MUST NOT write to `content/` directly. Only the main agent, responding to an explicit owner instruction, may write files.
+- **When in doubt, ask** — if you are unsure whether the owner wants something filed, ask. Never assume.
+
+Violation of this rule corrupts the wiki with unvetted content and breaks the human-curated knowledge model.
+
+---
+
 ## Directory Structure
 
 ```
@@ -25,6 +40,8 @@ This wiki is built on **Quartz** and published at `athena.wingadium.space`. All 
   literature/             ← One note per source — summary + key takeaways
   permanent/              ← Atomic concept notes, the backbone of the wiki
   maps/                   ← Maps of Content (MOC) — topic overviews
+  wip/                    ← Work-in-progress notes (longer-form, not yet permanent)
+  writing/                ← Published or draft long-form articles (blog posts, essays)
   refs/                   ← (Legacy) keep as-is, link into permanent/ over time
   til/                    ← (Legacy) Today I Learned — keep as-is
   journal/                ← (Legacy) long-form posts — keep as-is
@@ -34,6 +51,10 @@ This wiki is built on **Quartz** and published at `athena.wingadium.space`. All 
 ```
 
 **Legacy folders** (`refs/`, `til/`, `journal/`) are preserved. Do not move or restructure them unless explicitly asked. Gradually link their content into permanent notes via `[[wikilinks]]`.
+
+**`wip/`** — notes the owner is actively working on; not yet ready for `permanent/`. Do not auto-promote unless asked.
+
+**`writing/`** — long-form articles and blog posts. Treat as read-only unless owner asks for edits.
 
 ---
 
@@ -50,10 +71,15 @@ Quick captures. Created when owner tosses an idea without a source.
 
 ### 2. Literature Note (`content/literature/`)
 
-One note per source. Created during **Ingest** operation.
+One note per source. Created during **INGEST** operation.
 
 - Filename: `slug-of-source-title.md`
 - Frontmatter: title, source (URL/file), author, date-read, tags
+- `author` field rules:
+  - Single source with known author → `author: "Name Surname"`
+  - Official docs → `author: "Organization name"`
+  - Research session spanning multiple sources → `author: "Research session — Source A, Source B, Source C"`
+  - Never fabricate a composite name (e.g. `"OpenStack Docs / RFC 7348"` is wrong — use the research session format)
 - Sections:
   - **Summary** (2–4 sentences, your synthesis — NOT a copy-paste)
   - **Key Ideas** (bullet list, each as a self-contained insight)
@@ -74,7 +100,8 @@ Atomic concept notes. One idea per note. These are the wiki's backbone.
   - **Connections** section with wikilinks to related permanent notes
   - **Sources** section listing literature notes that informed this
 - Rules:
-  - One atomic concept per note — if a note is getting long, split it
+  - **One atomic concept per note** — if a note covers two distinct ideas, split it
+  - If two notes cover the same concept, merge them and archive the duplicate (`archived: true`)
   - Write as if explaining to a smart colleague, not copy-pasting definitions
   - Use `[[wikilinks]]` liberally — this is how the graph gets rich
 
@@ -102,6 +129,8 @@ updated: YYYY-MM-DD
 ---
 ```
 
+To archive a duplicate: add `archived: true` (never delete).
+
 ### Literature note
 
 ```yaml
@@ -109,7 +138,7 @@ updated: YYYY-MM-DD
 title: "Source Title"
 type: literature
 source: "https://url-or-filename"
-author: "Author Name"
+author: "Author Name" # see author field rules above
 date-read: YYYY-MM-DD
 tags: [domain]
 ---
@@ -148,19 +177,26 @@ Always match the owner's existing style in a file when updating it.
 
 Triggered when owner says: "ingest this", "process this article", "I just read...", "ghi chú về...", or drops a file in `raw/`.
 
-**Steps:**
+**Steps — DO NOT skip or reorder:**
 
 1. Read the source thoroughly
-2. Discuss key takeaways with owner (ask 1–2 clarifying questions if needed)
+2. **STOP. Discuss with owner.** Ask 1–2 clarifying questions about their perspective, what surprised them, or what they want emphasized. Do not proceed to writing until you have their input. This step is mandatory — it is what makes the note yours+theirs, not just a summary.
 3. Create a **literature note** in `content/literature/`
 4. Identify which **permanent notes** this source informs:
    - If a concept note exists → update it (add to Sources, refine content)
    - If it doesn't exist → create a new permanent note
+   - If this source overlaps significantly with an existing note → flag for potential merge, do not silently duplicate
 5. Check if any **Maps of Content** should be updated
-6. Update `content/index.md` (add new entries)
+6. Update `content/index.md` (add new entries, update "Last updated" line)
 7. Append to `content/log.md` with format: `## [YYYY-MM-DD] ingest | Source Title`
 
 A single source may touch 5–15 files. That's expected and good.
+
+**What INGEST is NOT:**
+
+- Researching a topic on your own and filing it without the owner having read a source
+- Firing background agents to research and then autonomously writing notes from their output
+- Creating notes "in advance" of the owner's review
 
 ### QUERY
 
@@ -182,10 +218,13 @@ Triggered when owner says "lint the wiki", "health check", "kiểm tra wiki".
 
 - Orphan notes (no inbound links) → suggest linking or archiving
 - Concepts mentioned in notes but lacking their own permanent note → flag for creation
-- Contradictions between notes → flag explicitly
+- Duplicate notes covering the same concept → flag for merge
+- Notes with `archived: true` that still have inbound links from active notes → fix the links
+- Contradictions between notes → flag explicitly with `> [!warning] Contradiction` callout
 - Stale claims that newer sources have superseded → flag
 - Missing cross-references between related permanent notes → add them
 - `index.md` entries that are missing or outdated → fix
+- `log.md` entries with wrong operation labels (e.g. `query` instead of `ingest`) → flag
 
 Report findings as a numbered list with suggested actions.
 
@@ -207,6 +246,7 @@ Triggered when owner shares a quick idea without a full source.
 - Prefer linking to **permanent notes** over literature or fleeting
 - When creating a new permanent note, backlink to any literature notes that informed it
 - Cross-link related permanent notes in a **Connections** section at the bottom
+- When a permanent note is archived, update all inbound links from active notes to point to the canonical replacement
 - Don't over-link — only link when the connection is genuinely meaningful
 
 ---
@@ -216,7 +256,7 @@ Triggered when owner shares a quick idea without a full source.
 ```markdown
 # Wiki Index
 
-_Last updated: YYYY-MM-DD_
+_Last updated: YYYY-MM-DD (operation: description)_
 
 ## Permanent Notes
 
@@ -239,11 +279,15 @@ _Last updated: YYYY-MM-DD_
 _(Preserved as-is. Link into permanent notes gradually.)_
 ```
 
+Archived notes are removed from the index (or kept with a ~~strikethrough~~ note if useful for historical context).
+
 ---
 
 ## log.md Format
 
 Append-only. Each entry starts with `## [YYYY-MM-DD] operation | description`.
+
+Valid operation labels: `ingest`, `query`, `capture`, `lint`, `refactor`, `setup`.
 
 ```markdown
 ## [2026-04-08] ingest | DORA Metrics — accelerate.devops
@@ -255,6 +299,10 @@ Pages touched: 4 permanent notes updated, 1 literature note created
 
 Answer synthesized from: [[permanent/dora-metrics]], [[literature/accelerate-devops]]
 Filed as permanent note: no (answered in chat)
+
+## [2026-04-09] refactor | Merged duplicate overlay notes, fixed backlinks
+
+Changes: archived openstack-overlay-networks, redirected 6 backlinks to openstack-neutron-overlay-protocols
 ```
 
 ---
@@ -267,6 +315,7 @@ Filed as permanent note: no (answered in chat)
 4. **Be honest about uncertainty** — use phrases like "reportedly", "as of [date]" for claims that may change
 5. **Flag contradictions** explicitly with a `> [!warning] Contradiction` callout
 6. **Don't over-engineer** — a simple note that exists beats a perfect note that doesn't
+7. **No duplicate concepts** — before creating a new permanent note, check if the concept already exists under a different name
 
 ---
 
@@ -308,3 +357,8 @@ Always use descriptive, lowercase, hyphenated filenames. Never hotlink external 
 - Never suppress uncertainty — if you're unsure, say so
 - Never create notes for trivial things that don't warrant permanent capture
 - Never let good insights die in chat history — file them
+- Never create or update wiki notes autonomously without an explicit owner trigger
+- Never skip the INGEST discussion step (step 2) — always discuss with owner before writing
+- Never fire background agents to write wiki files; research output stays in agent context only
+- Never create a literature note with a fabricated composite `author` field
+- Never silently create a permanent note that duplicates an existing one — check first
