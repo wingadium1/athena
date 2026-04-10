@@ -16,7 +16,7 @@ const config: QuartzConfig = {
     },
     locale: "en-US",
     baseUrl: "athena.wingadium.space",
-    ignorePatterns: ["private", "templates", ".obsidian"],
+    ignorePatterns: ["private", "templates", ".obsidian", "**/**/AGENTS.md"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
