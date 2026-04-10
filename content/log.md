@@ -89,3 +89,166 @@ Pages touched: 5 permanent notes (mới), 1 literature note (mới), 1 MOC (mớ
 Sources: OpenStack official docs (Neutron 25.x/28.x), Eran Gampel DVR blog, Red Hat DVR guide, networking-bgpvpn docs, ovn-bgp-agent docs, Red Hat EVPN/OpenShift article
 
 Answer filed as permanent notes: YES (5 notes + MOC)
+
+---
+
+## [2026-04-10] refactor | Migrate refs/ Batch 1 — DevOps core
+
+Source files archived: DevOps.md, cicd.md, continuous_integration.md, continuous_delivery.md, continuous_deployment.md, sre.md, slsa.md, devops_topology.md, devops_pipelines_and_toolchains.md, continuous_exploration.md (empty — archived only)
+
+Permanent notes created (9):
+
+- `devops` — DevOps culture, CI/CD relationship, SRE link
+- `site-reliability-engineering` — SRE vs DevOps, SLO/SLI/Error Budget
+- `slsa` — supply chain security framework, 4 levels
+- `cicd` — CI/CD as linked pair
+- `continuous-integration` — shift-left, CI vs CD vs Deployment comparison table
+- `continuous-delivery` — release-ready state, vs Continuous Deployment
+- `continuous-deployment` — fully automated pipeline to production, prerequisites
+- `devops-topology` — 9 beneficial topologies + 8 anti-types
+- `devops-pipeline-stages` — 9 stages, DevSecOps shift-left, feature flags
+
+Pages touched: 9 permanent notes (mới), 10 refs/ files (archived), index.md (cập nhật)
+
+---
+
+## [2026-04-10] refactor | Migrate refs/ Batch 2 — DORA + Flow metrics
+
+Source files archived: The_DORA_KPI_metrics.md, mean_time_to_recovery.md, pirate_metrics.md, flow_framework.md, don_reinertsen_cost_of_delay.md, kingman_s_formular.md, little_s_law.md, TTM.md, feature_flag.md
+
+Permanent notes created (9):
+
+- `dora-metrics` — 4 DORA metrics, velocity vs stability, elite/high/medium/low levels
+- `mean-time-to-restore` — MTTR definition, relationship với CFR trong DORA
+- `pirate-metrics` — AARRR framework, 5 customer lifecycle stages
+- `flow-framework` — 4 Flow Items, 5 Flow Metrics, SAFe mapping (Mik Kersten)
+- `cost-of-delay` — CoD concept, CD3 formula, Don Reinertsen
+- `little-s-law` — L = λW, WIP/throughput/cycle time relationship
+- `kingmans-formula` — VUT equation, utilization → wait time nonlinear growth
+- `time-to-market` — TTM vs Lead Time for Changes, 5 business challenges
+- `feature-flag` — deploy vs release separation, progressive rollout, kill switch
+
+Pages touched: 9 permanent notes (mới), 9 refs/ files (archived), index.md (cập nhật)
+
+---
+
+## [2026-04-10] refactor | Migrate refs/ Batch 3 — SAFe + Agile
+
+Source files archived (15): safe.md, safe_pi.md, safe_enabler.md, safe_ip_iteration.md, safe_value_stream.md, safe_value_stream_mapping.md, safe_operational_value_stream.md, safe_metrics_in_value_stream_mapping.md, scaling_devops_with_safe.md, agile_manifesto.md, agile_art.md, agile_art_system_team.md, agile_cadence.md, CALMR.md, devops_transforation_canvas.md
+
+Permanent notes created (13):
+
+- `safe` — SAFe framework, 4 core values, 10 principles, 4 configurations
+- `safe-planning-interval` — PI cadence, 8–12 weeks, ART delivery unit
+- `safe-ip-iteration` — IP iteration buffer, PI Planning, Inspect & Adapt
+- `safe-enablers` — 4 enabler types: Exploration, Architectural, Infrastructure, Compliance
+- `safe-value-stream` — Operational vs Development Value Stream; principle #10
+- `value-stream-mapping` — Lean VSM tool; PT/LT/%C&A metrics; waste identification
+- `safe-agile-release-train` — ART as team of teams; cross-functional; common cadence
+- `safe-system-team` — System Team as DevOps team of ART; CI/CD pipeline ownership
+- `agile-manifesto` — 4 values, 12 principles; SAFe context notes
+- `agile-cadence` — cadence vs sprint vs iteration; basis for PI synchronization
+- `calmr` — CALMR 5 pillars; evolution from CMAS → CALMS → CALMR
+- `scaling-devops-with-safe` — Essential SAFe, ART, RTE/PM/SA, 4 DevOps aspects
+- `devops-transformation-canvas` — 9-component workshop tool; current/future state VSM
+
+Merges applied:
+
+- `safe_operational_value_stream.md` content merged into `safe-value-stream.md`
+- `safe_metrics_in_value_stream_mapping.md` content merged into `value-stream-mapping.md`
+
+Pages touched: 13 permanent notes (mới), 15 refs/ files (archived), index.md (cập nhật)
+
+---
+
+## [2026-04-10] refactor | Migrate refs/ Batch 4 — Leadership + Culture
+
+Source files archived (12): ron_westrum_3_types_of_cultures.md, ron_westrum_generative_culture.md, ron_westrum_bureaucratic_culture.md, ron_westrum_pathological_culture.md, john_kotter_8_steps_driving_transform_of_a_culture.md, continuous_learning.md, clc_personal_mastery.md, clc_mental_models.md, clc_shared_vision.md, clc_system_thinking.md, clc_team_learning.md, follow_the_sun_model.md
+
+Permanent notes created (3):
+
+- `westrum-culture-typology` — 3 culture types (Pathological/Bureaucratic/Generative); 6 reactions to anomalies; DORA link
+- `continuous-learning-culture` — CLC 3 dimensions; Senge's 5 disciplines merged; SAFe Business Agility competency
+- `kotter-8-step-change` — 8 bước change management; urgency → coalition → vision → short-term wins → embed
+
+Merges applied:
+
+- 4 Westrum files (3 stubs + main) → `westrum-culture-typology.md`
+- 6 CLC files (5 sub-disciplines + main) → `continuous-learning-culture.md`
+- `clc_team_learning.md` (empty stub) → archived only, no permanent note
+- `follow_the_sun_model.md` (empty stub) → archived only, no permanent note
+
+Pages touched: 3 permanent notes (mới), 12 refs/ files (archived), index.md (cập nhật)
+
+---
+
+## [2026-04-10] refactor | Migrate refs/ Batch 5 — ML + Math
+
+Source files archived (8): machine_learning.md, supervised_learning.md, unsupervised_learning.md, k_means_clustering.md, naive_bayes_classifier.md, multinomial_distribution.md, overfitting.md, theory_of_constraints.md
+
+Permanent notes created (5):
+
+- `machine-learning` — ML overview; supervised vs unsupervised; overfitting pointer (merged 3 files)
+- `k-means-clustering` — K-Means algorithm; centroid initialization; elbow method; local minima warning
+- `naive-bayes-classifier` — Bayes theorem; NBC algorithm; multinomial distribution merged in
+- `overfitting-underfitting` — generalization problem; causes; K-fold cross-validation
+- `theory-of-constraints` — 5 focusing steps; constraint thinking; links to VSM/Little's Law/Kingman
+
+Merges applied:
+
+- machine_learning + supervised_learning + unsupervised_learning → `machine-learning.md`
+- multinomial_distribution → merged into `naive-bayes-classifier.md`
+
+Pages touched: 5 permanent notes (mới), 8 refs/ files (archived), index.md (cập nhật)
+
+---
+
+## [2026-04-10] refactor | Migrate refs/ Batch 6 — Infra misc
+
+Source files archived (1): Seekable_OCI.md
+
+Permanent notes created (1):
+
+- `seekable-oci` — SOCI technology; lazy loading; SOCI index; AWS Fargate use case
+
+Pages touched: 1 permanent note (mới), 1 refs/ file (archived), index.md (cập nhật)
+
+---
+
+## [2026-04-10] refactor | Migrate writing/ — 12 permanent notes từ 9 cluster
+
+Source files: writing/ (không archive — published content, read-only)
+
+Permanent notes created (12):
+
+- `resilience-vs-robustness` — Robustness (MTBF) vs Resilience (MTTR); Cynefin; 4 Hollnagel capabilities; transition path to CD
+- `tail-latency` — P99 compound effect; latency outliers; percentile monitoring vs average
+- `hedged-requests` — Race multiple service instances; first-response wins; trade-offs và when to use
+- `china-data-regulation` — CSL/DSL/PIPL framework; Core/Important/General data classification; cross-border transfer rules
+- `kubernetes-node-pool-design` — Taint/toleration + affinity/anti-affinity; pool segregation by workload type; cost strategies
+- `kubernetes-node-consolidation` — Minimal node count; Cluster Autoscaler + overprovisioning; stateful/variable workload limitations
+- `zero-trust-network-kubernetes` — mTLS STRICT; Calico + Istio sidecar mode; Istio Ambient mode; identity-based not IP-based
+- `container-runtime-security-falco` — Syscall monitoring via kernel module; rule-based alerting; DevSecOps stack
+- `multi-cloud-architecture` — Private cloud primary + AWS secondary; K8s portability; GitOps; Portworx/Ceph storage
+- `lossless-semantic-tree` — Pre-test analysis methodology; zero-call verification; Mock Verification Pattern
+- `ai-assisted-testing` — LST as AI context; human+AI multiplier model; structured prompts for better coverage
+- `software-architect-role` — Developer vs Architect; trade-off decisions; cost-awareness; ADR; Architectural Knowledge Management
+
+Pages touched: 12 permanent notes (mới), index.md (cập nhật), log.md (append)
+
+---
+
+## [2026-04-10] refactor | migrate journal/ — 5 permanent notes from journal/ cluster
+
+Source files: journal/ (không archive — legacy personal posts, read-only)
+Skipped: `note_for_project_aws_development.md` (link dump, no atomic concept), `command_tips.md` (tooling cheatsheet, not conceptual), `f_the_people_who_do_not_add_blank_line_at_end_of_file.md` (rant, no extractable concept), `todo.md` (1-line stub)
+
+Permanent notes created (5):
+
+- `system-design-patterns` — 8 core patterns: consistent hashing, CAP theorem, sharding, caching strategies, CDN, partitioning, message queues, indexes
+- `cassandra-kubernetes-ha` — DC = AZ mapping; StatefulSet per AZ với nodeAffinity `topology.kubernetes.io/zone`; NetworkTopologyStrategy; seed nodes; Spot viable vì HA design
+- `t-shaped-developer` — I-shaped vs T-shaped; cross-functional Agile teams; benefits; path (học + thời gian + kiên nhẫn + chia sẻ)
+- `aws-lambda-cold-start` — Cold vs warm start lifecycle; 15-min execution context reuse; keep-alive HTTP, /tmp caching, move heavy objects outside handler
+- `git-object-model` — blob/tree/commit DAG; SHA-1 content addressing; refs/ + logs/ structure; recovery by copying objects/ into fresh clone
+
+Pages touched: 5 permanent notes (mới), index.md (cập nhật), log.md (append)

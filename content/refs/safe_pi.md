@@ -4,7 +4,8 @@ alias:
   - PI
   - Program Increment
   - Planing Interval
-tags: [  DevOps, SAFe® ]
+tags: [DevOps, SAFe®]
+archived: true
 ---
 
 > [!info]
@@ -23,4 +24,5 @@ Một PI kéo dài khoảng 8-12 tuần.
 Vì PI dựa trên [[refs/agile_cadence|Cadence]], thế nên nó dung cấp nhịp độ cho các tàu ([[refs/agile_art|ART]]) và các asset họ build: iteratively và incrementally, thực tế Develop on Candence là một nhóm các sự kiện và hoạt động hằng ngày hằng tuần trong development.
 
 ## References
-* [ref 1](https://scaledagileframework.com/planning-interval/)
+
+- [ref 1](https://scaledagileframework.com/planning-interval/)

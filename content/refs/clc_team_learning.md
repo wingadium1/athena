@@ -1,5 +1,6 @@
 ---
 title: "Team learning"
 alias:
-tags: [ DevOps, SAFe® ]
+tags: [DevOps, SAFe®]
+archived: true
 ---

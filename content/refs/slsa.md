@@ -2,7 +2,8 @@
 title: "SLSA"
 alias:
   - Supply-chain Levels for Software Artifacts
-tags: [  DevOps ]
+tags: [DevOps]
+archived: true
 ---
 
 > [!info]

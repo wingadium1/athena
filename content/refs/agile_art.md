@@ -3,12 +3,12 @@ title: "Agile Release Train"
 alias:
   - ART
   - Tàu
-tags: [  DevOps, Agile ]
+tags: [DevOps, Agile]
+archived: true
 ---
 
 > [!info]
 > Agile Release Train (ART) là một nhóm các nhóm Agile hoạt động lâu dài, phát triển, deliver và thường vận hành một hoặc nhiều giải pháp trong một value stream.
-
 
 ## Characteristic
 
@@ -23,4 +23,3 @@ Agile Release Trains are fully cross-functional
 ### Enabled by Critical Roles
 
 ## Responsibility
-

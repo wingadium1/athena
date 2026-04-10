@@ -2,7 +2,8 @@
 title: "Site Reliability Engineering"
 alias:
   - SRE
-tags: [  ]
+tags: []
+archived: true
 ---
 
 > [!info]

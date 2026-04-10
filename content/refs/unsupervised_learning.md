@@ -1,6 +1,7 @@
 ---
 title: "Unsupervised Learning"
-tags: [ Machine Learning ]
+tags: [Machine Learning]
+archived: true
 ---
 
 > [!info]

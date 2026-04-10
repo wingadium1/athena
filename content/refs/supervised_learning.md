@@ -1,7 +1,8 @@
 ---
 title: "Supervised Learning"
 alias:
-tags: [ Machine Learning ]
+tags: [Machine Learning]
+archived: true
 ---
 
 > [!info]

@@ -1,6 +1,7 @@
 ---
 title: "DevOps Topology"
-tags: [  DevOps ]
+tags: [DevOps]
+archived: true
 ---
 
 [[refs/DevOps]]
@@ -9,14 +10,14 @@ Khó có thể để xác định trách nhiệm nằm ở đâu khi chuyển sa
 
 Năm 2013, Matthew Skelton mô tả ba loại nhóm chống đối cần tránh và năm cấu trúc nhóm có thể có. Những đóng góp bổ sung đã tăng số lượng loại chống đối lên tám và số lượng cấu trúc nhóm có lợi lên chín ([[https://web.devopstopologies.com/|refs]])
 
-* Dev and Ops Silos
-* Permanent DevOps Team Silo
-* Dev Doesn’t Need Ops
-* DevOps as the Dev Tools Team
-* Rebranded Sysadmins
-* Ops Embedded in Dev Team
-* Dev and DBA Silos
-* Fake SRE
+- Dev and Ops Silos
+- Permanent DevOps Team Silo
+- Dev Doesn’t Need Ops
+- DevOps as the Dev Tools Team
+- Rebranded Sysadmins
+- Ops Embedded in Dev Team
+- Dev and DBA Silos
+- Fake SRE
 
 Vậy nên sinh ra 9 loại DevOps Topology
 
@@ -48,7 +49,6 @@ Một số nhóm và tổ chức nhỏ hơn có thể không có đủ nhân l�
 
 ![alt text](../assets/img/devops_as_an_external_service.png)
 
-
 #### 5. DevOps team (with expiration date)
 
 Có thể có những tình huống mà việc có một nhóm DevOps chuyên dụng sẽ hiệu quả. Ý tưởng là nhóm DevOps có thể đóng vai trò là cầu nối cho cả nhóm Dev và Ops. Nhóm DevOps có thể hướng dẫn Dev cách làm việc với cơ sở hạ tầng và có thể hướng dẫn Ops về phát triển Agile. Đến một thời điểm nào đó, nhóm DevOps sẽ giải thể, cho phép Dev và Ops cộng tác trong mô hình cộng tác Dev và Ops. Sẽ tiềm ẩn nguy cơ nếu nhóm DevOps không giải thể, thay vào đó lại hình thành một silo riêng biệt. Trên thực tế, đây là một trong những loại anti-types (Silo nhóm DevOps) được đề cập ở trên.
@@ -56,6 +56,7 @@ Có thể có những tình huống mà việc có một nhóm DevOps chuyên d�
 ![alt text](../assets/img/devops_team_with_exp_date.png)
 
 #### 6. Nhóm ủng hộ DevOps - DevOps advocacy team
+
 Nhóm ủng hộ DevOps đóng vai trò là người tạo điều kiện giữa Dev và Ops nếu hai nhóm này có xu hướng tách biệt nhau. Không giống như DevOps team (with expiration date), nhóm DevOps này được duy trì liên tục, đảm bảo cả Dev và Ops đều tuân thủ các thông lệ DevOps hiện tại, tuy nhiên lại có điểm giống như DevOps team (with expiration date), nhóm này có nguy cơ trở thành một nhóm DevOps Silo. Hình 3.11 –
 
 ![alt text](../assets/img/devops_advocacy_team.png)
@@ -71,7 +72,6 @@ Ngay từ năm 2004, Google đã sử dụng các Developer của mình làm Ope
 Hiện tại thì với công nghệ container phổ biến, bản thân container cũng đã trừu tượng hoá rất nhiều vấn đề trong hạ tầng, gần như sự cộng tác giữa Dev và Ops không quá cần thiết.
 
 Trong trường hợp này, việc deploy bằng container có thể được Ops chấp nhận trong hầu hết trường hợp nếu có văn hóa kỹ thuật lành mạnh. Nếu không được giám sát chặt chẽ, có nguy cơ thay đổi thành anti-types mà Ops được kỳ vọng triển khai bất kỳ thứ gì từ Dev mà không cần thắc mắc.
-
 
 ![alt text](../assets/img/devops_container_driven_collaboration.png)
 

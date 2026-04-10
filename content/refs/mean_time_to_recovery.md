@@ -3,7 +3,8 @@ title: "Mean time to recovery"
 alias:
   - MTTR
   - Mean time to repair
-tags: [  DevOps ]
+tags: [DevOps]
+archived: true
 ---
 
 > [!info]

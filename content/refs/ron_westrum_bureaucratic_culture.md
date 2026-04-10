@@ -1,6 +1,7 @@
 ---
 title: "Bureaucratic Culture"
-tags: [  ]
+tags: []
+archived: true
 ---
 
 > [!info]

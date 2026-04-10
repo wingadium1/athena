@@ -2,7 +2,8 @@
 title: "Continuous Integration/Continuous Delivery"
 alias:
   - CI/CD
-tags: [  DevOps ]
+tags: [DevOps]
+archived: true
 ---
 
 > [!info]

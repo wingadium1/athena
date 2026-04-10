@@ -1,6 +1,7 @@
 ---
 title: "Seekable OCI"
-tags: [  AWS, DevOps ]
+tags: [AWS, DevOps]
+archived: true
 ---
 
 > [!info]

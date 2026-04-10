@@ -1,7 +1,17 @@
 ---
-title: "CIP và Counterpart Fund — Lương QLVNCH Ẩn Trong Viện Trợ Kinh Tế"
-aliases: ["Commercial Import Program", "CIP Vietnam", "counterpart fund", "quỹ đối ứng"]
-tags: [lịch-sử, việt-nam, kinh-tế-chính-trị, chiến-tranh-việt-nam, mỹ, viện-trợ]
+title: CIP và Counterpart Fund — Lương QLVNCH Ẩn Trong Viện Trợ Kinh Tế
+aliases:
+  - Commercial Import Program
+  - CIP Vietnam
+  - counterpart fund
+  - quỹ đối ứng
+tags:
+  - lịch-sử
+  - việt-nam
+  - kinh-tế-chính-trị
+  - us-vietnam-conflict
+  - mỹ
+  - viện-trợ
 created: 2026-04-08
 updated: 2026-04-08
 ---
@@ -56,8 +66,8 @@ CIP là case study về cách **phân loại kế toán** có thể che giấu b
 ## Sources
 
 - [[literature/dang-phong-21-nam-vien-tro-my]]
-- Kahin, _Intervention: How America Became Involved in Vietnam_ (1986)
-- Montgomery, _The Politics of Foreign Aid_ (1962)
-- Dacy, _Foreign Aid, War, and Economic Development: South Vietnam 1955–1975_ (Cambridge UP, 1986)
-- Catton, _Diem's Final Failure_ (2002)
-- Pentagon Papers, Gravel Edition, Vol. 3, Ch. 1
+- [Kahin, _Intervention: How America Became Involved in Vietnam_ (1986)](https://books.google.com.vn/books/about/Intervention.html?id=2YvtAAAAMAAJ&redir_esc=y)
+- [Montgomery, _The Politics of Foreign Aid_ (1962)](https://www.ide.go.jp/library/English/Publish/Periodicals/De/pdf/65_01_11.pdf)
+- [Dacy, _Foreign Aid, War, and Economic Development: South Vietnam 1955–1975_ (Cambridge UP, 1986)](https://www.cambridge.org/core/books/foreign-aid-war-and-economic-development/56826396909064C788D327B75E510D94)
+- [Catton, _Diem's Final Failure_ (2002)](https://www.jstor.org/stable/j.ctv2rsfdc3)
+- [Pentagon Papers, Gravel Edition, Vol. 3, Ch. 1](https://nara-media-001.s3.amazonaws.com/arcmedia/research/pentagon-papers/Pentagon-Papers-Part-I.pdf)

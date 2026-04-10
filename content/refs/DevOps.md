@@ -1,6 +1,7 @@
 ---
 title: "DevOps"
-tags: [  DevOps ]
+tags: [DevOps]
+archived: true
 ---
 
 > [!info]
@@ -24,9 +25,9 @@ cậy trong việc cung cấp các bản cập nhật cho người dùng.
 
 ## Integration
 
-* **Tự động hóa**: DevOps khuyến khích tự động hóa các tác vụ lặp đi lặp lại và quy trình [[refs/cicd|CICD]] là quy trình công
-việc tự động xử lý việc tích hợp, thử nghiệm và triển khai mã nguồn.
-* **Hợp tác**: Cả DevOps và [[refs/cicd|CICD]] đều nhấn mạnh đến việc cải thiện khả năng giao tiếp và cộng tác giữa các nhóm
-phát triển và vận hành, phá vỡ các rào cản và thúc đẩy văn hóa chia sẻ trách nhiệm.
-* **Phản hồi liên tục**: Cả quy trình [[refs/cicd|CICD]] cung cấp phản hồi liên tục cho các developer về tình trạng và chất
-lượng mã nguồn của họ, phù hợp với trọng tâm của DevOps là cải tiến liên tục và phát triển lặp lại.
+- **Tự động hóa**: DevOps khuyến khích tự động hóa các tác vụ lặp đi lặp lại và quy trình [[refs/cicd|CICD]] là quy trình công
+  việc tự động xử lý việc tích hợp, thử nghiệm và triển khai mã nguồn.
+- **Hợp tác**: Cả DevOps và [[refs/cicd|CICD]] đều nhấn mạnh đến việc cải thiện khả năng giao tiếp và cộng tác giữa các nhóm
+  phát triển và vận hành, phá vỡ các rào cản và thúc đẩy văn hóa chia sẻ trách nhiệm.
+- **Phản hồi liên tục**: Cả quy trình [[refs/cicd|CICD]] cung cấp phản hồi liên tục cho các developer về tình trạng và chất
+  lượng mã nguồn của họ, phù hợp với trọng tâm của DevOps là cải tiến liên tục và phát triển lặp lại.

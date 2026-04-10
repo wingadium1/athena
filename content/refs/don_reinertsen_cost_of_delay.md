@@ -2,7 +2,8 @@
 title: "Cost of Delay"
 alias:
   - CoD
-tags: [  ]
+tags: []
+archived: true
 ---
 
 > [!info]

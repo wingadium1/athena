@@ -9,7 +9,7 @@ aliases:
     "MAAG Vietnam",
     "MACV viện trợ",
   ]
-tags: [lịch-sử, việt-nam, kinh-tế-chính-trị, chiến-tranh-việt-nam, mỹ, viện-trợ, quân-sự]
+tags: [lịch-sử, việt-nam, kinh-tế-chính-trị, us-vietnam-conflict, mỹ, viện-trợ, quân-sự]
 created: 2026-04-08
 updated: 2026-04-08
 ---
@@ -66,7 +66,7 @@ Cơ chế MAP/EDA là ví dụ điển hình về cách **chuẩn mực kế to�
 ## Sources
 
 - [[literature/dang-phong-21-nam-vien-tro-my]]
-- GAO B-133096 (1958): Audit MAP/MAAG Vietnam
-- GAO B-159451 (1974): DoD Property Disposal Vietnam
-- GAO NSIAD-94-27 (1994): EDA underreporting structure
-- Kahin, _Intervention: How America Became Involved in Vietnam_ (1986)
+- [GAO B-133096 (1958): Audit MAP/MAAG Vietnam](https://www.gao.gov/assets/b-133096.pdf)
+- [GAO B-159451 (1974): DoD Property Disposal Vietnam](https://www.gao.gov/assets/b-159451.pdf)
+- [GAO NSIAD-94-27 (1994): EDA underreporting structure](https://www.gao.gov/assets/nsiad-94-27.pdf)
+- [Kahin, _Intervention: How America Became Involved in Vietnam_ (1986)](https://books.google.com.vn/books/about/Intervention.html?id=2YvtAAAAMAAJ&redir_esc=y)

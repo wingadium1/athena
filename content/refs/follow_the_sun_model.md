@@ -1,4 +1,5 @@
 ---
 title: "follow-the-sun model"
-tags: [ ]
+tags: []
+archived: true
 ---

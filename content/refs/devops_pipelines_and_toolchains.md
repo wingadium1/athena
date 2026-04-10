@@ -1,6 +1,7 @@
 ---
 title: "DevOps - các Pipeline và Toolchain"
-tags: [  DevOps ]
+tags: [DevOps]
+archived: true
 ---
 
 [[refs/DevOps]]
@@ -24,7 +25,7 @@ Gồm 2 bước: Plan, Create
 
 Version Control đóng vai trò quan trọng, ngày nay version control lưu trữ cả test script và tất cả những thứ liên quan đến thay đổi và release.
 
-Document thì thường lưu trữ ở Wiki: requirements specifications, architectural  models, UI wireframes, and product and user documentation.
+Document thì thường lưu trữ ở Wiki: requirements specifications, architectural models, UI wireframes, and product and user documentation.
 
 ## [[refs/continuous_integration|Continuous integration]]
 
@@ -45,10 +46,10 @@ Nên sử dụng cùng với một test management software (XRay hoặc Zephyr)
 
 #### Static Analysis
 
-* Lint
-* SAST
-* Dependency scanning
-* License scanning
+- Lint
+- SAST
+- Dependency scanning
+- License scanning
 
 ### Packaging for deployment
 
@@ -74,12 +75,13 @@ Ngay cả khi các source code change được chạy ở trên production, nh�
 
 Các feature flag tool: LaunchDarkly, Flagsmith và CloudBees Feature Management.
 
-### Additional verification through advanced testing in the  environment.
+### Additional verification through advanced testing in the environment.
 
 #### Functional and UI testing
-* Sanity test
-* Smoke test
-* Regression test
+
+- Sanity test
+- Smoke test
+- Regression test
 
 Automation test có thể nên được triển khai
 
@@ -136,4 +138,3 @@ Trivy
 #### Alerting
 
 Khi sự cố phát sinh, điều quan trọng là phải thông báo kịp thời cho những người liên quan. Các công cụ cảnh báo có thể cung cấp nhiều kênh để thông báo, bao gồm email, tin nhắn SMS và tin nhắn trò chuyện IM. Chúng cũng có thể cung cấp cơ chế dung sai để ngăn chặn quá nhiều tin nhắn cảnh báo gửi đến nhân viên vận hành và tình trạng quá tải cảnh báo xảy ra. Các công cụ này cũng có thể tạo ra các vấn đề cho việc quản lý sự cố để các quy trình quản lý dịch vụ CNTT (ITSM) được tuân thủ.
-

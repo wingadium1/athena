@@ -2,7 +2,8 @@
 title: "Naive Bayes classifier"
 alias:
   - NBC
-tags: [ Machine Learning ]
+tags: [Machine Learning]
+archived: true
 ---
 
 > [!info] Naive Bayes classifiers
@@ -10,12 +11,11 @@ tags: [ Machine Learning ]
 > Bất chấp giả định “ngây thơ” về tính độc lập của đặc điểm, các bộ phân loại này được sử dụng rộng rãi vì tính đơn giản và hiệu quả của chúng trong [[refs/machine_learning|Machine Learning]]
 > Các thuật toán này thuộc nhóm [[refs/supervised_learning|Supervised Learning]].
 
-
 Nói một cách đơn giản như này
+
 $$
 P(A/B) = \frac{P(B|A) * P(A)}{P(B))}
 $$
-
 
 hoặc
 

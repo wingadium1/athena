@@ -1,6 +1,7 @@
 ---
 title: "Multinomial distribution"
-tags: [ Machine Learning, Mathematic, Statistic ]
+tags: [Machine Learning, Mathematic, Statistic]
+archived: true
 ---
 
 > [!info] Multinomial Distribution

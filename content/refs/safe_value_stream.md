@@ -1,7 +1,8 @@
 ---
 title: "SAFe® Value Stream"
 alias:
-tags: [  DevOps, SAFe® ]
+tags: [DevOps, SAFe®]
+archived: true
 ---
 
 > [!info]
@@ -20,7 +21,7 @@ Value stream là key practice của Lean. Việc triển khai Value Stream và c
 ### Operational Value Stream
 
 > [!info]
-> the interaction the customer or end user has with the organization and  which products are used in that interaction.
+> the interaction the customer or end user has with the organization and which products are used in that interaction.
 
 [[refs/safe|SAFe®]] cũng nhìn nhận cách khách hàng sử dụng sản phẩm và các dịch vụ để tìm kiếm giá trị, cách nhìn nhận vấn đề từ sự thuận lợi của khách hàng thì được define là Operational Value Stream.
 

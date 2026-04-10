@@ -4,7 +4,7 @@ type: literature
 source: "Sách - NXB Thế Giới / NXB Tri Thức"
 author: "Đặng Phong"
 date-read: 2026-04-08
-tags: [lịch-sử, việt-nam, kinh-tế-chính-trị, chiến-tranh-việt-nam, mỹ]
+tags: [lịch-sử, việt-nam, kinh-tế-chính-trị, us-vietnam-conflict, mỹ]
 ---
 
 ## Summary

@@ -2,7 +2,8 @@
 title: "Value Stream Mapping"
 alias:
   - VSM
-tags: [  DevOps, SAFe® ]
+tags: [DevOps, SAFe®]
+archived: true
 ---
 
 > [!info]
@@ -51,9 +52,10 @@ tags: [  DevOps, SAFe® ]
    1. Roll out changes and track key metrics to measure improvements.
 
 ## When to Use VSM?
-* When launching process improvement initiatives.
-* To address specific pain points in production, delivery, or communication.
-* During strategic planning to align operations with customer expectations.
-* In Lean, Six Sigma, or Agile transformations.
+
+- When launching process improvement initiatives.
+- To address specific pain points in production, delivery, or communication.
+- During strategic planning to align operations with customer expectations.
+- In Lean, Six Sigma, or Agile transformations.
 
 VSM is a powerful methodology for organizations to visualize, analyze, and continuously improve their processes to deliver maximum value to their customers efficiently.

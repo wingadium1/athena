@@ -8,7 +8,7 @@ aliases:
     "chiến tranh Vietnam Quốc hội Mỹ",
   ]
 tags:
-  [lịch-sử, việt-nam, kinh-tế-chính-trị, chiến-tranh-việt-nam, mỹ, chính-trị-mỹ, giám-sát-quốc-hội]
+  [lịch-sử, việt-nam, kinh-tế-chính-trị, us-vietnam-conflict, mỹ, chính-trị-mỹ, giám-sát-quốc-hội]
 created: 2026-04-08
 updated: 2026-04-08
 ---
@@ -79,8 +79,8 @@ Khoảng trống giám sát này có hệ quả kép: (1) về **đạo đức d
 ## Sources
 
 - [[literature/dang-phong-21-nam-vien-tro-my]]
-- Pentagon Papers, Gravel Edition (1971/2011)
-- FRUS 1964–68, Vol. V, Doc. 26 (McNamara classified testimony)
-- Montgomery, _The Politics of Foreign Aid_ (1962)
-- Bilmes, _"The Ghost Budget"_ (Just Security, 2024)
-- Bilmes & Stiglitz, _The Three Trillion Dollar War_ (2008)
+- [Pentagon Papers, Gravel Edition (1971/2011)](https://nsarchive2.gwu.edu/NSAEBB/NSAEBB359/index.htm)
+- [FRUS 1964–68, Vol. V, Doc. 26 (McNamara classified testimony)](https://history.state.gov/historicaldocuments/frus1964-68v05/d26)
+- [Montgomery, _The Politics of Foreign Aid_ (1962)](https://www.ide.go.jp/library/English/Publish/Periodicals/De/pdf/65_01_11.pdf)
+- [Bilmes, _"The Ghost Budget"_ (Just Security, 2024)](https://www.justsecurity.org/90907/the-ghost-budget-how-america-pays-for-endless-war/)
+- [Bilmes & Stiglitz, _The Three Trillion Dollar War_ (2008)](https://via.library.depaul.edu/cgi/viewcontent.cgi?article=1088&context=jhcl)
