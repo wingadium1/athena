@@ -134,6 +134,7 @@ psql -c "SELECT * FROM pg_stat_replication;"
 - [[permanent/swift-single-node-setup-kolla]] — Swift mandatory cho backup/replication
 - [[permanent/packer-openstack-image-pipeline]] — image được dùng để tạo Trove instances
 - [[permanent/kolla-ansible-deployment-patterns]] — Kolla deploy Trove components
+- [[permanent/postgresql-ha-patroni-pgpool-combo]] — so sánh: standalone HA với Patroni + pgpool-II (không cần OpenStack)
 
 ## Sources
 

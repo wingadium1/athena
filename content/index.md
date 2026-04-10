@@ -1,6 +1,6 @@
 # Wiki Index
 
-_Last updated: 2026-04-10 (ingest: Proxmox DBaaS Lab Day 1–4.5 — 7 permanent notes + 1 literature note)_
+_Last updated: 2026-04-10 (ingest: PostgreSQL HA — Patroni + pgpool-II — 3 permanent notes + 1 literature note)_
 
 Catalog của toàn bộ Athena Wiki. AI agent cập nhật file này sau mỗi lần ingest.
 
@@ -27,6 +27,9 @@ Catalog của toàn bộ Athena Wiki. AI agent cập nhật file này sau mỗi 
 | [[permanent/packer-openstack-image-pipeline\|Packer OpenStack Image Pipeline]]                    | Infrastructure      | Packer + Glance; use_floating_ip=false; image lifecycle candidate→approved              |
 | [[permanent/openstack-trove-guest-agent-connectivity\|Trove Guest Agent Connectivity (OVN)]]      | Infrastructure      | OVN logical IP vs Linux IP; RabbitMQ dual listener; DNAT Keystone; SNAT internet        |
 | [[permanent/openstack-trove-postgresql-ha\|Trove PostgreSQL HA Replication]]                      | Infrastructure      | Primary/replica via --replica-of; Swift mandatory; security group gotcha; failover      |
+| [[permanent/patroni\|Patroni]]                                                                    | Infrastructure/DB   | HA orchestrator cho PostgreSQL; Raft consensus qua etcd; automatic failover             |
+| [[permanent/pgpool-ii\|Pgpool-II]]                                                                | Infrastructure/DB   | Connection proxy: pooling, read load balancing, write routing tới primary               |
+| [[permanent/postgresql-ha-patroni-pgpool-combo\|PostgreSQL HA: Patroni + Pgpool-II]]              | Infrastructure/DB   | Combined pattern: Patroni lo failover, pgpool-II lo routing — không overlap             |
 | [[permanent/swift-single-node-setup-kolla\|Swift Single-Node Setup (Kolla)]]                      | Infrastructure      | Loopback disk; GPT label KOLLA_SWIFT_DATA; XFS label d0; ring builder replicas=1        |
 | [[permanent/devops\|DevOps]]                                                                      | DevOps              | Văn hóa + thực hành kết hợp Dev và Ops để rút ngắn delivery cycle                       |
 | [[permanent/site-reliability-engineering\|Site Reliability Engineering (SRE)]]                    | DevOps              | Google model: dùng software engineering để giải quyết vấn đề operations                 |
@@ -98,6 +101,7 @@ Catalog của toàn bộ Athena Wiki. AI agent cập nhật file này sau mỗi 
 | [[literature/openstack-neutron-external-connectivity\|OpenStack Neutron Docs]]                    | OpenStack official docs                        | 2026-04-09 |
 | [[literature/openstack-neutron-overlay-research-2026-04\|OpenStack Overlay Protocols — Research]] | OpenStack Docs, RFC 7348, RFC 8926             | 2026-04-09 |
 | [[literature/proxmox-dbaas-lab-day1-to-day4.5\|Proxmox DBaaS Lab — Day 1 to Day 4.5]]             | proxmox-dbaas-lab command packs + live journal | 2026-04-10 |
+| [[literature/postgresql-ha-patroni-pgpool-ii\|PostgreSQL HA — Patroni + Pgpool-II]]               | joao victor silva de oliveira (Medium)         | 2026-04-10 |
 
 ---
 

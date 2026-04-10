@@ -275,3 +275,21 @@ Literature note created (1):
 - `proxmox-dbaas-lab-day1-to-day4.5` — summary toàn bộ lab experience với 5+ incidents documented
 
 Pages touched: 7 permanent notes (mới), 1 literature note (mới), index.md (cập nhật), log.md (append)
+
+---
+
+## [2026-04-10] ingest | PostgreSQL HA — Patroni + pgpool-II on Ubuntu
+
+Source: https://medium.com/@joaovic32/demystifying-high-availability-postgresql-with-patroni-and-pgpool-ii-on-ubuntu-428c91a55b1a
+
+Key concepts added:
+
+- `patroni` — HA orchestrator dùng Raft consensus qua etcd; automatic failover; REST API health check
+- `pgpool-ii` — connection proxy: pooling, read load balancing, write routing; sr_check awareness
+- `postgresql-ha-patroni-pgpool-combo` — combined pattern; phân chia trách nhiệm không overlap; so sánh với Trove HA
+
+Permanent note updated (1):
+
+- `openstack-trove-postgresql-ha` — thêm link so sánh sang postgresql-ha-patroni-pgpool-combo
+
+Pages touched: 3 permanent notes (mới), 1 permanent note (updated), 1 literature note (mới), index.md (cập nhật), log.md (append)
