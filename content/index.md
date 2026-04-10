@@ -1,6 +1,6 @@
 # Wiki Index
 
-_Last updated: 2026-04-10 (refactor: migrate journal/ — 5 permanent notes created from journal/ cluster migration)_
+_Last updated: 2026-04-10 (ingest: Proxmox DBaaS Lab Day 1–4.5 — 7 permanent notes + 1 literature note)_
 
 Catalog của toàn bộ Athena Wiki. AI agent cập nhật file này sau mỗi lần ingest.
 
@@ -21,6 +21,13 @@ Catalog của toàn bộ Athena Wiki. AI agent cập nhật file này sau mỗi 
 | [[permanent/openstack-dvr-architecture\|DVR — Distributed Virtual Router]]                        | Infrastructure      | Phân tán L3 routing ra compute nodes; east-west + floating IP north-south               |
 | [[permanent/openstack-floating-ip-nat\|Floating IP NAT Mechanism]]                                | Infrastructure      | DNAT/SNAT iptables rules; centralized vs. DVR models                                    |
 | [[permanent/openstack-bgp-evpn-external\|BGP/EVPN External Connectivity in OpenStack]]            | Infrastructure      | Dynamic routing at scale: neutron-dynamic-routing, BGPVPN, ovn-bgp-agent                |
+| [[permanent/kolla-ansible-deployment-patterns\|Kolla-Ansible Deployment Patterns]]                | Infrastructure      | Multi-node deploy; hostname resolution trap; RAM requirements; nova cell_v2 discovery   |
+| [[permanent/ovs-bridge-management-nic-pitfall\|OVS Bridge Management NIC Pitfall]]                | Infrastructure      | OVS L2 takeover làm mất SSH; recovery qua noVNC; rule: chỉ provider NIC vào br-ex       |
+| [[permanent/openstack-provider-net-routing\|OpenStack Provider Net Routing (No Floating IP)]]     | Infrastructure      | Static route từ jump host qua ctrl-1; gateway IP phải trên br-ex                        |
+| [[permanent/packer-openstack-image-pipeline\|Packer OpenStack Image Pipeline]]                    | Infrastructure      | Packer + Glance; use_floating_ip=false; image lifecycle candidate→approved              |
+| [[permanent/openstack-trove-guest-agent-connectivity\|Trove Guest Agent Connectivity (OVN)]]      | Infrastructure      | OVN logical IP vs Linux IP; RabbitMQ dual listener; DNAT Keystone; SNAT internet        |
+| [[permanent/openstack-trove-postgresql-ha\|Trove PostgreSQL HA Replication]]                      | Infrastructure      | Primary/replica via --replica-of; Swift mandatory; security group gotcha; failover      |
+| [[permanent/swift-single-node-setup-kolla\|Swift Single-Node Setup (Kolla)]]                      | Infrastructure      | Loopback disk; GPT label KOLLA_SWIFT_DATA; XFS label d0; ring builder replicas=1        |
 | [[permanent/devops\|DevOps]]                                                                      | DevOps              | Văn hóa + thực hành kết hợp Dev và Ops để rút ngắn delivery cycle                       |
 | [[permanent/site-reliability-engineering\|Site Reliability Engineering (SRE)]]                    | DevOps              | Google model: dùng software engineering để giải quyết vấn đề operations                 |
 | [[permanent/slsa\|SLSA — Supply-chain Levels for Software Artifacts]]                             | DevOps/Security     | Framework bảo vệ software supply chain theo 4 levels                                    |
@@ -83,13 +90,14 @@ Catalog của toàn bộ Athena Wiki. AI agent cập nhật file này sau mỗi 
 
 ## Literature Notes
 
-| Note                                                                                              | Source                             | Date Read  |
-| ------------------------------------------------------------------------------------------------- | ---------------------------------- | ---------- |
-| [[literature/karpathy-llm-wiki\|LLM Wiki — Karpathy]]                                             | Andrej Karpathy (gist)             | 2026-04-08 |
-| [[literature/tetsu-kasuya-46-method\|Phương pháp 4:6 — Tetsu Kasuya]]                             | Project Barista                    | 2026-04-08 |
-| [[literature/dang-phong-21-nam-vien-tro-my\|21 Năm Viện Trợ Mỹ ở VN]]                             | Đặng Phong (sách)                  | 2026-04-08 |
-| [[literature/openstack-neutron-external-connectivity\|OpenStack Neutron Docs]]                    | OpenStack official docs            | 2026-04-09 |
-| [[literature/openstack-neutron-overlay-research-2026-04\|OpenStack Overlay Protocols — Research]] | OpenStack Docs, RFC 7348, RFC 8926 | 2026-04-09 |
+| Note                                                                                              | Source                                         | Date Read  |
+| ------------------------------------------------------------------------------------------------- | ---------------------------------------------- | ---------- |
+| [[literature/karpathy-llm-wiki\|LLM Wiki — Karpathy]]                                             | Andrej Karpathy (gist)                         | 2026-04-08 |
+| [[literature/tetsu-kasuya-46-method\|Phương pháp 4:6 — Tetsu Kasuya]]                             | Project Barista                                | 2026-04-08 |
+| [[literature/dang-phong-21-nam-vien-tro-my\|21 Năm Viện Trợ Mỹ ở VN]]                             | Đặng Phong (sách)                              | 2026-04-08 |
+| [[literature/openstack-neutron-external-connectivity\|OpenStack Neutron Docs]]                    | OpenStack official docs                        | 2026-04-09 |
+| [[literature/openstack-neutron-overlay-research-2026-04\|OpenStack Overlay Protocols — Research]] | OpenStack Docs, RFC 7348, RFC 8926             | 2026-04-09 |
+| [[literature/proxmox-dbaas-lab-day1-to-day4.5\|Proxmox DBaaS Lab — Day 1 to Day 4.5]]             | proxmox-dbaas-lab command packs + live journal | 2026-04-10 |
 
 ---
 

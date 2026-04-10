@@ -252,3 +252,26 @@ Permanent notes created (5):
 - `git-object-model` — blob/tree/commit DAG; SHA-1 content addressing; refs/ + logs/ structure; recovery by copying objects/ into fresh clone
 
 Pages touched: 5 permanent notes (mới), index.md (cập nhật), log.md (append)
+
+---
+
+## [2026-04-10] ingest | Proxmox DBaaS Lab — Day 1 to Day 4.5
+
+Source: `/Users/sonht2.gmo/git/openstack-101/lab/proxmox-dbaas-lab/` (command packs + live journal)
+Owner emphasis: Trove + Swift + PG HA replication, Kolla-Ansible real incidents, OVS bridge pitfall
+
+Permanent notes created (7):
+
+- `kolla-ansible-deployment-patterns` — hostname resolution trap (127.0.1.1 / Erlang); RAM requirements; nova cell_v2 discover_hosts; kolla_toolbox snapshot gotcha
+- `ovs-bridge-management-nic-pitfall` — OVS L2 takeover làm mất SSH; recovery via Proxmox noVNC; rule provider NIC only
+- `openstack-provider-net-routing` — static route từ tools-1 qua ctrl-1; gateway IP phải trên br-ex, không raw NIC; no floating IP pattern
+- `packer-openstack-image-pipeline` — Packer + OpenStack plugin; use_floating_ip=false; image lifecycle candidate→approved; Glance metadata tagging
+- `openstack-trove-guest-agent-connectivity` — OVN logical IP vs Linux IP boundary; RabbitMQ dual listener; DNAT Keystone; SNAT internet; subnet gateway phải dùng br-ex IP
+- `openstack-trove-postgresql-ha` — primary/replica via --replica-of; Swift mandatory; security group không auto-attach replica; backup_docker_image explicit; trove-guestagent.conf immutable; failover timeline 2 limitation
+- `swift-single-node-setup-kolla` — loopback disk; GPT label KOLLA_SWIFT_DATA; XFS label d0; ring builder part_power=10 replicas=1; swap prerequisite; systemd persistence
+
+Literature note created (1):
+
+- `proxmox-dbaas-lab-day1-to-day4.5` — summary toàn bộ lab experience với 5+ incidents documented
+
+Pages touched: 7 permanent notes (mới), 1 literature note (mới), index.md (cập nhật), log.md (append)
