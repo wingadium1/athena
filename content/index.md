@@ -1,6 +1,6 @@
 # Wiki Index
 
-_Last updated: 2026-04-10 (ingest: PostgreSQL HA — Patroni + pgpool-II — 3 permanent notes + 1 literature note)_
+_Last updated: 2026-04-11 (ingest: Tứ giác nước — mô hình đô thị sông nước Việt Nam, so sánh Trung Quốc và châu Âu)_
 
 Catalog của toàn bộ Athena Wiki. AI agent cập nhật file này sau mỗi lần ingest.
 
@@ -16,6 +16,9 @@ Catalog của toàn bộ Athena Wiki. AI agent cập nhật file này sau mỗi 
 | [[permanent/cip-counterpart-fund-viet-nam\|CIP và Counterpart Fund]]                              | Lịch sử/Kinh tế     | Cơ chế ẩn lương QLVNCH trong viện trợ kinh tế Mỹ — 1955–1975                            |
 | [[permanent/map-vien-tro-vu-khi-qlvnch\|MAP và EDA — Định Giá Thấp Vũ Khí Viện Trợ]]              | Lịch sử/Kinh tế     | Structural underreporting vũ khí viện trợ qua cơ chế EDA book value                     |
 | [[permanent/lau-nam-goc-qua-giam-sat-quoc-hoi\|Lầu Năm Góc và Giám Sát Quốc Hội]]                 | Lịch sử/Chính trị   | Bức tranh tổng thể về khoảng trống oversight của Quốc Hội Mỹ trong Vietnam War          |
+| [[permanent/ming-tax-base-erosion\|Nhà Minh — Sụp Đổ Cơ Sở Thuế Ruộng Đất]]                       | Lịch sử/Kinh tế     | Guiji/touxian: đất thoát sổ thuế qua đặc quyền gentry; nửa diện tích mất trong 140 năm  |
+| [[permanent/ming-silver-inflation\|Nhà Minh — Lạm Phát Bạc và Bẫy Tài Chính]]                     | Lịch sử/Kinh tế     | Manila Galleon, bạc mất giá, Nhất điều tiên gắn ngân sách vào bạc; cú sốc kép 1630s     |
+| [[permanent/tu-giac-nuoc\|Tứ Giác Nước — Mô Hình Đô Thị Sông Nước Việt Nam]]                      | Lịch sử/Đô thị      | Kinh đô VN cổ 3–4 mặt sông; so sánh bối sơn diện thủy TQ và mô hình 1 mặt sông châu Âu  |
 | [[permanent/openstack-neutron-overlay-protocols\|OpenStack Overlay Protocols (VXLAN/GRE/GENEVE)]] | Infrastructure      | Overlay tunnels giải quyết VLAN limit; VNI allocation và OVS flow pipeline              |
 | [[permanent/openstack-external-network-mapping\|OpenStack External Network Mapping]]              | Infrastructure      | Provider networks kết nối vào tenant overlays qua OVS bridge + router namespace         |
 | [[permanent/openstack-dvr-architecture\|DVR — Distributed Virtual Router]]                        | Infrastructure      | Phân tán L3 routing ra compute nodes; east-west + floating IP north-south               |
@@ -93,15 +96,16 @@ Catalog của toàn bộ Athena Wiki. AI agent cập nhật file này sau mỗi 
 
 ## Literature Notes
 
-| Note                                                                                              | Source                                         | Date Read  |
-| ------------------------------------------------------------------------------------------------- | ---------------------------------------------- | ---------- |
-| [[literature/karpathy-llm-wiki\|LLM Wiki — Karpathy]]                                             | Andrej Karpathy (gist)                         | 2026-04-08 |
-| [[literature/tetsu-kasuya-46-method\|Phương pháp 4:6 — Tetsu Kasuya]]                             | Project Barista                                | 2026-04-08 |
-| [[literature/dang-phong-21-nam-vien-tro-my\|21 Năm Viện Trợ Mỹ ở VN]]                             | Đặng Phong (sách)                              | 2026-04-08 |
-| [[literature/openstack-neutron-external-connectivity\|OpenStack Neutron Docs]]                    | OpenStack official docs                        | 2026-04-09 |
-| [[literature/openstack-neutron-overlay-research-2026-04\|OpenStack Overlay Protocols — Research]] | OpenStack Docs, RFC 7348, RFC 8926             | 2026-04-09 |
-| [[literature/proxmox-dbaas-lab-day1-to-day4.5\|Proxmox DBaaS Lab — Day 1 to Day 4.5]]             | proxmox-dbaas-lab command packs + live journal | 2026-04-10 |
-| [[literature/postgresql-ha-patroni-pgpool-ii\|PostgreSQL HA — Patroni + Pgpool-II]]               | joao victor silva de oliveira (Medium)         | 2026-04-10 |
+| Note                                                                                              | Source                                                    | Date Read  |
+| ------------------------------------------------------------------------------------------------- | --------------------------------------------------------- | ---------- |
+| [[literature/karpathy-llm-wiki\|LLM Wiki — Karpathy]]                                             | Andrej Karpathy (gist)                                    | 2026-04-08 |
+| [[literature/tetsu-kasuya-46-method\|Phương pháp 4:6 — Tetsu Kasuya]]                             | Project Barista                                           | 2026-04-08 |
+| [[literature/dang-phong-21-nam-vien-tro-my\|21 Năm Viện Trợ Mỹ ở VN]]                             | Đặng Phong (sách)                                         | 2026-04-08 |
+| [[literature/openstack-neutron-external-connectivity\|OpenStack Neutron Docs]]                    | OpenStack official docs                                   | 2026-04-09 |
+| [[literature/openstack-neutron-overlay-research-2026-04\|OpenStack Overlay Protocols — Research]] | OpenStack Docs, RFC 7348, RFC 8926                        | 2026-04-09 |
+| [[literature/proxmox-dbaas-lab-day1-to-day4.5\|Proxmox DBaaS Lab — Day 1 to Day 4.5]]             | proxmox-dbaas-lab command packs + live journal            | 2026-04-10 |
+| [[literature/postgresql-ha-patroni-pgpool-ii\|PostgreSQL HA — Patroni + Pgpool-II]]               | joao victor silva de oliveira (Medium)                    | 2026-04-10 |
+| [[literature/tu-giac-nuoc-research\|Tứ Giác Nước — Nghiên cứu so sánh đô thị]]                    | Research session — Wikipedia, Lê Vĩnh An, Trần Quốc Vượng | 2026-04-11 |
 
 ---
 

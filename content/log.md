@@ -293,3 +293,32 @@ Permanent note updated (1):
 - `openstack-trove-postgresql-ha` — thêm link so sánh sang postgresql-ha-patroni-pgpool-combo
 
 Pages touched: 3 permanent notes (mới), 1 permanent note (updated), 1 literature note (mới), index.md (cập nhật), log.md (append)
+
+---
+
+## [2026-04-11] ingest | Nhà Minh — tài chính sụp đổ (research tổng hợp)
+
+Source: research tổng hợp từ nhiều nguồn học thuật (Ray Huang, Flynn & Giráldez, Von Glahn, Atwell)
+
+Key concepts added:
+
+- `ming-tax-base-erosion` — guiji (詭寄)/touxian (投獻); scale: đất chịu thuế giảm ~50% trong 140 năm; Single Whip Reform và giới hạn cơ cấu
+- `ming-silver-inflation` — Manila Galleon; arbitrage bạc toàn cầu; bẫy Nhất điều tiên; cú sốc kép 1630s; tranh luận Atwell vs. Von Glahn
+
+Fleeting note updated (1):
+
+- `2026-04-11-minh-trieu-tai-chinh-sup-do` — thay [!warning] bằng [!info] promoted, link sang 2 permanent notes
+
+Pages touched: 2 permanent notes (mới), 1 fleeting note (updated), index.md (cập nhật), log.md (append)
+
+---
+
+## [2026-04-11] ingest | Tứ giác nước — mô hình đô thị sông nước Việt Nam (research so sánh)
+
+Source: Research session — Wikipedia tiếng Việt (Tứ giác nước), TS Lê Vĩnh An (Tạp chí Kiến trúc 01-2025), GS Trần Quốc Vượng, TU Delft (Chang'an water systems), Wikipedia EN (Bern, Metz, Nanjing, Beijing, London, Rome)
+
+Key concepts added:
+
+- `tu-giac-nuoc` — định nghĩa, các kinh đô VN tiêu biểu, bốn chức năng; so sánh với 背山面水 Trung Quốc và mô hình 1 mặt sông châu Âu; các analog châu Âu (Bern, Metz, Wrocław, Koblenz)
+
+Pages touched: 1 permanent note (mới), 1 literature note (mới), index.md (cập nhật), log.md (append)
