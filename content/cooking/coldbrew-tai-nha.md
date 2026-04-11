@@ -47,19 +47,19 @@ Bình nhựa trong suốt có vạch đo. **Vấn đề**: phần lọc bé, khi
 - **Kết quả**: Khá đậm, ít chua, vị gần với coldbrew ở quán (Măng Đen, TwitterBean)
 - **Nhận xét**: Tỉ lệ 1:14 hợp lý cho drinking strength uống với đá. Robusta cho vị đậm đúng như kỳ vọng. Giấy lọc pourover cho nước trong.
 
-### [2026-04-10] Arabica — ngâm không túi lọc, chờ kết quả ⏳
+### [2026-04-10] Arabica — ngâm không túi lọc, 16 tiếng ✓
 
-- **Cafe**: [Núi Min Cầu Đất Arabica](https://visty.vn/san-pham/mountain-soul-ca-phe-nui-min/) (Visty)
+- **Cafe**: [Mountain Soul Arabica](https://visty.vn/san-pham/mountain-soul-ca-phe-nui-min/) (Visty)
 - **Phương pháp**: Ngâm bột trực tiếp vào nước, không dùng túi lọc
-- **Bắt đầu**: Tối 10/4/2026
-- **Dự kiến thử**: Sáng 12/4/2026 (Chủ nhật)
-- **Kết quả**: _(chưa có — update sau khi thử)_
-- **Câu hỏi cần trả lời**: Vị arabica cold brew so với robusta? Lọc xác kiểu gì hiệu quả nhất?
+- **Thời gian ủ**: ~16 tiếng
+- **Lọc**: Giấy lọc pourover — không tắc, hoạt động tốt
+- **Kết quả**: Đậm vị, chua sáng, hậu vị tốt. Nhìn chung tốt.
+- **So với robusta**: Arabica cho vị chua sáng rõ hơn (đặc trưng giống); robusta đậm/đắng hơn, ít chua
 
 ## Muốn thử tiếp
 
 - [ ] Mua lại Hario Filter-in Bottle (hoặc tương đương có filter lớn)
-- [x] Thử arabica fine grind — đang ngâm 10/4, xem kết quả 12/4
+- [x] Thử arabica fine grind — 16 tiếng, kết quả tốt (chua sáng, hậu vị tốt)
 - [ ] So sánh trực tiếp robusta vs arabica cùng tỉ lệ
 
 ## Connections
