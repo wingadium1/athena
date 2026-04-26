@@ -1,6 +1,6 @@
 # Wiki Index
 
-_Last updated: 2026-04-11 (ingest: Tứ giác nước — mô hình đô thị sông nước Việt Nam, so sánh Trung Quốc và châu Âu)_
+_Last updated: 2026-04-25 (capture: Gươm/Kiếm/Đao — taxonomy vũ khí truyền thống Đại Việt, so sánh TQ, từ nguyên, Hồ Gươm)_
 
 Catalog của toàn bộ Athena Wiki. AI agent cập nhật file này sau mỗi lần ingest.
 
@@ -91,6 +91,8 @@ Catalog của toàn bộ Athena Wiki. AI agent cập nhật file này sau mỗi 
 | [[permanent/t-shaped-developer\|T-Shaped Developer]]                                              | Career/Agile        | Broad + deep skillset; cross-functional team enabler; contrast with I-shaped specialist |
 | [[permanent/aws-lambda-cold-start\|AWS Lambda Cold Start]]                                        | AWS/Serverless      | Cold vs warm start; execution context reuse; keep-alive, /tmp caching optimizations     |
 | [[permanent/git-object-model\|Git Object Model]]                                                  | Git/Internals       | blob/tree/commit DAG; refs + logs; content-addressed recovery pattern                   |
+| [[permanent/y-bat\|Y Bát (衣鉢)]]                                                                 | Phật giáo/Văn hóa   | Áo cà sa + bình bát; biểu tượng giới luật, truyền thừa chánh pháp, lối sống giản dị     |
+| [[permanent/guom-kiem-dao-vu-khi-dai-viet\|Gươm, Kiếm, Đao — Vũ khí Đại Việt]]                    | Lịch sử/Văn hóa     | Taxonomy vũ khí lạnh Việt Nam; từ nguyên gươm/kiếm; Hồ Gươm; so sánh dao/jian TQ        |
 
 ---
 

@@ -313,6 +313,38 @@ Pages touched: 2 permanent notes (mới), 1 fleeting note (updated), index.md (c
 
 ---
 
+## [2026-04-25] capture | Gươm / Kiếm / Đao — Taxonomy vũ khí lạnh Đại Việt
+
+Key concepts added: guom-kiem-dao-vu-khi-dai-viet
+Pages touched: 1 permanent note (mới), index.md (cập nhật)
+
+Highlights:
+
+- Đao (刀) = single-edged broad curved → 1:1 với Chinese dao; không nhầm lẫn
+- Chinese jian (劍) → bifurcation trong tiếng Việt: **kiếm** (thẳng 2 lưỡi) + **gươm** (cong 1 lưỡi)
+- Gươm từ nguyên: Proto-Vietic *t-kɨəm ← Old Chinese 劍 *s.kr[a]m-s; tiền âm tiết \*t- → lenition /k/→/ɣ/; bằng chứng: tiếng Rục "təkɨəm"
+- Kiếm = âm Hán-Việt (mượn thời Đường+); gươm = âm Việt cổ (mượn sớm hơn)
+- Trực-Kiếm Đại Việt: mũi vếch Câu-Kiếm-Phong — đặc thù không thấy ở jian TQ hay tachi Nhật
+- Biến thể vùng: Bắc (TQ), Trung (Nhật+ĐNA), Nam (Cham/Khmer/Xiêm), thế kỷ 19 (+Pháp)
+- Hồ Gươm + Gươm Thần Thuận Thiên: gươm = từ dân gian gần gũi hơn kiếm trong văn hóa
+- Nguồn học thuật chính: Vetyukov V. (2015), WHJ №2, pp.12–27
+
+---
+
+## [2026-04-25] capture | Y Bát (衣鉢) — thuật ngữ Phật giáo
+
+Key concepts added: y-bat
+Pages touched: 1 permanent note (mới), index.md (cập nhật)
+
+Highlights:
+
+- Y bát = áo cà sa (y) + bình bát (bát) — biểu tượng giới luật, truyền thừa, giản dị
+- Kế thừa y bát: nghi thức trao truyền từ thầy sang trò — 3 lớp ý nghĩa: chánh pháp, lãnh đạo Tăng đoàn, tâm ấn thiền tông
+- Thiền tông: câu chuyện Huệ Năng — Hoằng Nhẫn là ví dụ kinh điển nhất
+- Ngoài đạo Phật: kế thừa tinh thần/phong cách/di sản của người thầy trong mọi lĩnh vực
+
+---
+
 ## [2026-04-11] ingest | Tứ giác nước — mô hình đô thị sông nước Việt Nam (research so sánh)
 
 Source: Research session — Wikipedia tiếng Việt (Tứ giác nước), TS Lê Vĩnh An (Tạp chí Kiến trúc 01-2025), GS Trần Quốc Vượng, TU Delft (Chang'an water systems), Wikipedia EN (Bern, Metz, Nanjing, Beijing, London, Rome)
