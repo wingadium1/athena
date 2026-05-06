@@ -345,6 +345,55 @@ Highlights:
 
 ---
 
+## [2026-05-06] query | Bổ sung danh sách đầy đủ Kẻ + Xá vào permanent note
+
+Bổ sung vào permanent note `danh-xung-lang-bac-bo`:
+
+- Bảng Kẻ mở rộng: 29 địa danh (từ 8 → 29), có đầy đủ tên chữ + địa điểm + nghề truyền thống
+- Bảng Xá: thống kê đầu TK XIX (Nguyễn Xá 36, Hoàng Xá 35, Lê Xá 21...), ước tính >200 địa danh toàn miền Bắc
+- 8 làng Xá tiêu biểu gắn sự kiện/nhân vật lịch sử
+- Ghi chú Tàm Xá — trường hợp Xá không theo họ người
+- Kết luận phân bố: Xá gần như độc quyền Bắc Bộ + Bắc Trung Bộ
+
+Pages touched: 1 permanent note (updated), log.md (append)
+
+---
+
+## [2026-05-06] ingest | Danh xưng làng Bắc Bộ — Kẻ, Xá và biến thiên lịch sử
+
+Sources: Đức An (QDND — "Hà Nội: Vẫn còn đó những Kẻ nổi tiếng") · PGS Bùi Xuân Đính (Tạp chí Thế giới Di sản — "Tên làng và những nổi chìm lịch sử")
+
+Key concepts added:
+
+- `danh-xung-lang-bac-bo` — 3 lớp tên: Kẻ (tiền Bắc thuộc, từ Nôm cổ), Xá (Bắc thuộc, tên họ khai khẩn), Hán-Việt (TK X+, song song với tên Nôm)
+- Nguyên tắc "càng vô nghĩa càng cổ" cho nhóm Kẻ
+- Bảng đối chiếu Kẻ → tên chữ + nghề truyền thống
+- Phân bố địa lý: Bắc Hà Nội dày, Nam thưa (biển lấn)
+- Biến động sau 1945: đại xã, tên cách mạng, hợp tác xã → đứt gãy ký ức địa danh
+- Note để ngỏ phần "Các lớp tiếp theo" để chủ nhân bổ sung
+
+Pages touched: 1 permanent note (mới), 1 literature note (mới), index.md (cập nhật)
+
+---
+
+## [2026-05-06] ingest | OpenStack Disk QoS — Cinder Volume QoS và Nova Ephemeral Disk Throttling
+
+Source: Research session — Cinder 2026.1 docs, Nova Rocky spec, OpenStackClient docs, nova/virt/libvirt/config.py
+
+Status: Fleeting + Literature notes tạo trước; permanent notes chưa tạo (owner chưa có ý kiến rõ về phần quan trọng nhất)
+
+Key topics captured:
+
+- Token bucket mechanics trong Cinder QoS: `total_iops_sec` / `total_iops_sec_max` / `size_iops_sec`
+- `consumer=front-end` vs `back-end` — enforcement point và trade-offs
+- Nova flavor extra specs cho ephemeral disk (6 keys, không có burst)
+- libvirt `<iotune>` XML mapping từ cả hai nguồn
+- Capacity-based QoS (`*_per_gb`, `*_per_gb_min`)
+
+Pages touched: 1 literature note (mới), 1 fleeting note (mới), index.md (cập nhật)
+
+---
+
 ## [2026-04-11] ingest | Tứ giác nước — mô hình đô thị sông nước Việt Nam (research so sánh)
 
 Source: Research session — Wikipedia tiếng Việt (Tứ giác nước), TS Lê Vĩnh An (Tạp chí Kiến trúc 01-2025), GS Trần Quốc Vượng, TU Delft (Chang'an water systems), Wikipedia EN (Bern, Metz, Nanjing, Beijing, London, Rome)
@@ -354,3 +403,18 @@ Key concepts added:
 - `tu-giac-nuoc` — định nghĩa, các kinh đô VN tiêu biểu, bốn chức năng; so sánh với 背山面水 Trung Quốc và mô hình 1 mặt sông châu Âu; các analog châu Âu (Bern, Metz, Wrocław, Koblenz)
 
 Pages touched: 1 permanent note (mới), 1 literature note (mới), index.md (cập nhật), log.md (append)
+
+---
+
+## [2026-05-06] ingest | Làng Kẻ ở Phú Thọ và Vĩnh Phúc — mở rộng permanent note
+
+Source: Research session — phanduykha.wordpress.com (Phan Duy Kha, _Nhìn về thời đại Hùng Vương_, 2013), DanViet (Kẻ Rưng/Tứ Trưng), donghodao.vn (Kẻ Nổi/Phượng Lâu), tinbds.com (Kẻ Mỏ/Yên Lạc), Wikipedia (Di chỉ Phùng Nguyên, Vĩnh Lại)
+
+Key additions:
+
+- 5 làng Kẻ tại Phú Thọ: Kẻ Khống (Chu Hóa), Kẻ Nội (Phùng Nguyên), Kẻ Nổi (Phượng Lâu), Kẻ Chịnh (Trịnh Xá), Kẻ Giáp (Tứ Xã — cần xác minh)
+- 3 làng Kẻ tại Vĩnh Phúc: Kẻ Cánh (Hương Canh), Kẻ Rưng (Tứ Trưng), Kẻ Mỏ (Yên Lạc)
+- Luận điểm Phan Duy Kha: 3 trung tâm phân bố Kẻ tương ứng vùng lõi Đông Sơn
+- Tranh luận học thuật: Hoàng Thị Châu (1967) vs An Chi (1996) về nguồn gốc "kẻ"
+
+Pages touched: 1 permanent note (danh-xung-lang-bac-bo.md — cập nhật), log.md (append)

@@ -1,6 +1,6 @@
 # Wiki Index
 
-_Last updated: 2026-04-25 (capture: Gươm/Kiếm/Đao — taxonomy vũ khí truyền thống Đại Việt, so sánh TQ, từ nguyên, Hồ Gươm)_
+_Last updated: 2026-05-06 (ingest: Danh xưng làng Bắc Bộ — Kẻ, Xá và biến thiên lịch sử)_
 
 Catalog của toàn bộ Athena Wiki. AI agent cập nhật file này sau mỗi lần ingest.
 
@@ -93,6 +93,7 @@ Catalog của toàn bộ Athena Wiki. AI agent cập nhật file này sau mỗi 
 | [[permanent/git-object-model\|Git Object Model]]                                                  | Git/Internals       | blob/tree/commit DAG; refs + logs; content-addressed recovery pattern                   |
 | [[permanent/y-bat\|Y Bát (衣鉢)]]                                                                 | Phật giáo/Văn hóa   | Áo cà sa + bình bát; biểu tượng giới luật, truyền thừa chánh pháp, lối sống giản dị     |
 | [[permanent/guom-kiem-dao-vu-khi-dai-viet\|Gươm, Kiếm, Đao — Vũ khí Đại Việt]]                    | Lịch sử/Văn hóa     | Taxonomy vũ khí lạnh Việt Nam; từ nguyên gươm/kiếm; Hồ Gươm; so sánh dao/jian TQ        |
+| [[permanent/danh-xung-lang-bac-bo\|Danh xưng làng Bắc Bộ qua các thời kỳ]]                        | Lịch sử/Văn hóa     | Kẻ (tiền Bắc thuộc) → Xá (Bắc thuộc) → Hán-Việt (TK X+); nghề làng, phân bố địa lý      |
 
 ---
 
@@ -108,6 +109,8 @@ Catalog của toàn bộ Athena Wiki. AI agent cập nhật file này sau mỗi 
 | [[literature/proxmox-dbaas-lab-day1-to-day4.5\|Proxmox DBaaS Lab — Day 1 to Day 4.5]]             | proxmox-dbaas-lab command packs + live journal            | 2026-04-10 |
 | [[literature/postgresql-ha-patroni-pgpool-ii\|PostgreSQL HA — Patroni + Pgpool-II]]               | joao victor silva de oliveira (Medium)                    | 2026-04-10 |
 | [[literature/tu-giac-nuoc-research\|Tứ Giác Nước — Nghiên cứu so sánh đô thị]]                    | Research session — Wikipedia, Lê Vĩnh An, Trần Quốc Vượng | 2026-04-11 |
+| [[literature/openstack-disk-qos-research-2026-05\|OpenStack Disk QoS — Cinder & Ephemeral]]       | Research session — Cinder docs, Nova Rocky spec, libvirt  | 2026-05-06 |
+| [[literature/danh-xung-lang-viet-bac-bo-research-2026-05\|Danh xưng làng Việt Bắc Bộ — Kẻ & Xá]]  | Đức An (QDND), PGS Bùi Xuân Đính (Thế giới Di sản)        | 2026-05-06 |
 
 ---
 
