@@ -46,7 +46,11 @@ Violation of this rule corrupts the wiki with unvetted content and breaks the hu
   til/                    ← (Legacy) Today I Learned — keep as-is
   journal/                ← (Legacy) long-form posts — keep as-is
   cooking/                ← Recipes and food notes
-  index.md                ← Catalog of the entire wiki
+  index.md                ← Top-level hub — links to all catalog sub-pages
+  permanent-notes.md      ← Catalog of permanent concept notes (the wiki's backbone)
+  literature-notes.md     ← Catalog of literature notes — one entry per ingested source
+  maps-of-content.md      ← Catalog of Maps of Content
+  legacy-notes.md         ← Catalog of legacy references (refs/, til/, journal/, cooking/)
   log.md                  ← Append-only operation log
 ```
 
@@ -187,7 +191,11 @@ Triggered when owner says: "ingest this", "process this article", "I just read..
    - If it doesn't exist → create a new permanent note
    - If this source overlaps significantly with an existing note → flag for potential merge, do not silently duplicate
 5. Check if any **Maps of Content** should be updated
-6. Update `content/index.md` (add new entries, update "Last updated" line)
+6. Update catalog pages:
+   - `content/permanent-notes.md` — add new permanent note entries
+   - `content/literature-notes.md` — add new literature note entry
+   - `content/maps-of-content.md` — if any MOC was updated/created
+   - Update "Last updated" line on affected pages
 7. Append to `content/log.md` with format: `## [YYYY-MM-DD] ingest | Source Title`
 
 A single source may touch 5–15 files. That's expected and good.
@@ -204,7 +212,7 @@ Triggered when owner asks a question about the wiki content.
 
 **Steps:**
 
-1. Read `content/index.md` to find relevant notes
+1. Read `content/permanent-notes.md` to find relevant notes
 2. Read the relevant notes
 3. Synthesize an answer with citations (e.g., `[[permanent/dora-metrics]]`)
 4. If the answer is valuable → ask owner: "Should I save this as a permanent note?"
@@ -223,7 +231,7 @@ Triggered when owner says "lint the wiki", "health check", "kiểm tra wiki".
 - Contradictions between notes → flag explicitly with `> [!warning] Contradiction` callout
 - Stale claims that newer sources have superseded → flag
 - Missing cross-references between related permanent notes → add them
-- `index.md` entries that are missing or outdated → fix
+- `permanent-notes.md`, `literature-notes.md`, `maps-of-content.md`, or `legacy-notes.md` entries that are missing or outdated → fix
 - `log.md` entries with wrong operation labels (e.g. `query` instead of `ingest`) → flag
 
 Report findings as a numbered list with suggested actions.
@@ -253,33 +261,83 @@ Triggered when owner shares a quick idea without a full source.
 
 ## index.md Format
 
+`index.md` is the top-level wiki hub — it links to all catalog sub-pages. No inline tables.
+
 ```markdown
 # Wiki Index
 
 _Last updated: YYYY-MM-DD (operation: description)_
 
+Catalog của toàn bộ Athena Wiki.
+
 ## Permanent Notes
+
+Xem [[permanent-notes|Permanent Notes]].
+
+## Literature Notes
+
+Xem [[literature-notes|Literature Notes]].
+
+## Maps of Content
+
+Xem [[maps-of-content|Maps of Content]].
+
+## Legacy (refs/, til/, journal/)
+
+Xem [[legacy-notes|Legacy Notes]].
+
+_Preserved as-is. Linked into permanent notes gradually._
+```
+
+## permanent-notes.md Format
+
+```markdown
+# Permanent Notes
+
+_Last updated: YYYY-MM-DD (operation: description)_
 
 | Note                                     | Domain      | Summary          |
 | ---------------------------------------- | ----------- | ---------------- |
 | [[permanent/concept-slug\|Concept Name]] | Engineering | One-line summary |
+```
 
-## Literature Notes
+Archived notes are removed (or kept with a ~~strikethrough~~ note if useful for historical context).
+
+## literature-notes.md Format
+
+```markdown
+# Literature Notes
+
+_Last updated: YYYY-MM-DD (operation: description)_
 
 | Note                                     | Source | Date Read  |
 | ---------------------------------------- | ------ | ---------- |
 | [[literature/source-slug\|Source Title]] | Author | YYYY-MM-DD |
-
-## Maps of Content
-
-- [[maps/map-of-engineering\|Engineering]]
-
-## Legacy (refs/, til/, journal/)
-
-_(Preserved as-is. Link into permanent notes gradually.)_
 ```
 
-Archived notes are removed from the index (or kept with a ~~strikethrough~~ note if useful for historical context).
+## maps-of-content.md Format
+
+```markdown
+# Maps of Content
+
+_Last updated: YYYY-MM-DD (operation: description)_
+
+- [[maps/map-of-engineering\|Engineering]] — one-line description
+```
+
+## legacy-notes.md Format
+
+```markdown
+# Legacy Notes
+
+_Preserved as-is. Linked into permanent notes gradually._
+
+_Last updated: YYYY-MM-DD (initial catalog)_
+
+| File              | Type    | Topic    |
+| ----------------- | ------- | -------- |
+| [[refs/...\|...]] | ref     | Domain   |
+```
 
 ---
 

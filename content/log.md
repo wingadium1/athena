@@ -1,3 +1,7 @@
+---
+draft: true
+---
+
 # Wiki Log
 
 Append-only record of operations. Format: `## [YYYY-MM-DD] operation | description`
