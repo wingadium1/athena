@@ -63,6 +63,7 @@ Architect là bottleneck tự nhiên — họ có mental model đầy đủ nh�
 - [[permanent/resilience-vs-robustness]] — architect phải quyết định: optimize MTBF hay MTTR? Đây là architectural trade-off
 - [[permanent/dora-metrics]] — DORA metrics đo hiệu quả của architectural decisions ở tầng tổ chức
 - [[permanent/devops-topology]] — structure của team phản ánh và bị phản ánh bởi architecture (Conway's Law)
+- [[permanent/workflow-first-agentic-architecture]] — concrete AI architecture decision: workflow-first, agent only when needed
 
 ## Sources
 

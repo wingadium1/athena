@@ -3,11 +3,12 @@ draft: true
 ---
 # Permanent Notes
 
-_Last updated: 2026-05-06 (ingest: Danh xưng làng Bắc Bộ — Kẻ, Xá và biến thiên lịch sử)_
+_Last updated: 2026-06-22 (capture: Workflow-First Agentic Architecture)_
 
 | Note                                                                                              | Domain              | Summary                                                                                 |
 | ------------------------------------------------------------------------------------------------- | ------------------- | --------------------------------------------------------------------------------------- |
 | [[permanent/llm-wiki-pattern\|LLM Wiki Pattern]]                                                  | PKM/LLM             | Pattern xây dựng knowledge base với LLM làm maintainer                                  |
+| [[permanent/workflow-first-agentic-architecture\|Workflow-First Agentic Architecture]]          | CLAUDE/Architecture | Workflow là default; agents chỉ khi goals open-ended hoặc replanning cần thiết           |
 | [[permanent/rag-vs-compiled-knowledge\|RAG vs Compiled Knowledge]]                                | PKM/LLM             | So sánh RAG (re-derive mỗi lần) vs compiled knowledge (tích lũy)                        |
 | [[permanent/zettelkasten\|Zettelkasten]]                                                          | PKM                 | Phương pháp atomic notes + linking của Niklas Luhmann                                   |
 | [[permanent/cip-counterpart-fund-viet-nam\|CIP và Counterpart Fund]]                              | Lịch sử/Kinh tế     | Cơ chế ẩn lương QLVNCH trong viện trợ kinh tế Mỹ — 1955–1975                            |

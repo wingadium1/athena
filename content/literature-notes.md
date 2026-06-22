@@ -3,7 +3,7 @@ draft: true
 ---
 # Literature Notes
 
-_Last updated: 2026-05-06 (ingest: Danh xưng làng Bắc Bộ — Kẻ, Xá và biến thiên lịch sử)_
+_Last updated: 2026-06-22 (capture: Claude Certified Architect (CCA-F) - 2026 Exam Prep — Section 1 started)_
 
 | Note                                                                                              | Source                                                    | Date Read  |
 | ------------------------------------------------------------------------------------------------- | --------------------------------------------------------- | ---------- |
@@ -17,3 +17,4 @@ _Last updated: 2026-05-06 (ingest: Danh xưng làng Bắc Bộ — Kẻ, Xá và
 | [[literature/tu-giac-nuoc-research\|Tứ Giác Nước — Nghiên cứu so sánh đô thị]]                    | Research session — Wikipedia, Lê Vĩnh An, Trần Quốc Vượng | 2026-04-11 |
 | [[literature/openstack-disk-qos-research-2026-05\|OpenStack Disk QoS — Cinder & Ephemeral]]       | Research session — Cinder docs, Nova Rocky spec, libvirt  | 2026-05-06 |
 | [[literature/danh-xung-lang-viet-bac-bo-research-2026-05\|Danh xưng làng Việt Bắc Bộ — Kẻ & Xá]]  | Đức An (QDND), PGS Bùi Xuân Đính (Thế giới Di sản)        | 2026-05-06 |
+| [[literature/certified-claude-architect-masterclass-2026-section-1-agentic-architecture-foundation\|Agentic Architecture - Foundation]] | Jacob Bushong | 2026-06-22 |
