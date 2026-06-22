@@ -428,6 +428,12 @@ Pages touched: 1 permanent note (mới), 1 literature note (mới), index.md (c�
 
 ---
 
+## [2026-06-22] capture | Claude Certified Architect (CCA-F) — Section 1 FINISH
+
+Cross-concept extraction from L1-L6. 3 new permanent notes (agentic-loop, tool-use-lifecycle, workflow-patterns), 1 updated (workflow-first-agentic-architecture), all backlinked from literature note, catalogs updated.
+
+Pages touched: 3 permanent notes created, 1 permanent note updated, 1 literature note updated (Links), permanent-notes.md, literature-notes.md, log.md
+
 ## [2026-05-06] ingest | Làng Kẻ ở Phú Thọ và Vĩnh Phúc — mở rộng permanent note
 
 Source: Research session — phanduykha.wordpress.com (Phan Duy Kha, _Nhìn về thời đại Hùng Vương_, 2013), DanViet (Kẻ Rưng/Tứ Trưng), donghodao.vn (Kẻ Nổi/Phượng Lâu), tinbds.com (Kẻ Mỏ/Yên Lạc), Wikipedia (Di chỉ Phùng Nguyên, Vĩnh Lại)

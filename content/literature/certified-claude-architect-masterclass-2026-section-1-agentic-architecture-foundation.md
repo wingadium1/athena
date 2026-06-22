@@ -135,4 +135,7 @@ Across the section, the recurring design principle is to start simple, preserve 
 
 ## Links
 
-- [[permanent/workflow-first-agentic-architecture]]
+- [[permanent/agentic-loop]] — the PRAO cycle that powers all agentic systems
+- [[permanent/tool-use-lifecycle]] — the four-phase lifecycle of every tool call in an agent
+- [[permanent/workflow-patterns]] — five composable patterns for deterministic AI systems
+- [[permanent/workflow-first-agentic-architecture]] — the decision framework driving workflow vs agent choices

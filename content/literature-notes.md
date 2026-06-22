@@ -3,7 +3,7 @@ draft: true
 ---
 # Literature Notes
 
-_Last updated: 2026-06-22 (capture: Claude Certified Architect (CCA-F) - 2026 Exam Prep — Section 1 started)_
+_Last updated: 2026-06-22 (capture: Claude Certified Architect (CCA-F) — Section 1 FINISH)_
 
 | Note                                                                                              | Source                                                    | Date Read  |
 | ------------------------------------------------------------------------------------------------- | --------------------------------------------------------- | ---------- |
