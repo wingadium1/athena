@@ -8,6 +8,24 @@ Append-only record of operations. Format: `## [YYYY-MM-DD] operation | descripti
 
 ---
 
+## [2026-06-22] capture | Workflow-First Agentic Architecture
+
+Added permanent note and backlinks from Claude section 1, software architect role, and LLM Wiki Pattern.
+
+---
+
+## [2026-06-22] capture | Claude Certified Architect (CCA-F) - 2026 Exam Prep — Section 1 complete
+
+Section 1 summary finalized; tracker marked complete.
+
+---
+
+## [2026-06-22] capture | Claude Certified Architect (CCA-F) - 2026 Exam Prep — Section 1 started
+
+Pages touched: 1 literature note (mới), literature-notes.md (cập nhật), wip tracker (cập nhật), index.md (cập nhật)
+
+---
+
 ## [2026-04-08] ingest | 21 Năm Viện Trợ Mỹ ở Việt Nam — Đặng Phong
 
 Key concepts added: cip-counterpart-fund-viet-nam, map-vien-tro-vu-khi-qlvnch, lau-nam-goc-qua-giam-sat-quoc-hoi
@@ -409,6 +427,12 @@ Key concepts added:
 Pages touched: 1 permanent note (mới), 1 literature note (mới), index.md (cập nhật), log.md (append)
 
 ---
+
+## [2026-06-22] capture | Claude Certified Architect (CCA-F) — Section 1 FINISH
+
+Cross-concept extraction from L1-L6. 3 new permanent notes (agentic-loop, tool-use-lifecycle, workflow-patterns), 1 updated (workflow-first-agentic-architecture), all backlinked from literature note, catalogs updated.
+
+Pages touched: 3 permanent notes created, 1 permanent note updated, 1 literature note updated (Links), permanent-notes.md, literature-notes.md, log.md
 
 ## [2026-05-06] ingest | Làng Kẻ ở Phú Thọ và Vĩnh Phúc — mở rộng permanent note
 

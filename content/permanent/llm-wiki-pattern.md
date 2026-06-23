@@ -32,6 +32,7 @@ Kiến trúc gồm 3 lớp:
 
 - [[permanent/rag-vs-compiled-knowledge]] — so sánh với RAG approach
 - [[permanent/zettelkasten]] — method ghi chú mà pattern này build on top
+- [[permanent/workflow-first-agentic-architecture]] — ingest/query/lint are deterministic workflows, not free-form agent loops
 
 ## Sources
 
