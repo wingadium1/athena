@@ -422,3 +422,28 @@ Key additions:
 - Tranh luận học thuật: Hoàng Thị Châu (1967) vs An Chi (1996) về nguồn gốc "kẻ"
 
 Pages touched: 1 permanent note (danh-xung-lang-bac-bo.md — cập nhật), log.md (append)
+
+## [2026-05-22] filter-ingest | OpenStack DBaaS Work Wiki — Batch 1 (enrich existing notes)
+
+Source: Work wiki — OpenStack/DBaaS project (filtered — customer/org content excluded)
+
+Key concepts enriched:
+- postgresql-ha-patroni-pgpool-combo: split-brain protection (DCS quorum fencing), etcd sizing, phased migration path, operational commands
+- kolla-ansible-deployment-patterns: RHOSO comparison table, decision framework, updated aliases
+- openstack-neutron-overlay-protocols: hybrid topology pattern (Provider VLAN + GENEVE), Floating IP rejection rationale, GENEVE VNI limitation in OVN
+
+Pages touched: 3 permanent notes updated, 1 literature note created, 3 catalog pages updated
+
+## [2026-05-22] filter-ingest | OpenStack DBaaS Work Wiki — Batch 2 (new notes + enrich)
+
+Source: Work wiki — OpenStack/DBaaS project (filtered — customer/org content excluded)
+
+Key concepts added:
+- rhoso-deployment-model: RHOSO 18 architecture, OCP-based control plane, EDPM, NIC patterns, PRD checklist
+- openstack-validation-methodology: V-item structured PoC, T1/MUST classification, finding taxonomy, bare-metal revalidation
+
+Key concepts enriched:
+- patroni: 4 production gotchas (arping nohup, allowed-address-pairs, callback config, SIGHUP), etcd v2 API dependency
+- ovs-bridge-management-nic-pitfall: RHOSO NIC pattern B, AWS nested-virt OVS constraints, jumbo frames dependency
+
+Pages touched: 2 permanent notes created, 2 permanent notes enriched, catalog updated

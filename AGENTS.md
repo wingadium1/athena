@@ -246,6 +246,67 @@ Triggered when owner shares a quick idea without a full source.
 2. Ask: "Should I also check if this connects to any existing permanent notes?"
 3. If yes → add wikilinks
 
+### FILTER-INGEST
+
+Triggered when owner says: "filter ingest from [path]", "import từ wiki công việc", "lọc tri thức từ [path]", or references an external LLM wiki directory containing work knowledge.
+
+**Purpose**: Import general/personal knowledge from a work wiki while stripping out customer-specific, organization-specific, and project-meta content. The result is clean, reusable permanent notes added to Athena.
+
+**Source structure assumption**: The source wiki uses the same MD + wikilinks + frontmatter format as Athena. It typically organizes content by project folders with an `index.md` catalog.
+
+**Steps — DO NOT skip or reorder:**
+
+1. **Scan the source directory.** Read `index.md` (or the top-level structure) to build a file inventory. Note frontmatter tags and titles.
+
+2. **Classify each file** using the filtering rules below. Assign one of three verdicts:
+   - **SKIP** — customer/org/project-meta only, nothing reusable
+   - **EXTRACT** — mixed content; extract only general knowledge sections (`## Key Knowledge Captured`, `## Summary`, standalone technical explanations)
+   - **INCLUDE** — pure general/technical knowledge, reusable as-is
+
+3. **Present the classification to owner.** Show a table: `| File | Verdict | Why |`. Owner can override any verdict.
+
+4. **For INCLUDE files**: Process like normal INGEST (steps 2–7).
+   - Step 2 (discuss) can be **batched**: ask owner once about the whole batch's themes instead of per-file.
+
+5. **For EXTRACT files**: 
+   - Read the general knowledge sections only
+   - Create a **literature note** with `author: "Work wiki — [project]"`
+   - Create/update permanent notes from the extracted knowledge
+   - Skip customer sections entirely — do not reference, quote, or link to them
+
+6. **For SKIP files**: Do nothing. Owner can override individual files to INCLUDE/EXTRACT.
+
+7. **Update catalog pages and log** as in normal INGEST. Use `filter-ingest` as the log operation label.
+
+**Batch mode**: When the source has 5+ files, classify ALL files first, present the full verdict table, then process approved files in parallel batches of 3–5.
+
+#### Filtering Rules
+
+**Auto-SKIP by filename pattern** (these files are project/customer meta):
+- `customer-*`, `stakeholders*`, `*estimation*`, `*register*`, `*deliverables*`
+- `*-project.md` (graph anchors), `*-inventory.md`, `source-conventions.md`
+- `overview.md` (project-level scope docs), `*-qa-index.md`
+- `*-validation-evidence-*.md`, `*-validation-guide.md` (customer PoC evidence)
+- `*bastion-access*`, `*assessment-*` (customer assessment)
+
+**Auto-SKIP by frontmatter tags**: `customer`, `stakeholders`, `estimation`, `evidence`, `internal`, `deliverables`, `qa`
+
+**INCLUDE signal** (files with these patterns likely contain general knowledge):
+- Has `## Key Knowledge Captured` section
+- Filename: `openstack-*`, `operations-*`, `dbaas-*`, `postgresql-*`, `deployment-*`, `storage-*`, `network-*`, `lab-proxmox-*`
+- Tags include: `architecture`, `operations`, `networking`, `storage`, `security`, `performance`, `ha`, `dbaas` (without `customer`/`stakeholders`)
+
+**Content-based SKIP** (files primarily about):
+- Customer decisions, stakeholder RACI, project estimation/timeline
+- Task-output tracking, validation evidence, meeting notes
+- Project scaffolding, batch plans, source inventories
+
+**EXTRACT pattern**: File has both customer context AND standalone `## Key Knowledge Captured` or `## Summary` sections. Extract only those sections.
+
+**Owner override**: Owner can reclassify any file at step 3. The filtering rules are starting points, not final decisions.
+
+**Keyword filter**: Before ingesting any content, check `content/.filter-keywords` for organization/customer names to strip. Replace them with generic equivalents (e.g., "the customer", "the project"). Do NOT ingest content containing these keywords in titles or as primary subjects.
+
 ---
 
 ## Wikilink Conventions
@@ -345,7 +406,7 @@ _Last updated: YYYY-MM-DD (initial catalog)_
 
 Append-only. Each entry starts with `## [YYYY-MM-DD] operation | description`.
 
-Valid operation labels: `ingest`, `query`, `capture`, `lint`, `refactor`, `setup`.
+Valid operation labels: `ingest`, `query`, `capture`, `lint`, `refactor`, `setup`, `filter-ingest`.
 
 ```markdown
 ## [2026-04-08] ingest | DORA Metrics — accelerate.devops

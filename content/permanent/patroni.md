@@ -3,7 +3,7 @@ title: "Patroni"
 aliases: ["patroni ha", "patroni failover", "patroni etcd"]
 tags: [postgresql, ha, patroni, distributed-systems, infrastructure, database]
 created: 2026-04-10
-updated: 2026-04-10
+updated: 2026-05-22
 ---
 
 Patroni là một HA agent cho PostgreSQL, chạy trên mỗi database node và chịu trách nhiệm duy nhất: đảm bảo cluster luôn có đúng một primary. Nó không tự mình quyết định — nó dùng một distributed consensus store (thường là etcd) để đồng thuận với các nodes khác về trạng thái cluster, tránh split-brain.
@@ -18,6 +18,53 @@ Patroni dùng **Raft consensus** thông qua etcd (hoặc Consul, ZooKeeper). M�
 4. Node thắng update cluster state trong etcd; các node còn lại đọc state và tự cấu hình làm replica
 
 Đây là automatic failover không cần human intervention. Thời gian failover thường 10–30 giây tùy cấu hình `ttl` và `loop_wait`.
+
+## Production Gotchas
+
+Bốn gotcha quan trọng phát hiện qua validation thực tế trên RHOSO:
+
+### 1. `arping` callback phải dùng `nohup ... & disown`
+
+Patroni giết tất cả callback processes vẫn đang chạy sau `loop_wait` (mặc định 10s). Nếu `arping` cho VIP failover callback chạy lâu hơn 10s, nó bị kill trước khi hoàn thành:
+
+```bash
+# ❌ Sai — bị Patroni kill sau 10s
+arping -c 5 -I eth0 <VIP>
+
+# ✅ Đúng — chạy background, không bị kill
+nohup arping -c 5 -I eth0 <VIP> & disown
+```
+
+### 2. `allowed-address-pairs` cho VIP phải set trên TẤT CẢ 3 DB VM ports
+
+Neutron security group behavior: nếu VIP chỉ được allowed trên port của primary, traffic từ primary gửi với source VIP sẽ bị drop khi đến replica. **Phải set `allowed-address-pairs` trên cả 3 Neutron ports của DB VMs** — nếu không, traffic từ leader mới bị silently drop.
+
+### 3. Callbacks nằm dưới `postgresql:` section (không phải root level)
+
+```yaml
+# ❌ Sai
+callbacks:
+  on_role_change: /path/to/callback.sh
+
+# ✅ Đúng
+postgresql:
+  callbacks:
+    on_role_change: /path/to/callback.sh
+```
+
+### 4. `systemctl restart patroni` — SIGHUP không reload callbacks
+
+Thay đổi callback config yêu cầu **full restart** của Patroni service. `SIGHUP` hoặc `systemctl reload` không reload callback definitions — chỉ reload PostgreSQL parameters.
+
+## etcd v2 API Dependency
+
+`python-etcd` (thư viện Python client cho etcd) yêu cầu etcd v2 API — phải explicitly enable:
+
+```
+etcd --enable-v2=true
+```
+
+Không có flag này, Patroni không thể kết nối tới etcd cluster. Đây là known limitation của `python-etcd` (không hỗ trợ v3 gRPC API). Mitigation: thêm `--enable-v2=true` khi start etcd. Long-term: migrate sang `python-etcd3` hoặc `etcd3gw`.
 
 ## Patroni vs pgpool Quorum
 
@@ -53,3 +100,4 @@ Patroni expose HTTP REST API (mặc định port 8008) cho health check và mana
 ## Sources
 
 - [[literature/postgresql-ha-patroni-pgpool-ii]]
+- [[literature/openstack-dbaas-work-wiki]]

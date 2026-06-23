@@ -1,12 +1,32 @@
 ---
-title: "Kolla-Ansible Multi-Node Deployment Patterns"
-aliases: ["kolla ansible", "kolla multinode", "kolla-ansible pitfalls"]
-tags: [openstack, kolla-ansible, deployment, infrastructure]
+title: "Kolla-Ansible Deployment Patterns"
+aliases: ["kolla ansible", "kolla multinode", "kolla-ansible pitfalls", "openstack deployment paths"]
+tags: [openstack, kolla-ansible, deployment, infrastructure, rhoso]
 created: 2026-04-10
-updated: 2026-04-10
+updated: 2026-05-22
 ---
 
 Kolla-Ansible đơn giản hóa việc deploy OpenStack bằng cách chạy mọi service trong Docker containers, với Ansible quản lý configuration và orchestration. Nhưng một số implicit assumptions của nó — về hostname resolution, RAM, và service lifecycle — có thể gây ra failures mà rất khó debug nếu không biết trước.
+
+## So sánh với RHOSO (Red Hat OpenStack Services on OpenShift)
+
+RHOSO 18 là deployment model hoàn toàn khác — OpenStack control plane chạy như OpenShift pods, data plane vẫn bare-metal RHEL:
+
+| Feature | Kolla-Ansible | RHOSO 18 |
+|---------|--------------|----------|
+| Orchestration | Ansible + Docker/Podman | Kubernetes Operators |
+| Control plane hosting | Bare-metal hoặc VMs | OpenShift / Kubernetes pods |
+| HA mechanism | Keepalived + HAProxy | OpenShift self-healing + routing |
+| Network backend | OVS hoặc OVN (configurable) | OVN-native (exclusive) |
+| Configuration | YAML `globals.yml` | Custom Resources (CRDs) |
+| Upgrade style | Imperative (`kolla-ansible upgrade`) | Declarative (OLM + CR updates) |
+| Kubernetes required | No | Yes — RHOCP 4.18+ |
+| Data plane | Linux + Libvirt/KVM | RHEL + Libvirt/KVM (giống) |
+| Best for | Ansible-native teams, budget constraints | OpenShift standardization, enterprise support |
+
+**Decision framework**:
+- Chọn **Kolla-Ansible** nếu: cần total config control, team Ansible/Linux mạnh, budget hạn chế, air-gapped environment
+- Chọn **RHOSO** nếu: cần vendor support + security certification, đã có OpenShift, muốn GitOps model, cần lifecycle guarantees
 
 ## Hostname Resolution Trap (RabbitMQ / Erlang)
 
@@ -76,3 +96,4 @@ Kolla-Ansible 2024.2 yêu cầu **Ubuntu 24.04 Noble**, không phải 22.04 Jamm
 ## Sources
 
 - [[literature/proxmox-dbaas-lab-day1-to-day4.5]]
+- [[literature/openstack-dbaas-work-wiki]]

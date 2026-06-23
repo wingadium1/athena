@@ -3,12 +3,30 @@ title: "OpenStack Neutron Overlay Protocols: GRE, VXLAN, GENEVE"
 aliases: ["Neutron tunnel types", "OpenStack overlay", "GENEVE vs VXLAN OpenStack"]
 tags: [networking, OpenStack, Neutron, overlay, GRE, VXLAN, GENEVE, cloud]
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-05-22
 ---
 
 OpenStack Neutron cung cấp **self-service networks** thông qua overlay (tunnel) protocols. Các protocols này cho phép create isolated L2 networks không bị giới hạn bởi 4094 VLAN IDs của physical infrastructure.
 
 Docs chính thức: [Overlay (tunnel) protocols — Neutron docs](https://docs.openstack.org/neutron/2024.1/admin/intro-overlay-protocols.html)
+
+## Hybrid Topology: Provider VLAN + GENEVE Overlay
+
+Một pattern production quan trọng: dùng **Provider VLAN cho external connectivity** và **GENEVE overlay cho tenant isolation** — kết hợp ưu điểm của cả hai:
+
+| Layer | Technology | Purpose |
+|-------|-----------|---------|
+| External | Provider VLAN | DB access từ ngoài OpenStack cluster, direct L2, zero encapsulation overhead |
+| Tenant | GENEVE overlay | Multi-tenant isolation, soft network boundaries, dynamic provisioning |
+
+Tại sao **không dùng Floating IP** cho DBaaS scale lớn:
+- Public IP exhaustion ở 2000+ instances
+- NAT latency 200–500 µs/packet — không chấp nhận được cho DB workload (P99 <1ms)
+- Network node CPU bottleneck ở NAT table ~2000 concurrent flows
+- Security group + NAT = two-hop processing per packet
+- Khó debug vì NAT ẩn source IP trong DB logs
+
+Floating IP phù hợp cho web applications. **Không phù hợp cho DB workloads at scale.**
 
 ## Ba loại overlay protocols
 
@@ -66,6 +84,12 @@ GENEVE Header (16 bytes base + variable options):
 
 RFC 8926 mô tả: _"The data plane is generic and extensible enough to support current and future control planes."_ — VXLAN bị locked vào một control plane model (multicast flood-and-learn), GENEVE thì không.
 
+#### GENEVE vs VXLAN trong OVN: VNI limitation
+
+OVN dùng VXLAN internally nhưng map VNI qua 12-bit datapath binding — **giới hạn 4,096 logical networks** khi dùng VXLAN tunnel type. GENEVE preserve full 24-bit VNI space, cho 16.7M logical networks.
+
+MTU requirement cho GENEVE: header overhead 50 bytes. Physical MTU ≥1600 để support 1500-byte inner frame. Production best practice: jumbo frames (MTU 9000) end-to-end trên tenant/storage networks.
+
 ## So sánh tổng hợp
 
 | Feature             | VLAN (802.1Q) | GRE           | VXLAN          | GENEVE                |
@@ -120,7 +144,9 @@ VM vNIC
 - [[permanent/vxlan-vni-scalability]] — deep dive vào VXLAN VNI
 - [[permanent/openstack-ml2-overlay-config]] — cách configure trong ml2_conf.ini
 - [[permanent/openstack-external-network-mapping]] — cách provider network kết nối vào overlay qua router namespace
+- [[permanent/openstack-floating-ip-nat]] — Floating IP vs Provider Network trade-off
 
 ## Sources
 
 - [[literature/openstack-neutron-overlay-research-2026-04]]
+- [[literature/openstack-dbaas-work-wiki]]

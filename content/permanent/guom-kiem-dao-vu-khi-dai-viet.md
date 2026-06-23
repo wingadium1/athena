@@ -6,6 +6,7 @@ created: 2026-04-25
 updated: 2026-04-25
 ---
 
+
 # Gươm, Kiếm, Đao — Vietnamese Sword Taxonomy
 
 Vũ khí lạnh truyền thống Việt Nam thường được đặt trong hệ thống phân loại vay mượn từ Trung Quốc (dao/jian), nhưng thực tế phức tạp hơn nhiều. Vietnam là **vùng giao thoa**: chịu ảnh hưởng của Trung Hoa ở phía Bắc, Nhật Bản và các truyền thống Đông Nam Á ở miền Trung, Chăm-Khmer-Xiêm ở phía Nam, và sau này là Pháp vào thế kỷ 19. Kết quả là một bộ phân loại riêng — không hoàn toàn là bản sao của Trung Quốc.

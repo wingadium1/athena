@@ -3,7 +3,7 @@ draft: true
 ---
 # Literature Notes
 
-_Last updated: 2026-05-06 (ingest: Danh xưng làng Bắc Bộ — Kẻ, Xá và biến thiên lịch sử)_
+_Last updated: 2026-05-22 (filter-ingest: OpenStack DBaaS work wiki)_
 
 | Note                                                                                              | Source                                                    | Date Read  |
 | ------------------------------------------------------------------------------------------------- | --------------------------------------------------------- | ---------- |
@@ -17,3 +17,4 @@ _Last updated: 2026-05-06 (ingest: Danh xưng làng Bắc Bộ — Kẻ, Xá và
 | [[literature/tu-giac-nuoc-research\|Tứ Giác Nước — Nghiên cứu so sánh đô thị]]                    | Research session — Wikipedia, Lê Vĩnh An, Trần Quốc Vượng | 2026-04-11 |
 | [[literature/openstack-disk-qos-research-2026-05\|OpenStack Disk QoS — Cinder & Ephemeral]]       | Research session — Cinder docs, Nova Rocky spec, libvirt  | 2026-05-06 |
 | [[literature/danh-xung-lang-viet-bac-bo-research-2026-05\|Danh xưng làng Việt Bắc Bộ — Kẻ & Xá]]  | Đức An (QDND), PGS Bùi Xuân Đính (Thế giới Di sản)        | 2026-05-06 |
+| [[literature/openstack-dbaas-work-wiki\|OpenStack DBaaS — Work Wiki]]                             | Work wiki — OpenStack project                             | 2026-05-22 |
