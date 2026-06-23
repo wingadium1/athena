@@ -8,6 +8,18 @@ Append-only record of operations. Format: `## [YYYY-MM-DD] operation | descripti
 
 ---
 
+## [2026-06-23] capture | Claude Certified Architect (CCA-F) - Section 2, Lecture 4
+
+Extracted 5 core concepts from lecture notes on Parallel Execution. Created permanent notes for Parallel Execution, Fan-out, Fan-in, Partial Failure Handling, and Merging Strategies. All notes are cross-linked and backlinked from the source literature note.
+
+---
+
+## [2026-06-23] capture | Claude Certified Architect (CCA-F) - Section 2, Lecture 3
+
+Extracted 8 core concepts from lecture notes on Sequential Pipelines & Task Decomposition. Created permanent notes for Task Decomposition, Sequential Pipeline, Dependency Graph, Error Cascade, True vs. Artificial Dependency, Handoff Point, Orchestrator, and Over-Decomposition. All notes are cross-linked and backlinked from the source literature note.
+
+---
+
 ## [2026-06-22] capture | Workflow-First Agentic Architecture
 
 Added permanent note and backlinks from Claude section 1, software architect role, and LLM Wiki Pattern.
@@ -164,14 +176,14 @@ Permanent notes created (13):
 - `safe-planning-interval` — PI cadence, 8–12 weeks, ART delivery unit
 - `safe-ip-iteration` — IP iteration buffer, PI Planning, Inspect & Adapt
 - `safe-enablers` — 4 enabler types: Exploration, Architectural, Infrastructure, Compliance
-- `safe-value-stream` — Operational vs Development Value Stream; principle #10
+- `safe-value-stream` — Operational vs Development Value Stream; tổ chức xung quanh value theo principle #10
 - `value-stream-mapping` — Lean VSM tool; PT/LT/%C&A metrics; waste identification
 - `safe-agile-release-train` — ART as team of teams; cross-functional; common cadence
 - `safe-system-team` — System Team as DevOps team of ART; CI/CD pipeline ownership
 - `agile-manifesto` — 4 values, 12 principles; SAFe context notes
 - `agile-cadence` — cadence vs sprint vs iteration; basis for PI synchronization
 - `calmr` — CALMR 5 pillars; evolution from CMAS → CALMS → CALMR
-- `scaling-devops-with-safe` — Essential SAFe, ART, RTE/PM/SA, 4 DevOps aspects
+- `scaling-devops-with-safe` — Essential SAFe, ART, 3 roles (RTE/PM/SA), và 4 khía cạnh DevOps theo CALMR
 - `devops-transformation-canvas` — 9-component workshop tool; current/future state VSM
 
 Merges applied:
@@ -418,7 +430,7 @@ Pages touched: 1 literature note (mới), 1 fleeting note (mới), index.md (c�
 
 ## [2026-04-11] ingest | Tứ giác nước — mô hình đô thị sông nước Việt Nam (research so sánh)
 
-Source: Research session — Wikipedia tiếng Việt (Tứ giác nước), TS Lê Vĩnh An (Tạp chí Kiến trúc 01-2025), GS Trần Quốc Vượng, TU Delft (Chang'an water systems), Wikipedia EN (Bern, Metz, Nanjing, Beijing, London, Rome)
+Source: Research session — Wikipedia tiếng Việt (Tứ giác nước), TS Lê Vĩnh An (Tạp chí Kiến trúc 01-2025), GS Trần Quốc Vượng, TU Delft (Chang'an water systems), Wikipedia EN (Bern, Metz, Wrocław, Koblenz)
 
 Key concepts added:
 
@@ -471,3 +483,9 @@ Key concepts enriched:
 - ovs-bridge-management-nic-pitfall: RHOSO NIC pattern B, AWS nested-virt OVS constraints, jumbo frames dependency
 
 Pages touched: 2 permanent notes created, 2 permanent notes enriched, catalog updated
+
+---
+
+## [2026-06-23] capture | Claude Certified Architect (CCA-F) - Section 2, Lecture 6
+
+Extracted core concepts from lecture notes on Handling Ambiguity and Incomplete Specifications. Added details to the existing Section 2 literature note.
