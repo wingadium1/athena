@@ -480,82 +480,19 @@ Pages touched: 3 permanent notes updated, 1 literature note created, 3 catalog p
 
 Changes: Merged content of `certified-claude-architect-masterclass-2026-section-3-multi-agent-orchestration.md` into `certified-claude-architect-masterclass-2026-section-3-agentic-architecture-multi-agent-orchestration.md`. Archived source file. Updated literature-notes.md table.
 
-## [2026-06-24] ingest | Terminology Linker - Batch 1
-
-- Created 5 new permanent notes for agentic architecture concepts.
-- Files: action-environment-gap.md, agentic-systems.md, ambiguous-goal.md, assume-and-process.md, authority-boundaries.md
-
-## [2026-06-24] ingest | Terminology Linker - Batch 2
-
-- Created 5 new permanent notes for agentic architecture concepts.
-- Files: ccaf-framework.md, chatbots.md, clarify-first-strategy.md, context-capacity.md, context-isolation.md
-
-## [2026-06-24] ingest | Terminology Linker - Batch 3
-
-- Created 5 new permanent notes for agentic architecture concepts.
-- Files: decomposed-task.md, deterministic-workflows.md, dynamic-planning.md, dynamic-replanning.md, error-threshold.md
-
-## [2026-06-24] ingest | Terminology Linker - Batch 4
-
-- Created 4 new permanent notes for agentic architecture concepts.
-- Files: escalation.md, evaluator-optimizer.md, false-parallelism.md, four-phase-lifecycle-of-a-tool-call.md
-
-## [2026-06-24] ingest | Terminology Linker - Batch 5
-
-- Created 10 new permanent notes for agentic architecture concepts.
-- Files: goal-drift.md, handoff-messages.md, hierarchical-decomposition.md, hub-and-spoke-topology.md, hybrid-topologies.md, incremental-complexity.md, independent-testability.md, infinite-loops.md, instruction-design-principles.md, iterative-refinement-loops.md
-
-## [2026-06-24] ingest | Terminology Linker - Batch 6
-
-- Created 10 new permanent notes for agentic architecture concepts.
-- Files: monolithic-task.md, multi-agent-topologies.md, open-ended-goals.md, orchestrator.md, orchestrator-sub-agent.md, over-engineering.md, over-specified.md, parallel-decomposition.md, peer-to-peer-topology.md, perception-reasoning-action-and-observation.md
-
-## [2026-06-24] ingest | Terminology Linker - Batch 7
-
-- Created 10 new permanent notes for agentic architecture concepts.
-- Files: pipeline-topology.md, progress-vs-spinning.md, prompt-chaining.md, replanning.md, replanning-triggers.md, result-aggregation.md, role-of-the-orchestrator.md, routing.md, schema-versioning.md, separation-of-responsibilities.md
-
-## [2026-06-24] ingest | Terminology Linker - Batch 8
-
 ## [2026-06-24] ingest | Terminology Linker - Finalization
 
 - Created all permanent notes for agentic architecture concepts.
-- Updated glossary with all new terms.
-- Updated literature notes to link to the new glossary.
-- Linked all new terms in the three literature notes.
-- This completes the relink and add terminology task.
+- Formalized glossary file: `content/glossaries/agentic-systems-glossary.md`.
+- Performed graph weaving (Phase 4 & 5) by updating `## Connections` in all relevant permanent notes.
+- Updated operational log.
+- This completes the Terminology Linker task.
+## [2026-06-24] capture | Session Continuity Across Turns and Failure
 
+Added key insights to literature note: [[literature/certified-claude-architect-masterclass-2026-section-3-agentic-architecture-multi-agent-orchestration|Multi-agent Orchestration]].
 
-## [2026-06-24] refactor | Terminology Linker - Finalization
+Key concepts: Session resumption, Checkpoint design (coarse vs. fine-grained), State versioning, Memory hygiene.
 
-- Updated glossary with all new terms.
-- Updated literature notes to link to the new glossary.
-- Linked all new terms in the three literature notes.
-- This completes the relink and add terminology task.
+## [2026-06-24] capture | Agentic Architecture - Reliability & Human Oversight - L8 notes
 
-
-## [2026-06-24] refactor | Terminology Linker - Finalization
-
-- Updated glossary with all new terms.
-- Updated literature notes to link to the new glossary.
-- Linked all new terms in the three literature notes.
-- This completes the relink and add terminology task.
-
-
-## [2026-06-24] refactor | Terminology Linker on Agentic Architecture - Finalization
-
-- Updated glossary with all new terms.
-- Updated literature notes to link to the new glossary.
-- Linked all new terms in the three literature notes.
-- This completes the relink and add terminology task.
-
-
-
-
-
-
-
-
-
-
-
+Added raw notes for Lesson 8 (Interrupt Points and Review Workflows). Synthesized principles for interruption point placement, state persistence, structured handoff messages, and sync/async escalation patterns.

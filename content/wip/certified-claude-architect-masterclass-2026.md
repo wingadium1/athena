@@ -19,6 +19,8 @@ updated: 2026-06-23
 |---|---------|--------|---------|
 | 1 | Agentic Architecture - Foundation | complete | 6 |
 | 2 | Agentic Architecture - Task Decomposition & Planning | complete | 6 |
-| 3 | Agentic Architecture - Multi Agent Orchestration | in-progress | 5 |
+| 3 | Agentic Architecture - Multi Agent Orchestration | complete | 5 |
+| 4 | Agentic Architecture - Reliability & Human Oversight | complete | 7 |
+|---|---------|--------|---------|
 
-**Current**: Section 3, Lesson 6: Handoff Protocol and Continuity
+**Current**: Course complete or next section pending.

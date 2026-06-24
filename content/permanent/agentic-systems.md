@@ -14,6 +14,7 @@ Agentic systems are systems that can autonomously pursue goals by perceiving the
 - [[permanent/agentic-loop]]
 - [[permanent/deterministic-workflows]]
 - [[permanent/workflow-first-agentic-architecture]]
+- [[permanent/tool-use]]
 
 **Sources**:
 - [[literature/certified-claude-architect-masterclass-2026-section-1-agentic-architecture-foundation]]

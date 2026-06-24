@@ -19,6 +19,8 @@ This approach significantly improves the resilience and efficiency of long-runni
 > The `librarian` is currently researching patterns from workflow engines and distributed systems to enrich this note.
 
 ## Connections
+- [[permanent/handoff-verification]]
+- [[permanent/escalation]]
 
 ## Sources
 - [[literature/certified-claude-architect-masterclass-2026-section-3-agentic-architecture-multi-agent-orchestration|Agentic Architecture - Multi Agent Orchestration]]

@@ -22,6 +22,8 @@ Without this level of detail, debugging complex, asynchronous interactions becom
 > The `librarian` is currently researching established standards for structured audit logging to enrich this note.
 
 ## Connections
+- [[permanent/handoff-verification]]
+- [[permanent/error-propagation-in-multi-agent-systems]]
 
 ## Sources
 - [[literature/certified-claude-architect-masterclass-2026-section-3-agentic-architecture-multi-agent-orchestration|Agentic Architecture - Multi Agent Orchestration]]

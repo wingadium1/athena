@@ -10,8 +10,9 @@ Context Capacity refers to the amount of information (instructions, conversation
 
 **Why it matters**: Efficient management of the context window is crucial for effective agent design. If the context window is exceeded, the model may lose important information, leading to errors or a failure to complete its task.
 
-**Connections**:
+## Connections
 - [[permanent/agentic-loop]]
+- [[permanent/tool-use-lifecycle]]
 
-**Sources**:
+## Sources
 - [[literature/certified-claude-architect-masterclass-2026-section-1-agentic-architecture-foundation]]

@@ -66,9 +66,20 @@ Additionally, this lecture details the design of structured Agent-to-Agent messa
     - **Logging and Inspection**: Comprehensive audit logs are essential, capturing sender/receiver IDs, timestamps, message summaries, verification results, and errors to diagnose failures.
     - **Checkpointing and Substitutability**: Preserving state during handoffs prevents full restarts. Substitutability enables easy agent upgrades or replacements.
     - **Key Takeaway**: Robust handoff protocols prioritizing verification, structured logging, and error propagation are crucial for continuity and resilience, minimizing silent failures and preserving system integrity.
+- L7: [[permanent/in-context-state-vs-external-memory|In-context State vs. External Memory]]:
+    - **In-context State**: Transient, immediate, and zero-latency data stored in the current session. Truncated when the context window is full or the session ends.
+    - **External Memory**: Durable, persistent state outside the session (K-V stores, Relational DBs, Vector Indexes). Incurs latency due to tool calls, but enables complex querying (key/semantic) and long-term storage.
+    - **Design Principle**: Default to in-context for speed. Move to external memory ONLY when durability or cross-session persistence is required.
+    - **Hybrid Tiering**: Use a "Hot" tier (in-context) for active plans/current steps and a "Cold" tier (external) for rarely read/persistent data.
+    - **4 State Survival Questions**: 1. Survives interruption? 2. Need semantic query? 3. Shared across sessions? 4. Reconstructable? (If reconstructable, skip storing).
+- L8: [[permanent/session-continuity|Session Continuity]]: Managing interruptions by resuming from a saved checkpoint rather than restarting. Agent must track completed steps, current input, and prior results to resume successfully.
+- L8: [[permanent/checkpoint-design|Checkpoint Design]]: A snapshot of task progress at a phase boundary. Coarse-grained (phase boundaries) are generally better than fine-grained (every tool call) to balance state management complexity and redundancy.
+- L8: [[permanent/state-versioning|State Versioning]]: Recording timestamp and environment hash with checkpoints to detect and flag stale state on resume.
+- L8: [[permanent/memory-hygiene|Memory Hygiene]]: Proactively pruning stale state from context and external stores to prevent agents from acting on outdated facts.
 
 # Quotes
 
 # My Take
 
 # Links
+- [[permanent/in-context-state-vs-external-memory]]

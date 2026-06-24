@@ -14,6 +14,8 @@ This principle is analogous to designing to interfaces rather than concrete impl
 > The `librarian` is currently researching related design patterns from microservices and component-based architectures to enrich this note.
 
 ## Connections
+- [[permanent/multi-agent-orchestration]]
+- [[permanent/orchestrator]]
 
 ## Sources
 - [[literature/certified-claude-architect-masterclass-2026-section-3-agentic-architecture-multi-agent-orchestration|Agentic Architecture - Multi Agent Orchestration]]

@@ -13,6 +13,7 @@ An ambiguous goal is a high-level objective that lacks a clear, specific definit
 **Connections**:
 - [[permanent/clarify-first-strategy]]
 - [[permanent/assume-and-process]]
+- [[permanent/goal-drift]]
 
 **Sources**:
 - [[literature/certified-claude-architect-masterclass-2026-section-2-agentic-architecture-task-decomposition-planning]]

@@ -10,9 +10,10 @@ Escalation is a loop control mechanism where an agent passes a problem it cannot
 
 **Why it matters**: Escalation is a critical safety valve that prevents an agent from getting stuck or failing silently. The agent's design must clearly define when to escalate, treating it as a planned safety feature, not a failure.
 
-**Connections**:
+## Connections
 - [[permanent/termination-conditions]]
 - [[permanent/error-threshold]]
+- [[permanent/silent-failure]]
 
-**Sources**:
+## Sources
 - [[literature/certified-claude-architect-masterclass-2026-section-1-agentic-architecture-foundation]]
