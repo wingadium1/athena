@@ -16,6 +16,7 @@ Building an accurate dependency graph is a critical part of the planning phase. 
 
 - [[permanent/task-decomposition|Task Decomposition]]
 - [[permanent/sequential-pipeline|Sequential Pipeline]]
+- [[permanent/parallel-execution|Parallel Execution (Agentic)]]
 - [[permanent/true-vs-artificial-dependency|True vs. Artificial Dependency]]
 - [[permanent/orchestrator-agentic|Orchestrator (Agentic)]]
 

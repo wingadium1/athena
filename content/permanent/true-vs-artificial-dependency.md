@@ -17,6 +17,7 @@ Identifying and eliminating artificial dependencies is a key goal of task decomp
 - [[permanent/task-decomposition|Task Decomposition]]
 - [[permanent/dependency-graph|Dependency Graph (Agentic)]]
 - [[permanent/sequential-pipeline|Sequential Pipeline]]
+- [[permanent/parallel-execution|Parallel Execution (Agentic)]]
 - [[permanent/orchestrator-agentic|Orchestrator (Agentic)]]
 
 ## Sources

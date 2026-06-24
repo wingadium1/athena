@@ -20,6 +20,7 @@ However, the main drawback is the accumulation of latency; the total execution t
 - [[permanent/error-cascade|Error Cascade]]
 - [[permanent/true-vs-artificial-dependency|True vs. Artificial Dependency]]
 - [[permanent/handoff-point|Handoff Point]]
+- [[permanent/parallel-execution|Parallel Execution (Agentic)]]
 
 ## Sources
 

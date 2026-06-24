@@ -16,6 +16,7 @@ Empirical studies show that there is an optimal window for decomposition granula
 
 - [[permanent/task-decomposition|Task Decomposition]]
 - [[permanent/workflow-patterns|Workflow Patterns]]
+- [[permanent/handoff-point|Handoff Point]]
 
 ## Sources
 

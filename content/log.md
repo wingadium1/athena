@@ -8,6 +8,12 @@ Append-only record of operations. Format: `## [YYYY-MM-DD] operation | descripti
 
 ---
 
+## [2026-06-24] refactor | Terminology Linker on Agentic Architecture
+
+Created a new glossary for the "Certified Claude Architect Masterclass 2026" course, extracted from the Section 2 literature note. Added 22 new terms with definitions. Performed graph weaving by back-linking related concepts in 5 existing permanent notes to enrich the knowledge graph.
+
+---
+
 ## [2026-06-23] capture | Claude Certified Architect (CCA-F) - Section 2, Lecture 4
 
 Extracted 5 core concepts from lecture notes on Parallel Execution. Created permanent notes for Parallel Execution, Fan-out, Fan-in, Partial Failure Handling, and Merging Strategies. All notes are cross-linked and backlinked from the source literature note.
@@ -470,22 +476,86 @@ Key concepts enriched:
 
 Pages touched: 3 permanent notes updated, 1 literature note created, 3 catalog pages updated
 
-## [2026-05-22] filter-ingest | OpenStack DBaaS Work Wiki — Batch 2 (new notes + enrich)
+## [2026-06-24] refactor | Merged Section 3 lecture notes (L4, L5) into Section 3 master note
 
-Source: Work wiki — OpenStack/DBaaS project (filtered — customer/org content excluded)
+Changes: Merged content of `certified-claude-architect-masterclass-2026-section-3-multi-agent-orchestration.md` into `certified-claude-architect-masterclass-2026-section-3-agentic-architecture-multi-agent-orchestration.md`. Archived source file. Updated literature-notes.md table.
 
-Key concepts added:
-- rhoso-deployment-model: RHOSO 18 architecture, OCP-based control plane, EDPM, NIC patterns, PRD checklist
-- openstack-validation-methodology: V-item structured PoC, T1/MUST classification, finding taxonomy, bare-metal revalidation
+## [2026-06-24] ingest | Terminology Linker - Batch 1
 
-Key concepts enriched:
-- patroni: 4 production gotchas (arping nohup, allowed-address-pairs, callback config, SIGHUP), etcd v2 API dependency
-- ovs-bridge-management-nic-pitfall: RHOSO NIC pattern B, AWS nested-virt OVS constraints, jumbo frames dependency
+- Created 5 new permanent notes for agentic architecture concepts.
+- Files: action-environment-gap.md, agentic-systems.md, ambiguous-goal.md, assume-and-process.md, authority-boundaries.md
 
-Pages touched: 2 permanent notes created, 2 permanent notes enriched, catalog updated
+## [2026-06-24] ingest | Terminology Linker - Batch 2
 
----
+- Created 5 new permanent notes for agentic architecture concepts.
+- Files: ccaf-framework.md, chatbots.md, clarify-first-strategy.md, context-capacity.md, context-isolation.md
 
-## [2026-06-23] capture | Claude Certified Architect (CCA-F) - Section 2, Lecture 6
+## [2026-06-24] ingest | Terminology Linker - Batch 3
 
-Extracted core concepts from lecture notes on Handling Ambiguity and Incomplete Specifications. Added details to the existing Section 2 literature note.
+- Created 5 new permanent notes for agentic architecture concepts.
+- Files: decomposed-task.md, deterministic-workflows.md, dynamic-planning.md, dynamic-replanning.md, error-threshold.md
+
+## [2026-06-24] ingest | Terminology Linker - Batch 4
+
+- Created 4 new permanent notes for agentic architecture concepts.
+- Files: escalation.md, evaluator-optimizer.md, false-parallelism.md, four-phase-lifecycle-of-a-tool-call.md
+
+## [2026-06-24] ingest | Terminology Linker - Batch 5
+
+- Created 10 new permanent notes for agentic architecture concepts.
+- Files: goal-drift.md, handoff-messages.md, hierarchical-decomposition.md, hub-and-spoke-topology.md, hybrid-topologies.md, incremental-complexity.md, independent-testability.md, infinite-loops.md, instruction-design-principles.md, iterative-refinement-loops.md
+
+## [2026-06-24] ingest | Terminology Linker - Batch 6
+
+- Created 10 new permanent notes for agentic architecture concepts.
+- Files: monolithic-task.md, multi-agent-topologies.md, open-ended-goals.md, orchestrator.md, orchestrator-sub-agent.md, over-engineering.md, over-specified.md, parallel-decomposition.md, peer-to-peer-topology.md, perception-reasoning-action-and-observation.md
+
+## [2026-06-24] ingest | Terminology Linker - Batch 7
+
+- Created 10 new permanent notes for agentic architecture concepts.
+- Files: pipeline-topology.md, progress-vs-spinning.md, prompt-chaining.md, replanning.md, replanning-triggers.md, result-aggregation.md, role-of-the-orchestrator.md, routing.md, schema-versioning.md, separation-of-responsibilities.md
+
+## [2026-06-24] ingest | Terminology Linker - Batch 8
+
+## [2026-06-24] ingest | Terminology Linker - Finalization
+
+- Created all permanent notes for agentic architecture concepts.
+- Updated glossary with all new terms.
+- Updated literature notes to link to the new glossary.
+- Linked all new terms in the three literature notes.
+- This completes the relink and add terminology task.
+
+
+## [2026-06-24] refactor | Terminology Linker - Finalization
+
+- Updated glossary with all new terms.
+- Updated literature notes to link to the new glossary.
+- Linked all new terms in the three literature notes.
+- This completes the relink and add terminology task.
+
+
+## [2026-06-24] refactor | Terminology Linker - Finalization
+
+- Updated glossary with all new terms.
+- Updated literature notes to link to the new glossary.
+- Linked all new terms in the three literature notes.
+- This completes the relink and add terminology task.
+
+
+## [2026-06-24] refactor | Terminology Linker on Agentic Architecture - Finalization
+
+- Updated glossary with all new terms.
+- Updated literature notes to link to the new glossary.
+- Linked all new terms in the three literature notes.
+- This completes the relink and add terminology task.
+
+
+
+
+
+
+
+
+
+
+

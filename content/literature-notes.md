@@ -3,7 +3,7 @@ draft: true
 ---
 # Literature Notes
 
-_Last updated: 2026-06-22 (capture: Claude Certified Architect (CCA-F) — Section 1 FINISH)_
+_Last updated: 2026-06-24 (ingest: Agentic Architecture - Multi Agent Orchestration)_
 
 | Note                                                                                              | Source                                                    | Date Read  |
 | ------------------------------------------------------------------------------------------------- | --------------------------------------------------------- | ---------- |
@@ -19,3 +19,5 @@ _Last updated: 2026-06-22 (capture: Claude Certified Architect (CCA-F) — Secti
 | [[literature/danh-xung-lang-viet-bac-bo-research-2026-05\|Danh xưng làng Việt Bắc Bộ — Kẻ & Xá]]  | Đức An (QDND), PGS Bùi Xuân Đính (Thế giới Di sản)        | 2026-05-06 |
 | [[literature/certified-claude-architect-masterclass-2026-section-1-agentic-architecture-foundation\|Agentic Architecture - Foundation]] | Jacob Bushong | 2026-06-22 |
 | [[literature/openstack-dbaas-work-wiki\|OpenStack DBaaS — Work Wiki]]                             | Work wiki — OpenStack project                             | 2026-05-22 |
+| [[literature/certified-claude-architect-masterclass-2026-section-3-agentic-architecture-multi-agent-orchestration|Agentic Architecture - Multi Agent Orchestration]] | Jacob Bushong | 2026-06-24 |
+| [[glossaries/certified-claude-architect-masterclass-2026-glossary|Glossary: Certified Claude Architect Masterclass 2026]] | This Wiki | 2026-06-24 |

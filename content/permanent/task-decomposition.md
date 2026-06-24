@@ -18,6 +18,7 @@ Effective decomposition involves balancing granularity. While breaking down task
 - [[permanent/workflow-patterns|Workflow Patterns]]
 - [[permanent/orchestrator-agentic|Orchestrator (Agentic)]]
 - [[permanent/sequential-pipeline|Sequential Pipeline]]
+- [[permanent/parallel-execution|Parallel Execution (Agentic)]]
 - [[permanent/dependency-graph|Dependency Graph]]
 - [[permanent/over-decomposition|Over-Decomposition]]
 
