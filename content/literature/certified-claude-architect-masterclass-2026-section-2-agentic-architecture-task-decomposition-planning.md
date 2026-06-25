@@ -7,8 +7,7 @@ date-read: 2026-06-23
 updated: 2026-06-23
 tags: [claude, ai-agents, architecture, course]
 ---
-
-# Section 2: Agentic Architecture - Task Decomposition & Planning
+# CCA-F Section  2: Agentic Architecture - Task Decomposition & Planning
 
 ## Summary
 

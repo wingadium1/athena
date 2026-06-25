@@ -6,8 +6,7 @@ author: "Jacob Bushong"
 date-read: 2026-06-22
 tags: [claude, udemy, course]
 ---
-
-# Agentic Architecture - Foundation
+# CCA-F Section 1: Agentic Architecture - Foundation
 
 ## Summary
 

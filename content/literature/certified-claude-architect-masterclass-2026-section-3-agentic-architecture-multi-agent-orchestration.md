@@ -6,7 +6,7 @@ author: "Jacob Bushong"
 date-read: 2026-06-24
 tags: [claude, udemy, course, multi-agent-orchestration]
 ---
-
+# CCA-F Section 3: Agentic Architecture Multi Agent Orchestration
 # Summary
 The lecture explores multi-agent topology selection based on project needs, detailing three primary types: Hub-and-Spoke, Pipeline, and Peer-to-Peer. It highlights their respective strengths (centralized control, modularity, resilience) and weaknesses (single point of failure, latency, auditing complexity). Advanced concepts like Evaluator-Optimizer and Hybrid topologies are introduced, along with anti-patterns to avoid. The key takeaway emphasizes that understanding each topology's characteristics is crucial for effective system design, as topology selection is a strategic decision impacting system operation.
 
