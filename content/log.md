@@ -493,6 +493,25 @@ Added key insights to literature note: [[literature/certified-claude-architect-m
 
 Key concepts: Session resumption, Checkpoint design (coarse vs. fine-grained), State versioning, Memory hygiene.
 
-## [2026-06-24] capture | Agentic Architecture - Reliability & Human Oversight - L8 notes
+## [2026-06-26] ingest | CCA-F Section 5: Tool Design & MCP
 
-Added raw notes for Lesson 8 (Interrupt Points and Review Workflows). Synthesized principles for interruption point placement, state persistence, structured handoff messages, and sync/async escalation patterns.
+Key concepts added: tool description role, routing, schema as a contract, required vs optional parameters, error design, retry/partial success
+Pages touched: literature note created, WIP tracker updated
+
+## [2026-06-26] capture | CCA-F Section 6: Permanent Notes Creation
+
+Created 5 permanent notes based on CCA-F Section 6 lecture notes: 
+- `model-context-protocol`
+- `mcp-tools`
+- `mcp-resources`
+- `mcp-prompts`
+- `mcp-client-server-architecture`
+
+Updated permanent-notes.md.
+
+## [2026-06-26] ingest | CCA-F Section 7: Tool Design & MCP
+
+Key concepts added: STDIO vs StreamableHTTP transport, LLM Sampling, MCP Notifications/Roots, Least-privilege/Scoping, Reliability, Built-in vs Custom tools
+Pages touched: literature note created, permanent notes updated, catalogs updated
+
+---

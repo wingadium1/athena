@@ -21,6 +21,7 @@ updated: 2026-06-23
 | 2 | Agentic Architecture - Task Decomposition & Planning | complete | 6 |
 | 3 | Agentic Architecture - Multi Agent Orchestration | complete | 5 |
 | 4 | Agentic Architecture - Reliability & Human Oversight | complete | 7 |
+| 5 | Tool Design & MCP - Tool Design Fundamentals | in_progress | 8 |
 |---|---------|--------|---------|
 
 **Current**: Course complete or next section pending.
