@@ -16,4 +16,4 @@ A resource is defined by a URI scheme, a MIME type for correct content interpret
 - [[permanent/model-context-protocol|Model Context Protocol]]
 
 ## Sources
-- [[literature/cca-f-section-6-building-mcp-server|CCA-F Section 6: Building MCP Server]]
+- [[certified-claude-architect-masterclass-2026-section-6-tool-design-and-mcp-building-mcp-server|CCA-F Section 6: Building MCP Server]]

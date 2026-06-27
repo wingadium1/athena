@@ -16,4 +16,4 @@ Tools are defined via a JSON schema that explicitly describes input arguments an
 - [[permanent/model-context-protocol|Model Context Protocol]]
 
 ## Sources
-- [[literature/cca-f-section-6-building-mcp-server|CCA-F Section 6: Building MCP Server]]
+- [[certified-claude-architect-masterclass-2026-section-6-tool-design-and-mcp-building-mcp-server|CCA-F Section 6: Building MCP Server]]

@@ -1,10 +1,13 @@
 ---
-title: "Agentic Architecture - Foundation"
+title: "CCA-F Section 1: Agentic Architecture - Foundation"
 type: literature
 source: "Udemy: https://www.udemy.com/course/certified-claude-architect-masterclass-2026"
-author: "Jacob Bushong"
+author: Jacob Bushong
 date-read: 2026-06-22
-tags: [claude, udemy, course]
+tags:
+  - claude
+  - udemy
+  - course
 ---
 # CCA-F Section 1: Agentic Architecture - Foundation
 

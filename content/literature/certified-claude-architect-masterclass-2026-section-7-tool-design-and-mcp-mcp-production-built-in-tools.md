@@ -1,13 +1,15 @@
 ---
-title: "Tool Design & MCP - MCP Production & Built-in Tools"
+title: "CCA-F Section 7: Tool Design & MCP - MCP Production & Built-in Tools"
 type: literature
-source: "CCA-F"
-author: "Research session — Section 7"
+source: "Udemy: https://www.udemy.com/course/certified-claude-architect-masterclass-2026"
+author: Jacob Bushong
 date-read: 2026-06-26
-tags: [mcp, architecture, course]
+tags:
+  - mcp
+  - architecture
+  - course
 ---
-
-# Tool Design & MCP - MCP Production & Built-in Tools
+# CCA-F Section 7: Tool Design & MCP - MCP Production & Built-in Tools
 
 ## Summary
 This section covers advanced MCP concepts, focusing on transport mechanisms (STDIO vs. StreamableHTTP), sampling for LLM inference, security and access scoping, and production-readiness. It also contrasts built-in tools with custom server implementations to guide architectural decisions.

@@ -1,11 +1,15 @@
 ---
-title: "Section 2: Agentic Architecture - Task Decomposition & Planning"
+title: "CCA-F Section 2: Agentic Architecture - Task Decomposition & Planning"
 type: literature
-source: "Udemy — Claude Certified Architect (CCA-F) 2026 Exam Prep"
-author: "Jacob Bushong"
+source: "Udemy: https://www.udemy.com/course/certified-claude-architect-masterclass-2026"
+author: Jacob Bushong
 date-read: 2026-06-23
 updated: 2026-06-23
-tags: [claude, ai-agents, architecture, course]
+tags:
+  - claude
+  - ai-agents
+  - architecture
+  - course
 ---
 # CCA-F Section  2: Agentic Architecture - Task Decomposition & Planning
 

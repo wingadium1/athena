@@ -15,13 +15,14 @@ updated: 2026-06-23
 
 ## Progress
 
-| # | Section | Status | Lessons |
-|---|---------|--------|---------|
-| 1 | Agentic Architecture - Foundation | complete | 6 |
-| 2 | Agentic Architecture - Task Decomposition & Planning | complete | 6 |
-| 3 | Agentic Architecture - Multi Agent Orchestration | complete | 5 |
-| 4 | Agentic Architecture - Reliability & Human Oversight | complete | 7 |
-| 5 | Tool Design & MCP - Tool Design Fundamentals | in_progress | 8 |
-|---|---------|--------|---------|
+| #   | Section                                              | Status   | Lessons |
+| --- | ---------------------------------------------------- | -------- | ------- |
+| 1   | Agentic Architecture - Foundation                    | complete | 6       |
+| 2   | Agentic Architecture - Task Decomposition & Planning | complete | 6       |
+| 3   | Agentic Architecture - Multi Agent Orchestration     | complete | 5       |
+| 4   | Agentic Architecture - Reliability & Human Oversight | complete | 7       |
+| 5   | Tool Design & MCP - Tool Design Fundamentals         | complete | 8       |
+| 6   | Tool Design & MCP - Building MCP Server              | complete |         |
+| 7   | Tool Design & MCP - MCP Production & Built-in Tools  | complete | 8       |
 
 **Current**: Course complete or next section pending.

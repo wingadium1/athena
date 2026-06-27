@@ -1,10 +1,13 @@
 ---
-title: "Section 4: Agentic Architecture - Reliability & Human Oversight"
+title: "CCA-F Section 4: Agentic Architecture - Reliability & Human Oversight"
 type: literature
-source: "certified-claude-architect-masterclass-2026"
-author: "Jacob Bushong"
+source: "Udemy: https://www.udemy.com/course/certified-claude-architect-masterclass-2026"
+author: Jacob Bushong
 date-read: 2026-06-24
-tags: [claude, udemy, course]
+tags:
+  - claude
+  - udemy
+  - course
 ---
 # CCA-F Section 4: Agentic Architecture - Reliability & Human Oversight
 

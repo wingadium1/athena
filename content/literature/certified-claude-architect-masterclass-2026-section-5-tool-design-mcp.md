@@ -1,12 +1,15 @@
 ---
 title: "CCA-F Section 5: Tool Design & MCP - Tool Design Fundamentals"
 type: literature
-source: "CCA-F Course - Section 5"
-author: "Jacob Bushong"
+source: "Udemy: https://www.udemy.com/course/certified-claude-architect-masterclass-2026"
+author: Jacob Bushong
 date-read: 2026-06-26
-tags: [claude, mcp, tool-design, course]
+tags:
+  - claude
+  - mcp
+  - tool-design
+  - course
 ---
-
 # CCA-F Section 5: Tool Design & MCP - Tool Design Fundamentals
 
 ## Summary

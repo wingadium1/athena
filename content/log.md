@@ -8,6 +8,16 @@ Append-only record of operations. Format: `## [YYYY-MM-DD] operation | descripti
 
 ---
 
+## [2026-06-27] setup | Updated permanent notes and index based on Claude Masterclass research
+
+Changes:
+- Rebuilt permanent-notes.md index via `rebuild_index.py`.
+- Created/Enhanced: memory-hygiene.md, ccaf-framework.md, handoff-protocol.md, mcp-primitives.md.
+- Updated/Verified: agentic-loop.md, task-decomposition.md, hub-and-spoke-topology.md, validation-gate.md.
+- Updated catalogs (permanent-notes.md, literature-notes.md, etc.)
+
+---
+
 ## [2026-06-24] refactor | Terminology Linker on Agentic Architecture
 
 Created a new glossary for the "Certified Claude Architect Masterclass 2026" course, extracted from the Section 2 literature note. Added 22 new terms with definitions. Performed graph weaving by back-linking related concepts in 5 existing permanent notes to enrich the knowledge graph.
@@ -418,100 +428,626 @@ Pages touched: 1 permanent note (mới), 1 literature note (mới), index.md (c�
 
 ## [2026-05-06] ingest | OpenStack Disk QoS — Cinder Volume QoS và Nova Ephemeral Disk Throttling
 
-Source: Research session — Cinder 2026.1 docs, Nova Rocky spec, OpenStackClient docs, nova/virt/libvirt/config.py
+Source: `/Users/sonht2.gmo/git/openstack-101/lab/proxmox-dbaas-lab/` (command packs + live journal)
+Owner emphasis: Trove + Swift + PG HA replication, Kolla-Ansible real incidents, OVS bridge pitfall
 
-Status: Fleeting + Literature notes tạo trước; permanent notes chưa tạo (owner chưa có ý kiến rõ về phần quan trọng nhất)
+Permanent notes created (7):
 
-Key topics captured:
+- `kolla-ansible-deployment-patterns` — hostname resolution trap (127.0.1.1 / Erlang); RAM requirements; nova cell_v2 discover_hosts; kolla_toolbox snapshot gotcha
+- `ovs-bridge-management-nic-pitfall` — OVS L2 takeover làm mất SSH; recovery via Proxmox noVNC; rule provider NIC only
+- `openstack-provider-net-routing` — static route từ tools-1 qua ctrl-1; gateway IP phải trên br-ex, không raw NIC; no floating IP pattern
+- `packer-openstack-image-pipeline` — Packer + OpenStack plugin; use_floating_ip=false; image lifecycle candidate→approved; Glance metadata tagging
+- `openstack-trove-guest-agent-connectivity` — OVN logical IP vs Linux IP boundary; RabbitMQ dual listener; DNAT Keystone; SNAT internet; subnet gateway phải dùng br-ex IP
+- `openstack-trove-postgresql-ha` — primary/replica via --replica-of; Swift mandatory; security group không auto-attach replica; backup_docker_image explicit; trove-guestagent.conf immutable; failover timeline 2 limitation
+- `swift-single-node-setup-kolla` — loopback disk; GPT label KOLLA_SWIFT_DATA; XFS label d0; ring builder part_power=10 replicas=1; swap prerequisite; systemd persistence
 
-- Token bucket mechanics trong Cinder QoS: `total_iops_sec` / `total_iops_sec_max` / `size_iops_sec`
-- `consumer=front-end` vs `back-end` — enforcement point và trade-offs
-- Nova flavor extra specs cho ephemeral disk (6 keys, không có burst)
-- libvirt `<iotune>` XML mapping từ cả hai nguồn
-- Capacity-based QoS (`*_per_gb`, `*_per_gb_min`)
+Literature note created (1):
 
-Pages touched: 1 literature note (mới), 1 fleeting note (mới), index.md (cập nhật)
+- `proxmox-dbaas-lab-day1-to-day4.5` — summary toàn bộ lab experience với 5+ incidents documented
+
+Pages touched: 7 permanent notes (mới), 1 literature note (mới), index.md (cập nhật), log.md (append)
 
 ---
 
-## [2026-04-11] ingest | Tứ giác nước — mô hình đô thị sông nước Việt Nam (research so sánh)
+## [2026-04-10] ingest | PostgreSQL HA — Patroni + pgpool-II on Ubuntu
 
-Source: Research session — Wikipedia tiếng Việt (Tứ giác nước), TS Lê Vĩnh An (Tạp chí Kiến trúc 01-2025), GS Trần Quốc Vượng, TU Delft (Chang'an water systems), Wikipedia EN (Bern, Metz, Wrocław, Koblenz)
+Source: https://medium.com/@joaovic32/demystifying-high-availability-postgresql-with-patroni-and-pgpool-ii-on-ubuntu-428c91a55b1a
 
 Key concepts added:
 
-- `tu-giac-nuoc` — định nghĩa, các kinh đô VN tiêu biểu, bốn chức năng; so sánh với 背山面水 Trung Quốc và mô hình 1 mặt sông châu Âu; các analog châu Âu (Bern, Metz, Wrocław, Koblenz)
+- `patroni` — HA orchestrator dùng Raft consensus qua etcd; automatic failover; REST API health check
+- `pgpool-ii` — connection proxy: pooling, read load balancing, write routing; sr_check awareness
+- `postgresql-ha-patroni-pgpool-combo` — combined pattern; phân chia trách nhiệm không overlap; so sánh với Trove HA
 
-Pages touched: 1 permanent note (mới), 1 literature note (mới), index.md (cập nhật), log.md (append)
+Permanent note updated (1):
+
+- `openstack-trove-postgresql-ha` — thêm link so sánh sang postgresql-ha-patroni-pgpool-combo
+
+Pages touched: 3 permanent notes (mới), 1 permanent note (updated), 1 literature note (mới), index.md (cập nhật), log.md (append)
+
+---
+
+## [2026-04-11] ingest | Nhà Minh — tài chính sụp đổ (research tổng hợp)
+
+Source: research tổng hợp từ nhiều nguồn học thuật (Ray Huang, Flynn & Giráldez, Von Glahn, Atwell)
+
+Key concepts added:
+
+- `ming-tax-base-erosion` — guiji (詭寄)/touxian (投獻); scale: đất chịu thuế giảm ~50% trong 140 năm; Single Whip Reform và giới hạn cơ cấu
+- `ming-silver-inflation` — Manila Galleon; arbitrage bạc toàn cầu; bẫy Nhất điều tiên; cú sốc kép 1630s; tranh luận Atwell vs. Von Glahn
+
+Fleeting note updated (1):
+
+- `2026-04-11-minh-trieu-tai-chinh-sup-do` — thay [!warning] bằng [!info] promoted, link sang 2 permanent notes
+
+Pages touched: 2 permanent notes (mới), 1 fleeting note (updated), index.md (cập nhật), log.md (append)
 
 ---
 
-## [2026-06-22] capture | Claude Certified Architect (CCA-F) — Section 1 FINISH
+## [2026-04-25] capture | Gươm / Kiếm / Đao — Taxonomy vũ khí lạnh Đại Việt
 
-Cross-concept extraction from L1-L6. 3 new permanent notes (agentic-loop, tool-use-lifecycle, workflow-patterns), 1 updated (workflow-first-agentic-architecture), all backlinked from literature note, catalogs updated.
+Key concepts added: guom-kiem-dao-vu-khi-dai-viet
+Pages touched: 1 permanent note (mới), index.md (cập nhật)
 
-Pages touched: 3 permanent notes created, 1 permanent note updated, 1 literature note updated (Links), permanent-notes.md, literature-notes.md, log.md
+Highlights:
 
-## [2026-05-06] ingest | Làng Kẻ ở Phú Thọ và Vĩnh Phúc — mở rộng permanent note
-
-Source: Research session — phanduykha.wordpress.com (Phan Duy Kha, _Nhìn về thời đại Hùng Vương_, 2013), DanViet (Kẻ Rưng/Tứ Trưng), donghodao.vn (Kẻ Nổi/Phượng Lâu), tinbds.com (Kẻ Mỏ/Yên Lạc), Wikipedia (Di chỉ Phùng Nguyên, Vĩnh Lại)
-
-Key additions:
-
-- 5 làng Kẻ tại Phú Thọ: Kẻ Khống (Chu Hóa), Kẻ Nội (Phùng Nguyên), Kẻ Nổi (Phượng Lâu), Kẻ Chịnh (Trịnh Xá), Kẻ Giáp (Tứ Xã — cần xác minh)
-- 3 làng Kẻ tại Vĩnh Phúc: Kẻ Cánh (Hương Canh), Kẻ Rưng (Tứ Trưng), Kẻ Mỏ (Yên Lạc)
-- Luận điểm Phan Duy Kha: 3 trung tâm phân bố Kẻ tương ứng vùng lõi Đông Sơn
-- Tranh luận học thuật: Hoàng Thị Châu (1967) vs An Chi (1996) về nguồn gốc "kẻ"
-
-Pages touched: 1 permanent note (danh-xung-lang-bac-bo.md — cập nhật), log.md (append)
-
-## [2026-05-22] filter-ingest | OpenStack DBaaS Work Wiki — Batch 1 (enrich existing notes)
-
-Source: Work wiki — OpenStack/DBaaS project (filtered — customer/org content excluded)
-
-Key concepts enriched:
-- postgresql-ha-patroni-pgpool-combo: split-brain protection (DCS quorum fencing), etcd sizing, phased migration path, operational commands
-- kolla-ansible-deployment-patterns: RHOSO comparison table, decision framework, updated aliases
-- openstack-neutron-overlay-protocols: hybrid topology pattern (Provider VLAN + GENEVE), Floating IP rejection rationale, GENEVE VNI limitation in OVN
-
-Pages touched: 3 permanent notes updated, 1 literature note created, 3 catalog pages updated
-
-## [2026-06-24] refactor | Merged Section 3 lecture notes (L4, L5) into Section 3 master note
-
-Changes: Merged content of `certified-claude-architect-masterclass-2026-section-3-multi-agent-orchestration.md` into `certified-claude-architect-masterclass-2026-section-3-agentic-architecture-multi-agent-orchestration.md`. Archived source file. Updated literature-notes.md table.
-
-## [2026-06-24] ingest | Terminology Linker - Finalization
-
-- Created all permanent notes for agentic architecture concepts.
-- Formalized glossary file: `content/glossaries/agentic-systems-glossary.md`.
-- Performed graph weaving (Phase 4 & 5) by updating `## Connections` in all relevant permanent notes.
-- Updated operational log.
-- This completes the Terminology Linker task.
-## [2026-06-24] capture | Session Continuity Across Turns and Failure
-
-Added key insights to literature note: [[literature/certified-claude-architect-masterclass-2026-section-3-agentic-architecture-multi-agent-orchestration|Multi-agent Orchestration]].
-
-Key concepts: Session resumption, Checkpoint design (coarse vs. fine-grained), State versioning, Memory hygiene.
-
-## [2026-06-26] ingest | CCA-F Section 5: Tool Design & MCP
-
-Key concepts added: tool description role, routing, schema as a contract, required vs optional parameters, error design, retry/partial success
-Pages touched: literature note created, WIP tracker updated
-
-## [2026-06-26] capture | CCA-F Section 6: Permanent Notes Creation
-
-Created 5 permanent notes based on CCA-F Section 6 lecture notes: 
-- `model-context-protocol`
-- `mcp-tools`
-- `mcp-resources`
-- `mcp-prompts`
-- `mcp-client-server-architecture`
-
-Updated permanent-notes.md.
-
-## [2026-06-26] ingest | CCA-F Section 7: Tool Design & MCP
-
-Key concepts added: STDIO vs StreamableHTTP transport, LLM Sampling, MCP Notifications/Roots, Least-privilege/Scoping, Reliability, Built-in vs Custom tools
-Pages touched: literature note created, permanent notes updated, catalogs updated
+- Đao (刀) = single-edged broad curved → 1:1 với Chinese dao; không nhầm lẫn
+- Chinese jian (劍) → bifurcation trong tiếng Việt: **kiếm** (thẳng 2 lưỡi) + **gươm** (cong 1 lưỡi)
+- Gươm từ nguyên: Proto-Vietic *t-kɨəm ← Old Chinese 劍 *s.kr[a]m-s; tiền âm tiết \*t- → lenition /k/→/ɣ/; bằng chứng: tiếng Rục "təkɨəm"
+- Kiếm = âm Hán-Việt (mượn thời Đường+); gươm = âm Việt cổ (mượn sớm hơn)
+- Trực-Kiếm Đại Việt: mũi vếch Câu-Kiếm-Phong — đặc thù không thấy ở jian TQ hay tachi Nhật
+- Biến thể vùng: Bắc (TQ), Trung (Nhật+ĐNA), Nam (Cham/Khmer/Xiêm), thế kỷ 19 (+Pháp)
+- Hồ Gươm + Gươm Thần Thuận Thiên: gươm = từ dân gian gần gũi hơn kiếm trong văn hóa
+- Nguồn học thuật chính: Vetyukov V. (2015), WHJ №2, pp.12–27
 
 ---
+
+## [2026-04-25] capture | Y Bát (衣鉢) — thuật ngữ Phật giáo
+
+Key concepts added: y-bat
+Pages touched: 1 permanent note (mới), index.md (cập nhật)
+
+Highlights:
+
+- Y bát = áo cà sa (y) + bình bát (bát) — biểu tượng giới luật, truyền thừa, giản dị
+- Kế thừa y bát: nghi thức trao truyền từ thầy sang trò — 3 lớp ý nghĩa: chánh pháp, lãnh đạo Tăng đoàn, tâm ấn thiền tông
+- Thiền tông: câu chuyện Huệ Năng — Hoằng Nhẫn là ví dụ kinh điển nhất
+- Ngoài đạo Phật: kế thừa tinh thần/phong cách/di sản của người thầy trong mọi lĩnh vực
+
+---
+
+## [2026-05-06] query | Bổ sung danh sách đầy đủ Kẻ + Xá vào permanent note
+
+Bổ sung vào permanent note `danh-xung-lang-bac-bo`:
+
+- Bảng Kẻ mở rộng: 29 địa danh (từ 8 → 29), có đầy đủ tên chữ + địa điểm + nghề truyền thống
+- Bảng Xá: thống kê đầu TK XIX (Nguyễn Xá 36, Hoàng Xá 35, Lê Xá 21...), ước tính >200 địa danh toàn miền Bắc
+- 8 làng Xá tiêu biểu gắn sự kiện/nhân vật lịch sử
+- Ghi chú Tàm Xá — trường hợp Xá không theo họ người
+- Kết luận phân bố: Xá gần như độc quyền Bắc Bộ + Bắc Trung Bộ
+
+Pages touched: 1 permanent note (updated), log.md (append)
+
+---
+
+## [2026-05-06] ingest | Danh xưng làng Bắc Bộ — Kẻ, Xá và biến thiên lịch sử
+
+Sources: Đức An (QDND — "Hà Nội: Vẫn còn đó những Kẻ nổi tiếng") · PGS Bùi Xuân Đính (Tạp chí Thế giới Di sản — "Tên làng và những nổi chìm lịch sử")
+
+Key concepts added:
+
+- `danh-xung-lang-bac-bo` — 3 lớp tên: Kẻ (tiền Bắc thuộc, từ Nôm cổ), Xá (Bắc thuộc, tên họ khai khẩn), Hán-Việt (TK X+, song song với tên Nôm)
+- Nguyên tắc "càng vô nghĩa càng cổ" cho nhóm Kẻ
+- Bảng đối chiếu Kẻ → tên chữ + nghề truyền thống
+- Phân bố địa lý: Bắc Hà Nội dày, Nam thưa (biển lấn)
+- Biến động sau 1945: đại xã, tên cách mạng, hợp tác xã → đứt gãy ký ức địa danh
+- Note để ngỏ phần "Các lớp tiếp theo" để chủ nhân bổ sung
+
+Pages touched: 1 permanent note (mới), 1 literature note (mới), index.md (cập nhật)
+
+---
+
+## [2026-05-06] ingest | OpenStack Disk QoS — Cinder Volume QoS và Nova Ephemeral Disk Throttling
+
+Source: `/Users/sonht2.gmo/git/openstack-101/lab/proxmox-dbaas-lab/` (command packs + live journal)
+Owner emphasis: Trove + Swift + PG HA replication, Kolla-Ansible real incidents, OVS bridge pitfall
+
+Permanent notes created (7):
+
+- `kolla-ansible-deployment-patterns` — hostname resolution trap (127.0.1.1 / Erlang); RAM requirements; nova cell_v2 discover_hosts; kolla_toolbox snapshot gotcha
+- `ovs-bridge-management-nic-pitfall` — OVS L2 takeover làm mất SSH; recovery via Proxmox noVNC; rule provider NIC only
+- `openstack-provider-net-routing` — static route từ tools-1 qua ctrl-1; gateway IP phải trên br-ex, không raw NIC; no floating IP pattern
+- `packer-openstack-image-pipeline` — Packer + OpenStack plugin; use_floating_ip=false; image lifecycle candidate→approved; Glance metadata tagging
+- `openstack-trove-guest-agent-connectivity` — OVN logical IP vs Linux IP boundary; RabbitMQ dual listener; DNAT Keystone; SNAT internet; subnet gateway phải dùng br-ex IP
+- `openstack-trove-postgresql-ha` — primary/replica via --replica-of; Swift mandatory; security group không auto-attach replica; backup_docker_image explicit; trove-guestagent.conf immutable; failover timeline 2 limitation
+- `swift-single-node-setup-kolla` — loopback disk; GPT label KOLLA_SWIFT_DATA; XFS label d0; ring builder part_power=10 replicas=1; swap prerequisite; systemd persistence
+
+Literature note created (1):
+
+- `proxmox-dbaas-lab-day1-to-day4.5` — summary toàn bộ lab experience với 5+ incidents documented
+
+Pages touched: 7 permanent notes (mới), 1 literature note (mới), index.md (cập nhật), log.md (append)
+
+---
+
+## [2026-04-10] ingest | PostgreSQL HA — Patroni + pgpool-II on Ubuntu
+
+Source: https://medium.com/@joaovic32/demystifying-high-availability-postgresql-with-patroni-and-pgpool-ii-on-ubuntu-428c91a55b1a
+
+Key concepts added:
+
+- `patroni` — HA orchestrator dùng Raft consensus qua etcd; automatic failover; REST API health check
+- `pgpool-ii` — connection proxy: pooling, read load balancing, write routing; sr_check awareness
+- `postgresql-ha-patroni-pgpool-combo` — combined pattern; phân chia trách nhiệm không overlap; so sánh với Trove HA
+
+Permanent note updated (1):
+
+- `openstack-trove-postgresql-ha` — thêm link so sánh sang postgresql-ha-patroni-pgpool-combo
+
+Pages touched: 3 permanent notes (mới), 1 permanent note (updated), 1 literature note (mới), index.md (cập nhật), log.md (append)
+
+---
+
+## [2026-04-11] ingest | Nhà Minh — tài chính sụp đổ (research tổng hợp)
+
+Source: research tổng hợp từ nhiều nguồn học thuật (Ray Huang, Flynn & Giráldez, Von Glahn, Atwell)
+
+Key concepts added:
+
+- `ming-tax-base-erosion` — guiji (詭寄)/touxian (投獻); scale: đất chịu thuế giảm ~50% trong 140 năm; Single Whip Reform và giới hạn cơ cấu
+- `ming-silver-inflation` — Manila Galleon; arbitrage bạc toàn cầu; bẫy Nhất điều tiên; cú sốc kép 1630s; tranh luận Atwell vs. Von Glahn
+
+Fleeting note updated (1):
+
+- `2026-04-11-minh-trieu-tai-chinh-sup-do` — thay [!warning] bằng [!info] promoted, link sang 2 permanent notes
+
+Pages touched: 2 permanent notes (mới), 1 fleeting note (updated), index.md (cập nhật), log.md (append)
+
+---
+
+## [2026-04-25] capture | Gươm / Kiếm / Đao — Taxonomy vũ khí lạnh Đại Việt
+
+Key concepts added: guom-kiem-dao-vu-khi-dai-viet
+Pages touched: 1 permanent note (mới), index.md (cập nhật)
+
+Highlights:
+
+- Đao (刀) = single-edged broad curved → 1:1 với Chinese dao; không nhầm lẫn
+- Chinese jian (劍) → bifurcation trong tiếng Việt: **kiếm** (thẳng 2 lưỡi) + **gươm** (cong 1 lưỡi)
+- Gươm từ nguyên: Proto-Vietic *t-kɨəm ← Old Chinese 劍 *s.kr[a]m-s; tiền âm tiết \*t- → lenition /k/→/ɣ/; bằng chứng: tiếng Rục "təkɨəm"
+- Kiếm = âm Hán-Việt (mượn thời Đường+); gươm = âm Việt cổ (mượn sớm hơn)
+- Trực-Kiếm Đại Việt: mũi vếch Câu-Kiếm-Phong — đặc thù không thấy ở jian TQ hay tachi Nhật
+- Biến thể vùng: Bắc (TQ), Trung (Nhật+ĐNA), Nam (Cham/Khmer/Xiêm), thế kỷ 19 (+Pháp)
+- Hồ Gươm + Gươm Thần Thuận Thiên: gươm = từ dân gian gần gũi hơn kiếm trong văn hóa
+- Nguồn học thuật chính: Vetyukov V. (2015), WHJ №2, pp.12–27
+
+---
+
+## [2026-04-25] capture | Y Bát (衣鉢) — thuật ngữ Phật giáo
+
+Key concepts added: y-bat
+Pages touched: 1 permanent note (mới), index.md (cập nhật)
+
+Highlights:
+
+- Y bát = áo cà sa (y) + bình bát (bát) — biểu tượng giới luật, truyền thừa, giản dị
+- Kế thừa y bát: nghi thức trao truyền từ thầy sang trò — 3 lớp ý nghĩa: chánh pháp, lãnh đạo Tăng đoàn, tâm ấn thiền tông
+- Thiền tông: câu chuyện Huệ Năng — Hoằng Nhẫn là ví dụ kinh điển nhất
+- Ngoài đạo Phật: kế thừa tinh thần/phong cách/di sản của người thầy trong mọi lĩnh vực
+
+---
+
+## [2026-05-06] query | Bổ sung danh sách đầy đủ Kẻ + Xá vào permanent note
+
+Bổ sung vào permanent note `danh-xung-lang-bac-bo`:
+
+- Bảng Kẻ mở rộng: 29 địa danh (từ 8 → 29), có đầy đủ tên chữ + địa điểm + nghề truyền thống
+- Bảng Xá: thống kê đầu TK XIX (Nguyễn Xá 36, Hoàng Xá 35, Lê Xá 21...), ước tính >200 địa danh toàn miền Bắc
+- 8 làng Xá tiêu biểu gắn sự kiện/nhân vật lịch sử
+- Ghi chú Tàm Xá — trường hợp Xá không theo họ người
+- Kết luận phân bố: Xá gần như độc quyền Bắc Bộ + Bắc Trung Bộ
+
+Pages touched: 1 permanent note (updated), log.md (append)
+
+---
+
+## [2026-05-06] ingest | Danh xưng làng Bắc Bộ — Kẻ, Xá và biến thiên lịch sử
+
+Sources: Đức An (QDND — "Hà Nội: Vẫn còn đó những Kẻ nổi tiếng") · PGS Bùi Xuân Đính (Tạp chí Thế giới Di sản — "Tên làng và những nổi chìm lịch sử")
+
+Key concepts added:
+
+- `danh-xung-lang-bac-bo` — 3 lớp tên: Kẻ (tiền Bắc thuộc, từ Nôm cổ), Xá (Bắc thuộc, tên họ khai khẩn), Hán-Việt (TK X+, song song với tên Nôm)
+- Nguyên tắc "càng vô nghĩa càng cổ" cho nhóm Kẻ
+- Bảng đối chiếu Kẻ → tên chữ + nghề truyền thống
+- Phân bố địa lý: Bắc Hà Nội dày, Nam thưa (biển lấn)
+- Biến động sau 1945: đại xã, tên cách mạng, hợp tác xã → đứt gãy ký ức địa danh
+- Note để ngỏ phần "Các lớp tiếp theo" để chủ nhân bổ sung
+
+Pages touched: 1 permanent note (mới), 1 literature note (mới), index.md (cập nhật)
+
+---
+
+## [2026-05-06] ingest | OpenStack Disk QoS — Cinder Volume QoS và Nova Ephemeral Disk Throttling
+
+Source: `/Users/sonht2.gmo/git/openstack-101/lab/proxmox-dbaas-lab/` (command packs + live journal)
+Owner emphasis: Trove + Swift + PG HA replication, Kolla-Ansible real incidents, OVS bridge pitfall
+
+Permanent notes created (7):
+
+- `kolla-ansible-deployment-patterns` — hostname resolution trap (127.0.1.1 / Erlang); RAM requirements; nova cell_v2 discover_hosts; kolla_toolbox snapshot gotcha
+- `ovs-bridge-management-nic-pitfall` — OVS L2 takeover làm mất SSH; recovery via Proxmox noVNC; rule provider NIC only
+- `openstack-provider-net-routing` — static route từ tools-1 qua ctrl-1; gateway IP phải trên br-ex, không raw NIC; no floating IP pattern
+- `packer-openstack-image-pipeline` — Packer + OpenStack plugin; use_floating_ip=false; image lifecycle candidate→approved; Glance metadata tagging
+- `openstack-trove-guest-agent-connectivity` — OVN logical IP vs Linux IP boundary; RabbitMQ dual listener; DNAT Keystone; SNAT internet; subnet gateway phải dùng br-ex IP
+- `openstack-trove-postgresql-ha` — primary/replica via --replica-of; Swift mandatory; security group không auto-attach replica; backup_docker_image explicit; trove-guestagent.conf immutable; failover timeline 2 limitation
+- `swift-single-node-setup-kolla` — loopback disk; GPT label KOLLA_SWIFT_DATA; XFS label d0; ring builder part_power=10 replicas=1; swap prerequisite; systemd persistence
+
+Literature note created (1):
+
+- `proxmox-dbaas-lab-day1-to-day4.5` — summary toàn bộ lab experience với 5+ incidents documented
+
+Pages touched: 7 permanent notes (mới), 1 literature note (mới), index.md (cập nhật), log.md (append)
+
+---
+
+## [2026-04-10] ingest | PostgreSQL HA — Patroni + pgpool-II on Ubuntu
+
+Source: https://medium.com/@joaovic32/demystifying-high-availability-postgresql-with-patroni-and-pgpool-ii-on-ubuntu-428c91a55b1a
+
+Key concepts added:
+
+- `patroni` — HA orchestrator dùng Raft consensus qua etcd; automatic failover; REST API health check
+- `pgpool-ii` — connection proxy: pooling, read load balancing, write routing; sr_check awareness
+- `postgresql-ha-patroni-pgpool-combo` — combined pattern; phân chia trách nhiệm không overlap; so sánh với Trove HA
+
+Permanent note updated (1):
+
+- `openstack-trove-postgresql-ha` — thêm link so sánh sang postgresql-ha-patroni-pgpool-combo
+
+Pages touched: 3 permanent notes (mới), 1 permanent note (updated), 1 literature note (mới), index.md (cập nhật), log.md (append)
+
+---
+
+## [2026-04-11] ingest | Nhà Minh — tài chính sụp đổ (research tổng hợp)
+
+Source: research tổng hợp từ nhiều nguồn học thuật (Ray Huang, Flynn & Giráldez, Von Glahn, Atwell)
+
+Key concepts added:
+
+- `ming-tax-base-erosion` — guiji (詭寄)/touxian (投獻); scale: đất chịu thuế giảm ~50% trong 140 năm; Single Whip Reform và giới hạn cơ cấu
+- `ming-silver-inflation` — Manila Galleon; arbitrage bạc toàn cầu; bẫy Nhất điều tiên; cú sốc kép 1630s; tranh luận Atwell vs. Von Glahn
+
+Fleeting note updated (1):
+
+- `2026-04-11-minh-trieu-tai-chinh-sup-do` — thay [!warning] bằng [!info] promoted, link sang 2 permanent notes
+
+Pages touched: 2 permanent notes (mới), 1 fleeting note (updated), index.md (cập nhật), log.md (append)
+
+---
+
+## [2026-04-25] capture | Gươm / Kiếm / Đao — Taxonomy vũ khí lạnh Đại Việt
+
+Key concepts added: guom-kiem-dao-vu-khi-dai-viet
+Pages touched: 1 permanent note (mới), index.md (cập nhật)
+
+Highlights:
+
+- Đao (刀) = single-edged broad curved → 1:1 với Chinese dao; không nhầm lẫn
+- Chinese jian (劍) → bifurcation trong tiếng Việt: **kiếm** (thẳng 2 lưỡi) + **gươm** (cong 1 lưỡi)
+- Gươm từ nguyên: Proto-Vietic *t-kɨəm ← Old Chinese 劍 *s.kr[a]m-s; tiền âm tiết \*t- → lenition /k/→/ɣ/; bằng chứng: tiếng Rục "təkɨəm"
+- Kiếm = âm Hán-Việt (mượn thời Đường+); gươm = âm Việt cổ (mượn sớm hơn)
+- Trực-Kiếm Đại Việt: mũi vếch Câu-Kiếm-Phong — đặc thù không thấy ở jian TQ hay tachi Nhật
+- Biến thể vùng: Bắc (TQ), Trung (Nhật+ĐNA), Nam (Cham/Khmer/Xiêm), thế kỷ 19 (+Pháp)
+- Hồ Gươm + Gươm Thần Thuận Thiên: gươm = từ dân gian gần gũi hơn kiếm trong văn hóa
+- Nguồn học thuật chính: Vetyukov V. (2015), WHJ №2, pp.12–27
+
+---
+
+## [2026-04-25] capture | Y Bát (衣鉢) — thuật ngữ Phật giáo
+
+Key concepts added: y-bat
+Pages touched: 1 permanent note (mới), index.md (cập nhật)
+
+Highlights:
+
+- Y bát = áo cà sa (y) + bình bát (bát) — biểu tượng giới luật, truyền thừa, giản dị
+- Kế thừa y bát: nghi thức trao truyền từ thầy sang trò — 3 lớp ý nghĩa: chánh pháp, lãnh đạo Tăng đoàn, tâm ấn thiền tông
+- Thiền tông: câu chuyện Huệ Năng — Hoằng Nhẫn là ví dụ kinh điển nhất
+- Ngoài đạo Phật: kế thừa tinh thần/phong cách/di sản của người thầy trong mọi lĩnh vực
+
+---
+
+## [2026-05-06] query | Bổ sung danh sách đầy đủ Kẻ + Xá vào permanent note
+
+Bổ sung vào permanent note `danh-xung-lang-bac-bo`:
+
+- Bảng Kẻ mở rộng: 29 địa danh (từ 8 → 29), có đầy đủ tên chữ + địa điểm + nghề truyền thống
+- Bảng Xá: thống kê đầu TK XIX (Nguyễn Xá 36, Hoàng Xá 35, Lê Xá 21...), ước tính >200 địa danh toàn miền Bắc
+- 8 làng Xá tiêu biểu gắn sự kiện/nhân vật lịch sử
+- Ghi chú Tàm Xá — trường hợp Xá không theo họ người
+- Kết luận phân bố: Xá gần như độc quyền Bắc Bộ + Bắc Trung Bộ
+
+Pages touched: 1 permanent note (updated), log.md (append)
+
+---
+
+## [2026-05-06] ingest | Danh xưng làng Bắc Bộ — Kẻ, Xá và biến thiên lịch sử
+
+Sources: Đức An (QDND — "Hà Nội: Vẫn còn đó những Kẻ nổi tiếng") · PGS Bùi Xuân Đính (Tạp chí Thế giới Di sản — "Tên làng và những nổi chìm lịch sử")
+
+Key concepts added:
+
+- `danh-xung-lang-bac-bo` — 3 lớp tên: Kẻ (tiền Bắc thuộc, từ Nôm cổ), Xá (Bắc thuộc, tên họ khai khẩn), Hán-Việt (TK X+, song song với tên Nôm)
+- Nguyên tắc "càng vô nghĩa càng cổ" cho nhóm Kẻ
+- Bảng đối chiếu Kẻ → tên chữ + nghề truyền thống
+- Phân bố địa lý: Bắc Hà Nội dày, Nam thưa (biển lấn)
+- Biến động sau 1945: đại xã, tên cách mạng, hợp tác xã → đứt gãy ký ức địa danh
+- Note để ngỏ phần "Các lớp tiếp theo" để chủ nhân bổ sung
+
+Pages touched: 1 permanent note (mới), 1 literature note (mới), index.md (cập nhật)
+
+---
+
+## [2026-05-06] ingest | OpenStack Disk QoS — Cinder Volume QoS và Nova Ephemeral Disk Throttling
+
+Source: `/Users/sonht2.gmo/git/openstack-101/lab/proxmox-dbaas-lab/` (command packs + live journal)
+Owner emphasis: Trove + Swift + PG HA replication, Kolla-Ansible real incidents, OVS bridge pitfall
+
+Permanent notes created (7):
+
+- `kolla-ansible-deployment-patterns` — hostname resolution trap (127.0.1.1 / Erlang); RAM requirements; nova cell_v2 discover_hosts; kolla_toolbox snapshot gotcha
+- `ovs-bridge-management-nic-pitfall` — OVS L2 takeover làm mất SSH; recovery via Proxmox noVNC; rule provider NIC only
+- `openstack-provider-net-routing` — static route từ tools-1 qua ctrl-1; gateway IP phải trên br-ex, không raw NIC; no floating IP pattern
+- `packer-openstack-image-pipeline` — Packer + OpenStack plugin; use_floating_ip=false; image lifecycle candidate→approved; Glance metadata tagging
+- `openstack-trove-guest-agent-connectivity` — OVN logical IP vs Linux IP boundary; RabbitMQ dual listener; DNAT Keystone; SNAT internet; subnet gateway phải dùng br-ex IP
+- `openstack-trove-postgresql-ha` — primary/replica via --replica-of; Swift mandatory; security group không auto-attach replica; backup_docker_image explicit; trove-guestagent.conf immutable; failover timeline 2 limitation
+- `swift-single-node-setup-kolla` — loopback disk; GPT label KOLLA_SWIFT_DATA; XFS label d0; ring builder part_power=10 replicas=1; swap prerequisite; systemd persistence
+
+Literature note created (1):
+
+- `proxmox-dbaas-lab-day1-to-day4.5` — summary toàn bộ lab experience với 5+ incidents documented
+
+Pages touched: 7 permanent notes (mới), 1 literature note (mới), index.md (cập nhật), log.md (append)
+
+---
+
+## [2026-04-10] ingest | PostgreSQL HA — Patroni + pgpool-II on Ubuntu
+
+Source: https://medium.com/@joaovic32/demystifying-high-availability-postgresql-with-patroni-and-pgpool-ii-on-ubuntu-428c91a55b1a
+
+Key concepts added:
+
+- `patroni` — HA orchestrator dùng Raft consensus qua etcd; automatic failover; REST API health check
+- `pgpool-ii` — connection proxy: pooling, read load balancing, write routing; sr_check awareness
+- `postgresql-ha-patroni-pgpool-combo` — combined pattern; phân chia trách nhiệm không overlap; so sánh với Trove HA
+
+Permanent note updated (1):
+
+- `openstack-trove-postgresql-ha` — thêm link so sánh sang postgresql-ha-patroni-pgpool-combo
+
+Pages touched: 3 permanent notes (mới), 1 permanent note (updated), 1 literature note (mới), index.md (cập nhật), log.md (append)
+
+---
+
+## [2026-04-11] ingest | Nhà Minh — tài chính sụp đổ (research tổng hợp)
+
+Source: research tổng hợp từ nhiều nguồn học thuật (Ray Huang, Flynn & Giráldez, Von Glahn, Atwell)
+
+Key concepts added:
+
+- `ming-tax-base-erosion` — guiji (詭寄)/touxian (投獻); scale: đất chịu thuế giảm ~50% trong 140 năm; Single Whip Reform và giới hạn cơ cấu
+- `ming-silver-inflation` — Manila Galleon; arbitrage bạc toàn cầu; bẫy Nhất điều tiên; cú sốc kép 1630s; tranh luận Atwell vs. Von Glahn
+
+Fleeting note updated (1):
+
+- `2026-04-11-minh-trieu-tai-chinh-sup-do` — thay [!warning] bằng [!info] promoted, link sang 2 permanent notes
+
+Pages touched: 2 permanent notes (mới), 1 fleeting note (updated), index.md (cập nhật), log.md (append)
+
+---
+
+## [2026-04-25] capture | Gươm / Kiếm / Đao — Taxonomy vũ khí lạnh Đại Việt
+
+Key concepts added: guom-kiem-dao-vu-khi-dai-viet
+Pages touched: 1 permanent note (mới), index.md (cập nhật)
+
+Highlights:
+
+- Đao (刀) = single-edged broad curved → 1:1 với Chinese dao; không nhầm lẫn
+- Chinese jian (劍) → bifurcation trong tiếng Việt: **kiếm** (thẳng 2 lưỡi) + **gươm** (cong 1 lưỡi)
+- Gươm từ nguyên: Proto-Vietic *t-kɨəm ← Old Chinese 劍 *s.kr[a]m-s; tiền âm tiết \*t- → lenition /k/→/ɣ/; bằng chứng: tiếng Rục "təkɨəm"
+- Kiếm = âm Hán-Việt (mượn thời Đường+); gươm = âm Việt cổ (mượn sớm hơn)
+- Trực-Kiếm Đại Việt: mũi vếch Câu-Kiếm-Phong — đặc thù không thấy ở jian TQ hay tachi Nhật
+- Biến thể vùng: Bắc (TQ), Trung (Nhật+ĐNA), Nam (Cham/Khmer/Xiêm), thế kỷ 19 (+Pháp)
+- Hồ Gươm + Gươm Thần Thuận Thiên: gươm = từ dân gian gần gũi hơn kiếm trong văn hóa
+- Nguồn học thuật chính: Vetyukov V. (2015), WHJ №2, pp.12–27
+
+---
+
+## [2026-04-25] capture | Y Bát (衣鉢) — thuật ngữ Phật giáo
+
+Key concepts added: y-bat
+Pages touched: 1 permanent note (mới), index.md (cập nhật)
+
+Highlights:
+
+- Y bát = áo cà sa (y) + bình bát (bát) — biểu tượng giới luật, truyền thừa, giản dị
+- Kế thừa y bát: nghi thức trao truyền từ thầy sang trò — 3 lớp ý nghĩa: chánh pháp, lãnh đạo Tăng đoàn, tâm ấn thiền tông
+- Thiền tông: câu chuyện Huệ Năng — Hoằng Nhẫn là ví dụ kinh điển nhất
+- Ngoài đạo Phật: kế thừa tinh thần/phong cách/di sản của người thầy trong mọi lĩnh vực
+
+---
+
+## [2026-05-06] query | Bổ sung danh sách đầy đủ Kẻ + Xá vào permanent note
+
+Bổ sung vào permanent note `danh-xung-lang-bac-bo`:
+
+- Bảng Kẻ mở rộng: 29 địa danh (từ 8 → 29), có đầy đủ tên chữ + địa điểm + nghề truyền thống
+- Bảng Xá: thống kê đầu TK XIX (Nguyễn Xá 36, Hoàng Xá 35, Lê Xá 21...), ước tính >200 địa danh toàn miền Bắc
+- 8 làng Xá tiêu biểu gắn sự kiện/nhân vật lịch sử
+- Ghi chú Tàm Xá — trường hợp Xá không theo họ người
+- Kết luận phân bố: Xá gần như độc quyền Bắc Bộ + Bắc Trung Bộ
+
+Pages touched: 1 permanent note (updated), log.md (append)
+
+---
+
+## [2026-05-06] ingest | Danh xưng làng Bắc Bộ — Kẻ, Xá và biến thiên lịch sử
+
+Sources: Đức An (QDND — "Hà Nội: Vẫn còn đó những Kẻ nổi tiếng") · PGS Bùi Xuân Đính (Tạp chí Thế giới Di sản — "Tên làng và những nổi chìm lịch sử")
+
+Key concepts added:
+
+- `danh-xung-lang-bac-bo` — 3 lớp tên: Kẻ (tiền Bắc thuộc, từ Nôm cổ), Xá (Bắc thuộc, tên họ khai khẩn), Hán-Việt (TK X+, song song với tên Nôm)
+- Nguyên tắc "càng vô nghĩa càng cổ" cho nhóm Kẻ
+- Bảng đối chiếu Kẻ → tên chữ + nghề truyền thống
+- Phân bố địa lý: Bắc Hà Nội dày, Nam thưa (biển lấn)
+- Biến động sau 1945: đại xã, tên cách mạng, hợp tác xã → đứt gãy ký ức địa danh
+- Note để ngỏ phần "Các lớp tiếp theo" để chủ nhân bổ sung
+
+Pages touched: 1 permanent note (mới), 1 literature note (mới), index.md (cập nhật)
+
+---
+
+## [2026-05-06] ingest | OpenStack Disk QoS — Cinder Volume QoS và Nova Ephemeral Disk Throttling
+
+Source: `/Users/sonht2.gmo/git/openstack-101/lab/proxmox-dbaas-lab/` (command packs + live journal)
+Owner emphasis: Trove + Swift + PG HA replication, Kolla-Ansible real incidents, OVS bridge pitfall
+
+Permanent notes created (7):
+
+- `kolla-ansible-deployment-patterns` — hostname resolution trap (127.0.1.1 / Erlang); RAM requirements; nova cell_v2 discover_hosts; kolla_toolbox snapshot gotcha
+- `ovs-bridge-management-nic-pitfall` — OVS L2 takeover làm mất SSH; recovery via Proxmox noVNC; rule provider NIC only
+- `openstack-provider-net-routing` — static route từ tools-1 qua ctrl-1; gateway IP phải trên br-ex, không raw NIC; no floating IP pattern
+- `packer-openstack-image-pipeline` — Packer + OpenStack plugin; use_floating_ip=false; image lifecycle candidate→approved; Glance metadata tagging
+- `openstack-trove-guest-agent-connectivity` — OVN logical IP vs Linux IP boundary; RabbitMQ dual listener; DNAT Keystone; SNAT internet; subnet gateway phải dùng br-ex IP
+- `openstack-trove-postgresql-ha` — primary/replica via --replica-of; Swift mandatory; security group không auto-attach replica; backup_docker_image explicit; trove-guestagent.conf immutable; failover timeline 2 limitation
+- `swift-single-node-setup-kolla` — loopback disk; GPT label KOLLA_SWIFT_DATA; XFS label d0; ring builder part_power=10 replicas=1; swap prerequisite; systemd persistence
+
+Literature note created (1):
+
+- `proxmox-dbaas-lab-day1-to-day4.5` — summary toàn bộ lab experience với 5+ incidents documented
+
+Pages touched: 7 permanent notes (mới), 1 literature note (mới), index.md (cập nhật), log.md (append)
+
+---
+
+## [2026-04-10] ingest | PostgreSQL HA — Patroni + pgpool-II on Ubuntu
+
+Source: https://medium.com/@joaovic32/demystifying-high-availability-postgresql-with-patroni-and-pgpool-ii-on-ubuntu-428c91a55b1a
+
+Key concepts added:
+
+- `patroni` — HA orchestrator dùng Raft consensus qua etcd; automatic failover; REST API health check
+- `pgpool-ii` — connection proxy: pooling, read load balancing, write routing; sr_check awareness
+- `postgresql-ha-patroni-pgpool-combo` — combined pattern; phân chia trách nhiệm không overlap; so sánh với Trove HA
+
+Permanent note updated (1):
+
+- `openstack-trove-postgresql-ha` — thêm link so sánh sang postgresql-ha-patroni-pgpool-combo
+
+Pages touched: 3 permanent notes (mới), 1 permanent note (updated), 1 literature note (mới), index.md (cập nhật), log.md (append)
+
+---
+
+## [2026-04-11] ingest | Nhà Minh — tài chính sụp đổ (research tổng hợp)
+
+Source: research tổng hợp từ nhiều nguồn học thuật (Ray Huang, Flynn & Giráldez, Von Glahn, Atwell)
+
+Key concepts added:
+
+- `ming-tax-base-erosion` — guiji (詭寄)/touxian (投獻); scale: đất chịu thuế giảm ~50% trong 140 năm; Single Whip Reform và giới hạn cơ cấu
+- `ming-silver-inflation` — Manila Galleon; arbitrage bạc toàn cầu; bẫy Nhất điều tiên; cú sốc kép 1630s; tranh luận Atwell vs. Von Glahn
+
+Fleeting note updated (1):
+
+- `2026-04-11-minh-trieu-tai-chinh-sup-do` — thay [!warning] bằng [!info] promoted, link sang 2 permanent notes
+
+Pages touched: 2 permanent notes (mới), 1 fleeting note (updated), index.md (cập nhật), log.md (append)
+
+---
+
+## [2026-04-25] capture | Gươm / Kiếm / Đao — Taxonomy vũ khí lạnh Đại Việt
+
+Key concepts added: guom-kiem-dao-vu-khi-dai-viet
+Pages touched: 1 permanent note (mới), index.md (cập nhật)
+
+Highlights:
+
+- Đao (刀) = single-edged broad curved → 1:1 với Chinese dao; không nhầm lẫn
+- Chinese jian (劍) → bifurcation trong tiếng Việt: **kiếm** (thẳng 2 lưỡi) + **gươm** (cong 1 lưỡi)
+- Gươm từ nguyên: Proto-Vietic *t-kɨəm ← Old Chinese 劍 *s.kr[a]m-s; tiền âm tiết \*t- → lenition /k/→/ɣ/; bằng chứng: tiếng Rục "təkɨəm"
+- Kiếm = âm Hán-Việt (mượn thời Đường+); gươm = âm Việt cổ (mượn sớm hơn)
+- Trực-Kiếm Đại Việt: mũi vếch Câu-Kiếm-Phong — đặc thù không thấy ở jian TQ hay tachi Nhật
+- Biến thể vùng: Bắc (TQ), Trung (Nhật+ĐNA), Nam (Cham/Khmer/Xiêm), thế kỷ 19 (+Pháp)
+- Hồ Gươm + Gươm Thần Thuận Thiên: gươm = từ dân gian gần gũi hơn kiếm trong văn hóa
+- Nguồn học thuật chính: Vetyukov V. (2015), WHJ №2, pp.12–27
+
+---
+
+## [2026-04-25] capture | Y Bát (衣鉢) — thuật ngữ Phật giáo
+
+Key concepts added: y-bat
+Pages touched: 1 permanent note (mới), index.md (cập nhật)
+
+Highlights:
+
+- Y bát = áo cà sa (y) + bình bát (bát) — biểu tượng giới luật, truyền thừa, giản dị
+- Kế thừa y bát: nghi thức trao truyền từ thầy sang trò — 3 lớp ý nghĩa: chánh pháp, lãnh đạo Tăng đoàn, tâm ấn thiền tông
+- Thiền tông: câu chuyện Huệ Năng — Hoằng Nhẫn là ví dụ kinh điển nhất
+- Ngoài đạo Phật: kế thừa tinh thần/phong cách/di sản của người thầy trong mọi lĩnh vực
+
+---
+
+## [2026-05-06] query | Bổ sung danh sách đầy đủ Kẻ + Xá vào permanent note
+
+Bổ sung vào permanent note `danh-xung-lang-bac-bo`:
+
+- Bảng Kẻ mở rộng: 29 địa danh (từ 8 → 29), có đầy đủ tên chữ + địa điểm + nghề truyền thống
+- Bảng Xá: thống kê đầu TK XIX (Nguyễn Xá 36, Hoàng Xá 35, Lê Xá 21...), ước tính >200 địa danh toàn miền Bắc
+- 8 làng Xá tiêu biểu gắn sự kiện/nhân vật lịch sử
+- Ghi chú Tàm Xá — trường hợp Xá không theo họ người
+- Kết luận phân bố: Xá gần như độc quyền Bắc Bộ + Bắc Trung Bộ
+
+Pages touched: 1 permanent note (updated), log.md (append)
+
+---
+
+## [2026-05-06] ingest | Danh xưng làng Bắc Bộ — Kẻ, Xá và biến thiên lịch sử
+
+Sources: Đức An (QDND — "Hà Nội: Vẫn còn đó những Kẻ nổi tiếng") · PGS Bùi Xuân Đính (Tạp chí Thế giới Di sản — "Tên làng và những nổi chìm lịch sử")
+
+Key concepts added:
+
+- `danh-xung-lang-bac-bo` — 3 lớp tên: Kẻ (tiền Bắc thuộc, từ Nôm cổ), Xá (Bắc thuộc, tên họ khai khẩn), Hán-Việt (TK X+, song song với tên Nôm)
+- Nguyên tắc "càng vô nghĩa càng cổ" cho nhóm Kẻ
+- Bảng đối chiếu Kẻ → tên chữ + nghề truyền thống
+- Phân bố địa lý: Bắc Hà Nội dày, Nam thưa (biển lấn)
+- Biến động sau 1945: đại xã, tên cách mạng, hợp tác xã → đứt gãy ký ức địa danh
+- Note để ngỏ phần "Các lớp tiếp theo" để chủ nhân bổ sung
+
+Pages touched: 1 permanent note (mới), 1 literature note (mới), index.md (cập nhật)
+
+---
+
+## [2026-05-06] ingest | OpenStack Disk QoS — Cinder Volume QoS và Nova Ephemeral Disk Throttling
+
+Source: `/Users/sonht2.gmo/git/openstack-101/lab/proxmox-dbaas-lab/` (command packs + live journal)
+Owner emphasis: Trove + Swift + PG HA replication, Kolla-Ansible real incidents, OVS bridge pitfall
+
+Permanent notes created (7):
+
+- `kolla-ansible-deployment-patterns` — hostname resolution trap (127.0.1.1 / Erlang); RAM requirements; nova cell_v2 discover_hosts; kolla_toolbox snapshot gotcha
+- `ovs-bridge-management-nic-pitfall` — OVS L2 takeover làm mất SSH; recovery via Proxmox noVNC; rule provider NIC only
+- `openstack-provider-net-routing` — static route từ tools-1 qua ctrl-1; gateway IP phải trên br-ex, không raw NIC; no floating IP pattern
+- `packer-openstack-image-pipeline` — Packer + OpenStack plugin; use_floating_ip=false; image lifecycle candidate→approved; Glance metadata tagging
+- `openstack-trove-guest-agent-connectivity` — OVN logical IP vs Linux IP boundary; RabbitMQ dual listener; DNAT Keystone; SNAT internet; subnet gateway phải dùng br-ex IP
+- `openstack-trove-postgresql-ha` — primary/replica via --replica-of; Swift mandatory; security group không auto-attach replica; backup_docker_image explicit; trove-guestagent.conf immutable; failover timeline 2 limitation
+- `swift-single-node-setup-kolla` — loopback disk; GPT label KOLLA_SWIFT_DATA; XFS label d0; ring builder part_power=10 replicas=1; swap prerequisite; systemd persistence
+
+Literature note created (1):
+
+- `proxmox-dbaas-lab-day1-to-day4.5` — summary toàn bộ lab experience với 5+ incidents documented
+
+Pages touched: 7 permanent notes (mới), 1 literature note (mới), index.md (cập nhật), log.md (append)

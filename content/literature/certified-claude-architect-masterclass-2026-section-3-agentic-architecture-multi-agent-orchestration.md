@@ -1,10 +1,14 @@
 ---
-title: "Agentic Architecture - Multi Agent Orchestration"
+title: "CCA-F Section 3: Agentic Architecture - Multi Agent Orchestration"
 type: literature
-source: "certified-claude-architect-masterclass-2026"
-author: "Jacob Bushong"
+source: "Udemy: https://www.udemy.com/course/certified-claude-architect-masterclass-2026"
+author: Jacob Bushong
 date-read: 2026-06-24
-tags: [claude, udemy, course, multi-agent-orchestration]
+tags:
+  - claude
+  - udemy
+  - course
+  - multi-agent-orchestration
 ---
 # CCA-F Section 3: Agentic Architecture Multi Agent Orchestration
 # Summary

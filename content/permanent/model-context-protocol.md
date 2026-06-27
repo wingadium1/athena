@@ -19,4 +19,4 @@ The protocol follows a classic client-server architecture based on a defined tra
 - [[permanent/mcp-client-server-architecture|MCP Architecture]]
 
 ## Sources
-- [[literature/cca-f-section-6-building-mcp-server|CCA-F Section 6: Building MCP Server]]
+- [[certified-claude-architect-masterclass-2026-section-6-tool-design-and-mcp-building-mcp-server|CCA-F Section 6: Building MCP Server]]

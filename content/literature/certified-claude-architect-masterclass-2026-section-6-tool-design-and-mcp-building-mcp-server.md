@@ -1,13 +1,14 @@
 ---
-title: "Building MCP Server"
+title: "CCA-F Section 6: Tool Design & MCP - Building MCP Server"
 type: literature
-source: "CCA-F Section 6"
-author: "Unknown"
+source: "Udemy: https://www.udemy.com/course/certified-claude-architect-masterclass-2026"
+author: Jacob Bushong
 date-read: 2026-06-26
-tags: [mcp, course]
+tags:
+  - mcp
+  - course
 ---
-
-# Building MCP Server
+# CCA-F Section 6: Tool Design & MCP -Building MCP Server
 
 ## Summary
 Building MCP servers allows AI agents to interact with tools, resources, and prompts through a standardized, model-agnostic protocol. This section covers MCP concepts, primitives (tools, resources, prompts), server implementation in Python, and integration patterns.
