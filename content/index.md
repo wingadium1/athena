@@ -2,7 +2,7 @@
 title: Welcome to Athena
 ---
 
-_Last updated: 2026-06-22 (capture: Workflow-First Agentic Architecture added)_
+_Last updated: 2026-07-06 (ingest: Section 10 Lecture 1)_
 
 Chào mừng bạn đến với Khu Vườn Số của Athena tại athena.wingadium.space! Đây là không gian nơi tôi ghi chép,
 chia sẻ và khám phá những ý tưởng, kiến thức và trải nghiệm của mình.

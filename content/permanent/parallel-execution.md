@@ -10,10 +10,12 @@ Parallel Execution is a core orchestration pattern in agentic systems where mult
 
 This pattern is most effective when a larger task can be decomposed into subtasks that have no dependencies on each other. A common application is the "fan-out/fan-in" model, where a coordinator agent "fans out" work to multiple worker agents that run in parallel, and then "fans in" their results for aggregation. For example, a research task could fan out to multiple agents, each searching a different data source simultaneously.
 
-While powerful, parallel execution introduces significant architectural complexity. It requires a robust orchestrator to manage the concurrent processes, a synchronization mechanism (fan-in) to collect and merge results, and sophisticated strategies for handling partial failures, where one or more parallel branches may fail without halting the entire operation. It also increases the peak computational cost and token consumption, as multiple LLM calls may happen at once.
+While powerful, parallel execution introduces significant architectural complexity. It requires a robust [[orchestrator|orchestrator]] to manage the concurrent processes, a synchronization mechanism (fan-in) to collect and merge results, and sophisticated strategies for handling partial failures, where one or more parallel branches may fail without halting the entire operation. It also increases the peak computational cost and token consumption, as multiple LLM calls may happen at once.
 
 ## Connections
 
+- [[permanent/orchestrator]]
+- [[permanent/subagent-definition]]
 - [[permanent/task-decomposition|Task Decomposition]]
 - [[permanent/dependency-graph|Dependency Graph (Agentic)]]
 - [[permanent/fan-out|Fan-out]]

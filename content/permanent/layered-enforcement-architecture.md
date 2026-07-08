@@ -1,6 +1,6 @@
 ---
 title: "Layered Enforcement Architecture"
-aliases: ["layered-enforcement"]
+aliases: ["layered-enforcement", "permission model"]
 tags: [claude, agentic-architecture, reliability]
 created: 2026-06-24
 updated: 2026-06-24

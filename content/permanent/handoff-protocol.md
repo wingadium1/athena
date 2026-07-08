@@ -12,12 +12,14 @@ A handoff protocol is a formal contract governing the transfer of control, conte
 - Handoffs require a contract-first design with explicit schemas.
 - Evidence-based transfer (passing intermediate artifacts, not just conclusions) is crucial for verification.
 - Handoff verifiers must confirm readiness at the receiver's end.
-- Robust error propagation and recovery paths (escalation, retry) are essential to prevent silent failures.
+- Robust error propagation and recovery paths (escalation, retry) are essential to prevent [[silent-failure|silent failures]].
 
 ## Connections
 - [[permanent/role-of-the-orchestrator]]
 - [[permanent/multi-agent-topologies]]
 - [[permanent/partial-failure-handling]]
+- [[permanent/silent-failure]]
+- [[permanent/under-specified]]
 
 ## Sources
 - [[literature/certified-claude-architect-masterclass-2026-section-3-agentic-architecture-multi-agent-orchestration]]

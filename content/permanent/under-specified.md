@@ -11,9 +11,11 @@ An under-specified handoff message is one that lacks the necessary context for a
 **Why it matters**: This can lead to the sub-agent failing or producing incorrect results because it doesn't have all the information it needs.
 
 **Connections**:
+- [[permanent/handoff-protocol]]
 - [[permanent/handoff-messages]]
 - [[permanent/over-specified]]
 - [[permanent/context-isolation]]
+- [[permanent/silent-failure]]
 
 **Sources**:
 - [[literature/certified-claude-architect-masterclass-2026-section-3-agentic-architecture-multi-agent-orchestration]]

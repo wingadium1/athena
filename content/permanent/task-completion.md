@@ -6,7 +6,7 @@ created: 2026-06-24
 updated: 2026-06-24
 ---
 
-Task Completion is a termination condition for an agentic loop, where the agent stops its execution because its goal has been successfully achieved.
+Task Completion is a termination condition for an [[agentic-loop|agentic loop]], where the agent stops its execution because its goal has been successfully achieved.
 
 **Why it matters**: This is the ideal stopping condition for an agent, indicating that it has fulfilled its purpose.
 
